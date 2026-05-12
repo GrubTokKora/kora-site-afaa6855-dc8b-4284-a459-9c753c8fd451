@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bedford Thai – Authentic Thai Cuisine in Stamford, CT</title>
+    <meta name="description" content="We serve authentic Thai cuisine and warm hospitality to the Stamford community. Our experienced chefs prepare every dish to order from the finest ingredients.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Bedford Thai – Authentic Thai Cuisine in Stamford, CT">
+    <meta property="og:description" content="We serve authentic Thai cuisine and warm hospitality to the Stamford community. Our experienced chefs prepare every dish to order from the finest ingredients.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://quseprdus1.blob.core.windows.net/kora-business-images/social-media/afaa6855-dc8b-4284-a459-9c753c8fd450/medialibrary/1771364541_2pr3j7.jpeg">
+    <meta property="og:url" content="https://bedfordthai.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" href="https://quseprdus1.blob.core.windows.net/kora-business-images/77cca67e-15ac-4c94-9e11-672586103b15_1766307076.png">
+    <link rel="shortcut icon" href="https://quseprdus1.blob.core.windows.net/kora-business-images/77cca67e-15ac-4c94-9e11-672586103b15_1766307076.png">
+    <link rel="apple-touch-icon" href="https://quseprdus1.blob.core.windows.net/kora-business-images/77cca67e-15ac-4c94-9e11-672586103b15_1766307076.png">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://bedfordthai.com/">
+
+    <!-- Hero image preload -->
+    <link rel="preload" as="image" href="https://quseprdus1.blob.core.windows.net/kora-business-images/social-media/afaa6855-dc8b-4284-a459-9c753c8fd450/medialibrary/1771364541_2pr3j7.jpeg">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Bedford Thai",
+      "description": "We serve authentic Thai cuisine and warm hospitality to the Stamford community. Our experienced chefs will prepare and cook every dish for you to order from finest ingredients including premium spices and herbs from Thailand.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "77 Bedford Street",
+        "addressLocality": "Stamford",
+        "addressRegion": "CT",
+        "postalCode": "06901",
+        "addressCountry": "US"
+      },
+      "telephone": "+12035955577",
+      "servesCuisine": "Thai",
+      "openingHours": [
+        "Mo-Th 11:30-21:30",
+        "Fr 11:30-22:00",
+        "Sa 12:00-22:00",
+        "Su 12:00-21:30"
+      ],
+      "image": "https://quseprdus1.blob.core.windows.net/kora-business-images/social-media/afaa6855-dc8b-4284-a459-9c753c8fd450/medialibrary/1771364541_2pr3j7.jpeg",
+      "url": "https://bedfordthai.com/"
+    }
+    </script>
+
+    <!-- Tailwind + Fonts -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#E53935',
+                        secondary: '#222222',
+                        accent: '#F8F8F8',
+                    },
+                    fontFamily: {
+                        'display': ['"Playfair Display"', 'serif'],
+                        'body': ['"Roboto"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'body', sans-serif;
+            background-color: #F8F8F8;
+            color: #222222;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'display', serif;
+        }
+    </style>
+</head>
+<body class="bg-accent">
+
+    <!-- Header -->
+    <header id="home" class="bg-secondary/80 backdrop-blur-lg text-accent fixed top-0 left-0 right-0 z-50 shadow-md">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-display font-bold text-white">Bedford Thai</a>
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#menu" class="hover:text-primary transition-colors">Menu</a>
+                <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+            </nav>
+            <a href="https://www.toasttab.com/bedford-thai-stamford-77-bedford-street-stamford-ct" target="_blank" class="hidden md:inline-block bg-primary text-white px-6 py-2 rounded-full hover:bg-red-700 transition-colors font-semibold">Order Online</a>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-secondary/95">
+            <nav class="flex flex-col items-center space-y-4 py-4">
+                <a href="#home" class="hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="hover:text-primary transition-colors">About</a>
+                <a href="#menu" class="hover:text-primary transition-colors">Menu</a>
+                <a href="#gallery" class="hover:text-primary transition-colors">Gallery</a>
+                <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
+                <a href="https://www.toasttab.com/bedford-thai-stamford-77-bedford-street-stamford-ct" target="_blank" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-red-700 transition-colors font-semibold">Order Online</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="relative h-screen min-h-[600px] flex items-center justify-center text-center text-white">
+            <div class="absolute inset-0 bg-black/60 z-10"></div>
+            <img src="https://quseprdus1.blob.core.windows.net/kora-business-images/social-media/afaa6855-dc8b-4284-a459-9c753c8fd450/medialibrary/1771364541_2pr3j7.jpeg" 
+                 alt="A delicious spread of Thai food" 
+                 class="absolute inset-0 w-full h-full object-cover"
+                 loading="eager" fetchpriority="high" decoding="async" width="1920" height="1080">
+            <div class="relative z-20 container mx-auto px-6">
+                <h1 class="text-5xl md:text-7xl font-display font-bold mb-4">Bedford Thai</h1>
+                <p class="text-xl md:text-2xl mb-8">Authentic Thai Cuisine • Stamford, CT</p>
+                <div class="space-x-4">
+                    <a href="#menu" class="bg-primary text-white px-8 py-3 rounded-full hover:bg-red-700 transition-colors font-semibold text-lg">View Menu</a>
+                    <a href="https://www.toasttab.com/bedford-thai-stamford-77-bedford-street-stamford-ct" target="_blank" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full hover:bg-white hover:text-secondary transition-colors font-semibold text-lg">Order Online</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6 text-center max-w-3xl">
+                <h2 class="text-4xl font-display text-secondary mb-6">Our Story</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    We serve authentic Thai cuisine and warm hospitality to the Stamford community. Our experienced chefs will prepare and cook every dish for you to order from finest ingredients including premium spices and herbs from Thailand.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    Finest ingredients & premium spices brought from Thailand, prepared with care for every guest.
+                </p>
+            </div>
+        </section>
+
+        <!-- Menu Section -->
+        <section id="menu" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-display text-center text-secondary mb-12">Our Menu</h2>
+                <div class="space-y-12">
+                    
+                    <!-- Appetizer -->
+                    <div>
+                        <h3 class="text-3xl font-display text-primary mb-6 border-b-2 border-primary/30 pb-2">Appetizer</h3>
+                        <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                            <div class="menu-item"><h4>Vegetable Spring Roll</h4><p class="desc">Served with sweet plum sauce</p><span class="price">$5.25</span></div>
+                            <div class="menu-item"><h4>Chicken Cashew Wrap</h4><p class="desc">Minced chicken, carrot, celery, cilantro and cashew nut served with lettuce</p><span class="price">$11.95</span></div>
+                            <div class="menu-item"><h4>Roti Canai</h4><p class="desc">Multi layered bread served with chicken curry</p><span class="price">$8.95</span></div>
+                            <div class="menu-item"><h4>Crab Rangoon</h4><p class="desc">Crab meat and cream cheese wrapped in wonton wrapper</p><span class="price">$9.95</span></div>
+                            <div class="menu-item"><h4>Curry Puff</h4><p class="desc">Pastry stuffed with minced chicken, potato and curry powder</p><span class="price">$7.50</span></div>
+                            <div class="menu-item"><h4>Po Pia Sod</h4><p class="desc">Lettuce, cucumber, carrot, cilantro, noodle wrapped in rice paper roll</p><span class="price">$7.95</span></div>
+                            <div class="menu-item"><h4>Shrimp Summer Roll</h4><p class="desc">Shrimp, lettuce, cucumber, carrot, noodle, cilantro and basil wrapped in rice paper roll</p><span class="price">$9.95</span></div>
+                            <div class="menu-item"><h4>Tao Hoo Tord</h4><p class="desc">Crispy tofu served with sweet chili sauce</p><span class="price">$7.25</span></div>
+                            <div class="menu-item"><h4>Dumpling (pork/chicken/vegetables)</h4><p class="desc">Steamed or pan fried</p><span class="price">$8.50</span></div>
+                            <div class="menu-item"><h4>Chicken Satay</h4><p class="desc">Grilled marinated chicken served with peanut sauce and cucumber sauce</p><span class="price">$10.95</span></div>
+                            <div class="menu-item"><h4>Chicken Wing</h4><p class="desc">Fried chicken wing served with sweet chili sauce</p><span class="price">$8.95</span></div>
+                            <div class="menu-item"><h4>Lime Chili Shrimp</h4><p class="desc">Batter-fried shrimp, lime, onion, bell pepper, lemon grass and chili sauce</p><span class="price">$12.95</span></div>
+                            <div class="menu-item"><h4>Crispy Calamari</h4><p class="desc">Batter-fried calamari with sweet chili sauce</p><span class="price">$10.95</span></div>
+                            <div class="menu-item"><h4>Mee Grob</h4><p class="desc">Shrimp, crispy rice noodle, sweet and sour sauce</p><span class="price">$11.95</span></div>
+                            <div class="menu-item"><h4>Kong Tod</h4><p class="desc">Crispy shrimp served with sweet chili sauce</p><span class="price">$9.95</span></div>
+                        </div>
+                    </div>
+
+                    <!-- Chef Special -->
+                    <div>
+                        <h3 class="text-3xl font-display text-primary mb-6 border-b-2 border-primary/30 pb-2">Chef Special</h3>
+                        <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                            <div class="menu-item"><h4>Sizzling Pancake</h4><p class="desc">Rice pancake filled with shrimp, crab meat, ground pork, mushroom, onion, bean sprout and ground peanut (doesn't served with rice)</p><span class="price">$20.95</span></div>
+                            <div class="menu-item"><h4>Seafood Delight</h4><p class="desc">Shrimp, scallop, calamari, mussel, crabmeat, tomato, onion, bell pepper, pineapple, egg and spicy curry sauce</p><span class="price">$23.95</span></div>
+                            <div class="menu-item"><h4>Pla Rad Prik</h4><p class="desc">Crispy whole red snapper topped with onion, bell pepper and red chili paste</p><span class="price">$27.95</span></div>
+                            <div class="menu-item"><h4>Pla Sam Rod</h4><p class="desc">Crispy whole red snapper topped with onion, bell pepper and sweet chili sauce</p><span class="price">$27.95</span></div>
+                            <div class="menu-item"><h4>Salmon Mango Curry</h4><p class="desc">Salmon with onion, bell pepper, tomato, coconut milk and mango</p><span class="price">$22.95</span></div>
+                            <div class="menu-item"><h4>Steamed Ginger Fish</h4><p class="desc">Steamed tilapia fish topped with bell pepper, garlic, onion, broccoli, snow peas, scallion and cilantro in soy ginger sauce</p><span class="price">$20.95</span></div>
+                            <div class="menu-item"><h4>Pineapple Duck Curry</h4><p class="desc">Spicy duck, pineapple, coconut, basil and red curry paste</p><span class="price">$25.95</span></div>
+                            <div class="menu-item"><h4>Duck Choo Chee</h4><p class="desc">Spicy duck, topped with choo chee sauce and lime leaf</p><span class="price">$25.95</span></div>
+                            <div class="menu-item"><h4>Duck Ga Prow</h4><p class="desc">Spicy duck with onion, bell pepper, mushroom, chili and basil</p><span class="price">$25.95</span></div>
+                            <div class="menu-item"><h4>Peanut Shrimp Curry</h4><p class="desc">Peanut sauce, bell pepper, zucchini, pineapple, basil and curry</p><span class="price">$20.95</span></div>
+                            <div class="menu-item"><h4>Pra Raam Chicken</h4><p class="desc">Chicken, spinach, napa, snow pea, cashew nut and peanut sauce</p><span class="price">$17.95</span></div>
+                            <div class="menu-item"><h4>Shaking Beef</h4><p class="desc">Tender flank steak marinated in house special sauce, served on a bed of lettuce, cucumber, onion, tomato and ground peanut</p><span class="price">$20.95</span></div>
+                            <div class="menu-item"><h4>Laksa Shrimp</h4><p class="desc">Shrimp, rice noodles, red pepper, basil, cilantro, scallions and coconut red curry sauce (doesn't served with rice)</p><span class="price">$19.95</span></div>
+                            <div class="menu-item"><h4>Garlic Eggplant Asparagus</h4><p class="desc">Asparagus and eggplant sautéed with garlic sauce</p><span class="price">$17.95</span></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Curry -->
+                    <div>
+                        <h3 class="text-3xl font-display text-primary mb-6 border-b-2 border-primary/30 pb-2">Curry</h3>
+                        <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                            <div class="menu-item"><h4>Rendang</h4><p class="desc">Coconut milk stew with chili, onion, garlic, candle nut, bay leaf, lime leaf and lemon grass. Choice of: Vegetables/Tofu, Chicken, Beef, Shrimp</p><span class="price">from $14.95</span></div>
+                            <div class="menu-item"><h4>Red Curry</h4><p class="desc">Coconut milk, bell pepper, bamboo shoot, green bean, lime leaf and basil with red curry. Choice of: Vegetables/Tofu, Chicken, Beef, Shrimp</p><span class="price">from $14.95</span></div>
+                            <div class="menu-item"><h4>Green Curry</h4><p class="desc">Coconut milk, zucchini, eggplant, bell pepper, bamboo shoot, lime leaf and basil in green curry. Choice of: Vegetables/Tofu, Chicken, Beef, Shrimp</p><span class="price">from $14.95</span></div>
+                            <div class="menu-item"><h4>Penang Curry</h4><p class="desc">Coconut milk, bell pepper, green bean and lime leaf. Choice of: Vegetables/Tofu, Chicken, Beef, Shrimp</p><span class="price">from $14.95</span></div>
+                            <div class="menu-item"><h4>Mango Curry</h4><p class="desc">Mango, coconut milk, onion, bell pepper, tomato with red curry. Choice of: Vegetables/Tofu, Chicken, Beef, Shrimp</p><span class="price">from $14.95</span></div>
+                            <div class="menu-item"><h4>Yellow Curry</h4><p class="desc">Coconut milk, onion, potato, carrot and string bean with yellow curry. Choice of: Vegetables/Tofu, Chicken, Beef, Shrimp</p><span class="price">from $14.95</span></div>
+                            <div class="menu-item"><h4>Masaman Curry</h4><p class="desc">Coconut milk, onion, potato, carrot and peanut. Choice of: Vegetables/Tofu, Chicken, Beef, Shrimp</p><span class="price">from $14.95</span></div>
+                            <div class="menu-item"><h4>Jungle Curry</h4><p class="desc">Spicy curry with eggplant, green bean, bamboo shoot, lime leaf and basil. Choice of: Vegetables/Tofu, Chicken, Beef, Shrimp</p><span class="price">from $14.95</span></div>
+                            <div class="menu-item"><h4>Pineapple Curry</h4><p class="desc">Pineapple, coconut milk, onion, bell pepper, tomato, basil with red curry sauce. Choice of: Vegetables/Tofu, Chicken, Beef, Shrimp</p><span class="price">from $14.95</span></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <style>
+                .menu-item { display: grid; grid-template-columns: 1fr auto; gap-x: 1rem; }
+                .menu-item h4 { grid-column: 1 / 2; font-weight: 500; font-size: 1.125rem; color: #222222; }
+                .menu-item .price { grid-column: 2 / 3; grid-row: 1 / 3; font-weight: 500; color: #E53935; align-self: start; }
+                .menu-item .desc { grid-column: 1 / 2; color: #555; font-size: 0.9rem; }
+            </style>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-display text-center text-secondary mb-12">Gallery</h2>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://res.cloudinary.com/gonation/w_1400,c_fit,fl_lossy,f_auto,q_auto/gonation.data.prod/item/itm-A-OoabbFQxu5IRC0GMMAdQ/abm-fD5B9dooQhCWCffsS-yWjg/img-rLL_t_E2TgOwlmqxpYCEpQ-full.png" alt="Gallery image of Thai food" class="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                    <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/afaa6855-dc8b-4284-a459-9c753c8fd450/1bb77e5d-9379-43cd-96a3-b1f7e6d5a368/1771364422_3dazjk.jpeg" alt="Gallery image of Thai food" class="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                    <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://quseprdus1.blob.core.windows.net/kora-business-images/social-media/afaa6855-dc8b-4284-a459-9c753c8fd450/medialibrary/1771364481_ob6obt.jpeg" alt="Gallery image of Thai food" class="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                    <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://quseprdus1.blob.core.windows.net/kora-business-images/social-media/afaa6855-dc8b-4284-a459-9c753c8fd450/medialibrary/1771364493_u6vs86.jpeg" alt="Gallery image of Thai food" class="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                    <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://quseprdus1.blob.core.windows.net/kora-business-images/social-media/afaa6855-dc8b-4284-a459-9c753c8fd450/medialibrary/1771364506_t6at61.jpeg" alt="Gallery image of Thai food" class="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                    <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://quseprdus1.blob.core.windows.net/kora-business-images/social-media/afaa6855-dc8b-4284-a459-9c753c8fd450/medialibrary/1771364522_n9ybvw.jpeg" alt="Gallery image of Thai food" class="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                    <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://quseprdus1.blob.core.windows.net/kora-business-images/social-media/afaa6855-dc8b-4284-a459-9c753c8fd450/medialibrary/1771364541_2pr3j7.jpeg" alt="Gallery image of Thai food" class="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                    <div class="overflow-hidden rounded-lg shadow-lg"><img src="https://quseprdus1.blob.core.windows.net/kora-business-images/social-media/afaa6855-dc8b-4284-a459-9c753c8fd450/medialibrary/1771364550_55km78.jpeg" alt="Gallery image of Thai food" class="w-full h-full object-cover aspect-square hover:scale-105 transition-transform duration-300" loading="lazy"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Hours Section -->
+        <section id="contact" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-display text-center text-secondary mb-12">Visit Us</h2>
+                <div class="grid lg:grid-cols-2 gap-12 items-start">
+                    <div>
+                        <h3 class="text-2xl font-display text-secondary mb-4">Contact & Location</h3>
+                        <p class="text-lg mb-2"><strong>Address:</strong> 77 Bedford Street, Stamford, CT 06901</p>
+                        <p class="text-lg mb-6"><strong>Phone:</strong> <a href="tel:+12035955577" class="text-primary hover:underline">(203) 595-5577</a></p>
+                        
+                        <h3 class="text-2xl font-display text-secondary mb-4">Hours</h3>
+                        <ul class="space-y-2 text-lg">
+                            <li><strong>Monday:</strong> 11:30 AM – 09:30 PM</li>
+                            <li><strong>Tuesday:</strong> 11:30 AM – 09:30 PM</li>
+                            <li><strong>Wednesday:</strong> 11:30 AM – 09:30 PM</li>
+                            <li><strong>Thursday:</strong> 11:30 AM – 09:30 PM</li>
+                            <li><strong>Friday:</strong> 11:30 AM – 10:00 PM</li>
+                            <li><strong>Saturday:</strong> 12:00 PM – 10:00 PM</li>
+                            <li><strong>Sunday:</strong> 12:00 PM – 09:30 PM</li>
+                        </ul>
+                    </div>
+                    <div class="h-96 rounded-lg overflow-hidden shadow-xl">
+                        <iframe 
+                            src="https://www.google.com/maps/search/?api=1&query=Bedford%20Thai%2C%2077%20Bedford%20Street%20Stamford%20CT%2006901" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-accent py-12">
+        <div class="container mx-auto px-6 text-center">
+            <p class="font-display text-2xl mb-2">Bedford Thai</p>
+            <p>77 Bedford Street, Stamford, CT 06901</p>
+            <p><a href="tel:+12035955577" class="hover:text-primary transition-colors">(203) 595-5577</a></p>
+            <div class="flex justify-center space-x-4 mt-6">
+                <a href="https://www.instagram.com/bedfordthai/?hl=en" target="_blank" aria-label="Instagram" class="hover:text-primary transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+            </div>
+            <p class="text-sm text-gray-400 mt-8">&copy; 2024 Bedford Thai. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        // Close mobile menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.querySelectorAll('a');
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
