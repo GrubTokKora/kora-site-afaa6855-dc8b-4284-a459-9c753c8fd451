@@ -1,0 +1,35 @@
+/* Brand palette from legacy tailwind.config (Play CDN → CLI @theme) */
+@theme {
+  --color-brand-50: #fef7f0;
+  --color-brand-100: #fdeee0;
+  --color-brand-200: #fbd9c0;
+  --color-brand-300: #f7bf95;
+  --color-brand-400: #f29d5e;
+  --color-brand-500: #ee7b2e;
+  --color-brand-600: #e0601a;
+  --color-brand-700: #ba4815;
+  --color-brand-800: #943a18;
+  --color-brand-900: #783217;
+  --color-warm-50: #faf8f5;
+  --color-warm-100: #f5f0e8;
+  --color-warm-200: #e8dfd0;
+  --color-warm-300: #d6c8b0;
+  --color-warm-400: #c2ab8a;
+  --color-warm-500: #b08f68;
+  --color-warm-600: #9a7650;
+  --color-warm-700: #7f5f40;
+  --color-warm-800: #684e36;
+  --color-warm-900: #56412f;
+  --color-ink-50: #f6f6f6;
+  --color-ink-100: #e7e7e7;
+  --color-ink-200: #d1d1d1;
+  --color-ink-300: #b0b0b0;
+  --color-ink-400: #888888;
+  --color-ink-500: #6d6d6d;
+  --color-ink-600: #5d5d5d;
+  --color-ink-700: #4f4f4f;
+  --color-ink-800: #454545;
+  --color-ink-900: #1a1a1a;
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+}
