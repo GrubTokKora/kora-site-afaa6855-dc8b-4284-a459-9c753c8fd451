@@ -455,3 +455,10 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+@media (max-width: 767px) {
+  .menu-item .flex span {
+    white-space: normal;
+    text-align: right;
+  }
+}
