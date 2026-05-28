@@ -122,6 +122,10 @@ body {
   color: #ba4815;
 }
 
+.menu-item h4 {
+  overflow-wrap: break-word;
+}
+
 .gallery-img {
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
