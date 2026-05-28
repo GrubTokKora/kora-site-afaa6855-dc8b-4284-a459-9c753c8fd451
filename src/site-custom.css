@@ -470,3 +470,11 @@ body {
     text-align: right;
   }
 }
+
+@media (max-width: 380px) {
+  .menu-item .flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.125rem;
+  }
+}
