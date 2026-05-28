@@ -457,8 +457,11 @@ body {
 }
 
 @media (max-width: 767px) {
+  .menu-item .flex h4 {
+    min-width: 0;
+  }
   .menu-item .flex span {
-    white-space: normal;
+    white-space: nowrap;
     text-align: right;
   }
 }
