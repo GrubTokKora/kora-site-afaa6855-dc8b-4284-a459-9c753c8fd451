@@ -13,7 +13,7 @@
 <meta content="Kora Demo | Authentic Thai Cuisine in Wilton, CT" property="og:title"/>
 <meta content="Visit Kora Demo for authentic Thai cuisine, warm hospitality, lunch specials, curries, noodles, soups, salads, chef specials, and more in Wilton, CT." property="og:description"/>
 <meta content="website" property="og:type"/>
-<meta content="https://kora-demo-live.askkoraai.com" property="og:url"/>
+<meta content="https://kora-demo-staging.askkoraai.com" property="og:url"/>
 <meta content="Kora Demo" property="og:site_name"/>
 <meta content="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/afaa6855-dc8b-4284-a459-9c753c8fd451/de8c94d8-887e-4625-825f-ec262dbc28df/1778654469_9t72dd.png" property="og:image"/>
 <meta content="Kora Demo Thai restaurant in Wilton, CT" property="og:image:alt"/>
@@ -28,7 +28,7 @@
 <link href="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/afaa6855-dc8b-4284-a459-9c753c8fd451/de8c94d8-887e-4625-825f-ec262dbc28df/1778654469_9t72dd.png" rel="shortcut icon" type="image/png"/>
 <link href="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/afaa6855-dc8b-4284-a459-9c753c8fd451/de8c94d8-887e-4625-825f-ec262dbc28df/1778654469_9t72dd.png" rel="apple-touch-icon"/>
 <!-- Canonical -->
-<link href="https://kora-demo-live.askkoraai.com" rel="canonical"/>
+<link href="https://kora-demo-staging.askkoraai.com" rel="canonical"/>
 <!-- Hero image preload -->
 <link as="image" href="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/afaa6855-dc8b-4284-a459-9c753c8fd451/de8c94d8-887e-4625-825f-ec262dbc28df/1778654469_9t72dd.png" rel="preload"/>
 <!-- JSON-LD Structured Data -->
@@ -37,7 +37,7 @@
   "@type": "Restaurant",
   "name": "Kora Demo",
   "description": "Authentic Thai cuisine and warm hospitality in Wilton, CT.",
-  "url": "https://kora-demo-live.askkoraai.com",
+  "url": "https://kora-demo-staging.askkoraai.com",
   "telephone": "+12035955577",
   "image": "https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/afaa6855-dc8b-4284-a459-9c753c8fd451/de8c94d8-887e-4625-825f-ec262dbc28df/1778654469_9t72dd.png",
   "priceRange": "$$",
@@ -51,6 +51,12 @@
     "addressCountry": "US"
   },
   "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "10:30",
+      "closes": "21:30"
+    },
     {
       "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
@@ -439,10 +445,10 @@
 <p class="text-sm text-ink-500 leading-relaxed">Minced chicken, carrot, celery, cilantro and cashew nut
                   served with lettuce</p>
 </div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
+<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default opacity-50">
 <div class="flex items-baseline justify-between gap-4 mb-1">
 <h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">ROTI CANAI</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$8.95</span>
+<span class="text-lg font-bold text-ink-500 whitespace-nowrap">Out of Stock</span>
 </div>
 <p class="text-sm text-ink-500 leading-relaxed">Multi layered bread served with chicken curry</p>
 </div>
@@ -1235,7 +1241,7 @@
 <h3 class="font-display text-2xl font-bold text-ink-900">Opening Hours</h3>
 </div>
 <ul class="space-y-1 text-ink-600">
-<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Monday</span><span class="text-ink-400 font-medium">Closed</span>
+<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Monday</span><span class="font-medium">10:30 AM – 09:30 PM</span>
 </li>
 <li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Tuesday</span><span class="font-medium">11:30 AM – 09:30 PM</span>
 </li>
