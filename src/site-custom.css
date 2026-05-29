@@ -481,7 +481,7 @@ body {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
   .menu-item .flex {
     flex-direction: column;
     align-items: flex-start;
