@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -7,6 +8,7 @@ body {
   background: #faf8f5;
   color: #1a1a1a;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 ::-webkit-scrollbar {
@@ -218,6 +220,14 @@ body {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(194, 171, 138, 0.2);
+}
+
+#mobileMenuWrapper {
+  pointer-events: none;
+}
+
+#mobileMenuWrapper:has(.mobile-menu.open) {
+  pointer-events: auto;
 }
 
 .mobile-menu {
@@ -471,7 +481,7 @@ body {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 580px) {
   .menu-item .flex {
     flex-direction: column;
     align-items: flex-start;

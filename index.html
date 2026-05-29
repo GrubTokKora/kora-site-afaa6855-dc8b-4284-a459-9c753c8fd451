@@ -129,7 +129,8 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 </div>
 </header>
 <!-- Mobile Menu -->
-<div class="mobile-menu fixed inset-0 z-[60] bg-warm-50 flex flex-col" id="mobileMenu">
+<div class="fixed inset-0 z-[60] overflow-hidden" id="mobileMenuWrapper">
+<div class="mobile-menu absolute inset-0 bg-warm-50 flex flex-col" id="mobileMenu">
 <div class="flex justify-between items-center p-6 border-b border-warm-200">
 <span class="font-display text-xl font-bold text-ink-900">Kora Demo</span>
 <button class="p-2 hover:bg-warm-200 rounded-lg transition-colors" id="closeMenu">
@@ -153,6 +154,7 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 </svg>
         (203) 595-5577
       </a>
+</div>
 </div>
 </div>
 <!-- ========== HERO SECTION ========== -->
