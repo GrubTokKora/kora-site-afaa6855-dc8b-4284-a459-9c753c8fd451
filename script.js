@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('contact-submit-btn');
     const formMessage = document.getElementById('contact-form-message');
     const koraConfig = window.KORA_CONFIG || {};
-    const recaptchaSiteKey = koraConfig.recaptchaSiteKey;
+    const recaptchaSiteKey = (koraConfig.recaptchaSiteKey || '').trim();
 
     if (!recaptchaSiteKey) {
       if (submitBtn) {
