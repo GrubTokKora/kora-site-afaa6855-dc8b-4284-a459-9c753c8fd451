@@ -4,9 +4,9 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
-  background: #faf8f5;
-  color: #1a1a1a;
+  font-family: 'Roboto', sans-serif;
+  background: var(--color-warm-50);
+  color: var(--color-ink-900);
   overflow-x: hidden;
   max-width: 100%;
 }
@@ -16,11 +16,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f5f0e8;
+  background: var(--color-warm-100);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #c2ab8a;
+  background: var(--color-brand-300);
   border-radius: 4px;
 }
 
@@ -117,11 +117,11 @@ body {
 
 .menu-item:hover {
   transform: translateX(8px);
-  background: rgba(251, 217, 192, 0.15);
+  background: color-mix(in oklab, var(--color-brand-100) 50%, transparent);
 }
 
 .menu-item:hover .menu-price {
-  color: #ba4815;
+  color: var(--color-brand-600);
 }
 
 .menu-item h4 {
@@ -138,7 +138,7 @@ body {
 }
 
 .btn-primary {
-  background: #ba4815;
+  background: var(--color-brand-600);
   color: white;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
@@ -149,7 +149,7 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: #943a18;
+  background: var(--color-brand-700);
   transform: translateX(-101%);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -164,21 +164,21 @@ body {
 }
 
 .btn-primary:hover {
-  box-shadow: 0 10px 30px -10px rgba(186, 72, 21, 0.5);
+  box-shadow: 0 10px 30px -10px color-mix(in oklab, var(--color-brand-600) 50%, transparent);
   transform: translateY(-2px);
 }
 
 .btn-outline {
-  border: 2px solid #ba4815;
-  color: #ba4815;
+  border: 2px solid var(--color-brand-600);
+  color: var(--color-brand-600);
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .btn-outline:hover {
-  background: #ba4815;
+  background: var(--color-brand-600);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 10px 30px -10px rgba(186, 72, 21, 0.3);
+  box-shadow: 0 10px 30px -10px color-mix(in oklab, var(--color-brand-600) 30%, transparent);
 }
 
 .social-link {
@@ -187,7 +187,7 @@ body {
 
 .social-link:hover {
   transform: translateY(-3px);
-  color: #ba4815;
+  color: var(--color-brand-500);
 }
 
 .nav-link {
@@ -201,7 +201,7 @@ body {
   left: 0;
   width: 0;
   height: 2px;
-  background: #ba4815;
+  background: var(--color-brand-500);
   transition: width 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -212,14 +212,14 @@ body {
 .section-divider {
   width: 60px;
   height: 3px;
-  background: #ba4815;
+  background: var(--color-brand-500);
   border-radius: 2px;
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.85);
+  background: color-mix(in oklab, var(--color-warm-50) 85%, transparent);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(194, 171, 138, 0.2);
+  border: 1px solid color-mix(in oklab, var(--color-warm-300) 50%, transparent);
 }
 
 #mobileMenuWrapper {
@@ -248,12 +248,12 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(186, 72, 21, 0);
+  background: color-mix(in oklab, var(--color-brand-500) 0%, transparent);
   transition: background 0.4s ease;
 }
 
 .img-overlay:hover::after {
-  background: rgba(186, 72, 21, 0.08);
+  background: color-mix(in oklab, var(--color-brand-500) 8%, transparent);
 }
 
 .hours-row {
@@ -261,11 +261,11 @@ body {
 }
 
 .hours-row:hover {
-  background: rgba(251, 217, 192, 0.2);
+  background: color-mix(in oklab, var(--color-brand-100) 50%, transparent);
 }
 
 .section-bg-alt {
-  background: linear-gradient(180deg, #faf8f5 0%, #f5f0e8 50%, #faf8f5 100%);
+  background: linear-gradient(180deg, var(--color-warm-50) 0%, var(--color-warm-100) 50%, var(--color-warm-50) 100%);
 }
 
 .input-group input,
@@ -275,15 +275,15 @@ body {
 
 .input-group input:focus,
 .input-group textarea:focus {
-  border-color: #ba4815;
-  box-shadow: 0 0 0 3px rgba(186, 72, 21, 0.1);
+  border-color: var(--color-brand-500);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--color-brand-500) 10%, transparent);
   outline: none;
 }
 
 .deco-circle {
   position: absolute;
   border-radius: 50%;
-  background: rgba(186, 72, 21, 0.04);
+  background: color-mix(in oklab, var(--color-brand-500) 4%, transparent);
   pointer-events: none;
 }
 
@@ -291,11 +291,11 @@ body {
 
   0%,
   100% {
-    box-shadow: 0 0 0 0 rgba(186, 72, 21, 0.15);
+    box-shadow: 0 0 0 0 color-mix(in oklab, var(--color-brand-500) 15%, transparent);
   }
 
   50% {
-    box-shadow: 0 0 0 12px rgba(186, 72, 21, 0);
+    box-shadow: 0 0 0 12px color-mix(in oklab, var(--color-brand-500) 0%, transparent);
   }
 }
 
@@ -304,7 +304,7 @@ body {
 }
 
 .navbar-scrolled {
-  background: rgba(250, 248, 245, 0.92) !important;
+  background: color-mix(in oklab, var(--color-warm-50) 92%, transparent) !important;
   backdrop-filter: blur(20px) !important;
   box-shadow: 0 1px 20px rgba(0, 0, 0, 0.06);
 }
@@ -312,11 +312,11 @@ body {
 .navbar-scrolled .nav-link,
 .navbar-scrolled .font-display,
 .navbar-scrolled a {
-  color: #1a1a1a !important;
+  color: var(--color-ink-900) !important;
 }
 
 .navbar-scrolled svg {
-  color: #1a1a1a !important;
+  color: var(--color-ink-900) !important;
 }
 
 /* Menu page styles */
@@ -326,11 +326,11 @@ body {
 }
 
 .menu-cat-tab:hover {
-  background: rgba(186, 72, 21, 0.08);
+  background: color-mix(in oklab, var(--color-brand-500) 8%, transparent);
 }
 
 .menu-cat-tab.active {
-  background: #ba4815;
+  background: var(--color-brand-600);
   color: white;
 }
 
@@ -384,7 +384,7 @@ body {
 
 /* Text gradient */
 .text-gradient {
-  background: linear-gradient(135deg, #ba4815 0%, #e0601a 50%, #f29d5e 100%);
+  background: linear-gradient(135deg, var(--color-brand-700) 0%, var(--color-brand-600) 50%, var(--color-brand-400) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -430,11 +430,11 @@ body {
 }
 
 .hero-overlay {
-  background: rgba(26, 18, 11, 0.55);
+  background: color-mix(in oklab, var(--color-ink-900) 65%, transparent);
 }
 
 .hero-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(186, 72, 21, 0.3) 0%, transparent 60%);
+  background: radial-gradient(circle at 50% 50%, color-mix(in oklab, var(--color-brand-500) 30%, transparent) 0%, transparent 60%);
 }
 
 .reveal-delay-100 {
