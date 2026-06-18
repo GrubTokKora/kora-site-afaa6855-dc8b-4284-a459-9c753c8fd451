@@ -3,3 +3,21 @@
 @source "../**/*.html";
 @source "../script.js";
 @import "./site-custom.css";
+
+/* KORA_BRAND_THEME_START */
+@theme {
+  --color-primary: #000000;
+  --color-secondary: #F5F5F5;
+  --color-accent: #8A8A8A;
+  --font-heading: "Playfair Display", serif;
+  --font-body: Roboto, sans-serif;
+}
+/* KORA_BRAND_THEME_END */
+
+/* KORA_BRAND_BASE_START */
+@layer base {
+  body { font-family: var(--font-body); }
+  h1, h2, h3, h4, h5, h6 { font-family: var(--font-heading); }
+}
+/* KORA_BRAND_BASE_END */
+
