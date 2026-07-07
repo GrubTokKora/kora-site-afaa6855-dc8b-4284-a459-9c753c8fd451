@@ -98,7 +98,50 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     "https://www.tiktok.com/@kora.demo",
     "https://share.google/Sw0KZz7ApWQWequED"
   ],
-  "hasMenu": "https://korademo.com/#menu-page"
+  "hasMenu": "https://korademo.com/#menu-page",
+  "review": [
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Rama Ramachandran"
+      },
+      "reviewBody": "Great little Thai place in downtown Stamford.  Flavorful dishes, good service and reasonable prices make this place worth visiting often.  Had the sweet corn soup, Drunken noodles with Chicken, Basil Shrimp and Green curry with vegetables.  Something for every palate in our group of 6.  Finally we t..."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Tihomir S"
+      },
+      "reviewBody": "We recently had lunch at Bedford Thai in Stamford, CT, and it was an excellent experience. We ordered the Basil Tofu and the Cashew Nut Tofu, and both dishes were absolutely delicious. The tofu was cooked to perfection, and the flavors were rich and well-balanced. The restaurant itself is a nice spo..."
+    },
+    {
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Nire Lewis"
+      },
+      "reviewBody": "Ordered delivery, and the food was DELICIOUS! Had the pan fried pork dumplings, and although they came super soft (almost steamed) they had great flavor. The spicy fried rice had the perfect spice, and the Tom yum goong was phenomenal. I will be returning if I’m back in Stamford."
+    }
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "3"
+  }
 }</script>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
@@ -138,17 +181,18 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@400;600;700&display=swap">
 <!-- KORA_GOOGLE_FONTS_END -->
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
-</link></link><link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+</link></link></link><link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 </link></link></link></head>
 <body class="antialiased">
 <!-- ========== NAVIGATION ========== -->
@@ -163,6 +207,7 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <a class="nav-link hover:text-white transition-colors" href="#about">About</a>
 <a class="nav-link hover:text-white transition-colors" href="#hours_location">Hours &amp; Location</a>
 <a class="nav-link hover:text-white transition-colors" href="#gallery">Gallery</a>
+<a class="nav-link hover:text-white transition-colors" href="#testimonials">Reviews</a>
 <a class="nav-link hover:text-white transition-colors" href="#contact">Contact</a>
 </nav>
 </div>
@@ -196,6 +241,7 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <a class="hover:text-brand-700 transition-colors" href="#hours">Hours</a>
 <a class="hover:text-brand-700 transition-colors" href="#location">Location</a>
 <a class="hover:text-brand-700 transition-colors" href="#gallery">Gallery</a>
+<a class="hover:text-brand-700 transition-colors" href="#testimonials">Reviews</a>
 <a class="hover:text-brand-700 transition-colors" href="#contact">Contact</a>
 </nav>
 <div class="mt-auto p-8 border-t border-warm-200">
@@ -896,6 +942,69 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 </div>
 </div>
 </section>
+<!-- ========== TESTIMONIALS ========== -->
+<section class="py-24 md:py-32 section-bg-alt" id="testimonials">
+<div class="container mx-auto px-6 max-w-6xl">
+<div class="text-center mb-16 reveal">
+<p class="text-brand-600 text-sm font-semibold tracking-[0.25em] uppercase mb-3">Testimonials</p>
+<h2 class="font-display text-4xl md:text-5xl font-bold text-ink-900 mb-4">What Our Customers Say</h2>
+<div class="section-divider mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 stagger-children">
+<!-- Review Card 1 -->
+<div class="glass-card rounded-3xl p-8 flex flex-col h-full shadow-lg">
+<div class="flex items-center mb-4">
+<img alt="Avatar of Rama Ramachandran" class="w-14 h-14 rounded-full mr-4 object-cover" height="56" loading="lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjX9QPYL2IonnbbW1oGQ8OXbKMbcLgFOfk-SPNqM8wFr2ESgEUiMZg=s128-c0x00000000-cc-rp-mo-ba4" width="56"/>
+<div>
+<h4 class="font-semibold text-ink-800 text-lg">Rama Ramachandran</h4>
+<div class="flex items-center">
+<svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+<svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+<svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+<svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+<svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+</div>
+</div>
+</div>
+<p class="text-ink-600 text-sm leading-relaxed">"Great little Thai place in downtown Stamford.  Flavorful dishes, good service and reasonable prices make this place worth visiting often.  Had the sweet corn soup, Drunken noodles with Chicken, Basil Shrimp and Green curry with vegetables.  Something for every palate in our group of 6.  Finally we t..."</p>
+</div>
+<!-- Review Card 2 -->
+<div class="glass-card rounded-3xl p-8 flex flex-col h-full shadow-lg">
+<div class="flex items-center mb-4">
+<img alt="Avatar of Tihomir S" class="w-14 h-14 rounded-full mr-4 object-cover" height="56" loading="lazy" src="https://lh3.googleusercontent.com/a/ACg8ocLcHqAvIi5JH0sFMucu5-QF3zq0oeQgcp0AMgsSp0Wa8a42R7A=s128-c0x00000000-cc-rp-mo-ba4" width="56"/>
+<div>
+<h4 class="font-semibold text-ink-800 text-lg">Tihomir S</h4>
+<div class="flex items-center">
+<svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+<svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+<svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+<svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+<svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+</div>
+</div>
+</div>
+<p class="text-ink-600 text-sm leading-relaxed">"We recently had lunch at Bedford Thai in Stamford, CT, and it was an excellent experience. We ordered the Basil Tofu and the Cashew Nut Tofu, and both dishes were absolutely delicious. The tofu was cooked to perfection, and the flavors were rich and well-balanced. The restaurant itself is a nice spo..."</p>
+</div>
+<!-- Review Card 3 -->
+<div class="glass-card rounded-3xl p-8 flex flex-col h-full shadow-lg">
+<div class="flex items-center mb-4">
+<img alt="Avatar of Nire Lewis" class="w-14 h-14 rounded-full mr-4 object-cover" height="56" loading="lazy" src="https://lh3.googleusercontent.com/a-/ALV-UjWnCxbsDTpvT6-NLnlZaY3tNIrjBnDMefS1d_4lU8FEoz94Y5NMrw=s128-c0x00000000-cc-rp-mo-ba3" width="56"/>
+<div>
+<h4 class="font-semibold text-ink-800 text-lg">Nire Lewis</h4>
+<div class="flex items-center">
+<svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+<svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+<svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+<svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+<svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+</div>
+</div>
+</div>
+<p class="text-ink-600 text-sm leading-relaxed">"Ordered delivery, and the food was DELICIOUS! Had the pan fried pork dumplings, and although they came super soft (almost steamed) they had great flavor. The spicy fried rice had the perfect spice, and the Tom yum goong was phenomenal. I will be returning if I’m back in Stamford."</p>
+</div>
+</div>
+</div>
+</section>
 <!-- ========== CONTACT ========== -->
 <section class="py-24 md:py-32 section-bg-alt relative" id="contact">
 <div class="container mx-auto px-6 max-w-6xl">
@@ -1067,10 +1176,10 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 </div>
 </div>
 <div class="border-t border-ink-800 pt-8 text-center">
-<img alt="Kora Demo 1 logo" class="h-12 w-auto mx-auto mb-4" height="48" loading="lazy" src="https://quseprdus1.blob.core.windows.net/kora-business-images/social-media/afaa6855-dc8b-4284-a459-9c753c8fd451/medialibrary/1781674810_rbpnce.jpg" width="180"/>
+<img alt="Kora Demo 1 logo" class="h-12 w-auto mx-auto mb-4" height="48" loading="lazy" src="https://quseprdus1.blob.core.windows.net/kora-business-images/social-media/afaa6855-dc8b-4284-a459-9c753c8fd451/medialibrary/1781674810_rbpnce.jpg" width="180">
 <p class="text-warm-500 text-sm">Authentic Thai Cuisine - Wilton, CT</p>
 <p class="text-ink-600 text-xs mt-4">All rights reserved.</p>
-</div>
+</img></div>
 </div>
 </footer>
 <script src="script.js"></script>
