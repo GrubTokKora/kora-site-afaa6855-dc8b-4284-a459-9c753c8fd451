@@ -182,16 +182,11 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@400;600;700&display=swap">
 <!-- KORA_GOOGLE_FONTS_END -->
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
@@ -200,8 +195,13 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
-</link></link></link></link></link></link></link></link></link></head>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
+</link></link></link></link></link></link></link></link></link></link></head>
 <body class="antialiased">
 <!-- ========== NAVIGATION ========== -->
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="navbar">
@@ -305,33 +305,99 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 </div>
 </section>
 <!-- ========== OFFERS ========== -->
-<section class="py-24 md:py-32 bg-white" id="offers">
-<div class="container mx-auto px-6 max-w-5xl">
+<section class="py-24 md:py-32 relative overflow-hidden" id="offers" style="background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%);">
+<!-- Decorative background elements -->
+<div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at 20% 50%, rgba(138,138,138,0.08) 0%, transparent 60%), radial-gradient(ellipse at 80% 20%, rgba(138,138,138,0.06) 0%, transparent 50%);"></div>
+<div class="absolute top-0 left-0 w-full h-px" style="background: linear-gradient(90deg, transparent, rgba(138,138,138,0.3), transparent);"></div>
+<div class="absolute bottom-0 left-0 w-full h-px" style="background: linear-gradient(90deg, transparent, rgba(138,138,138,0.3), transparent);"></div>
+<div class="container mx-auto px-6 max-w-6xl relative z-10">
+<!-- Section Header -->
 <div class="text-center mb-16 reveal">
-<p class="text-brand-600 text-sm font-semibold tracking-[0.25em] uppercase mb-3">Special Deals</p>
-<h2 class="font-display text-4xl md:text-6xl font-bold text-ink-900 mb-4">Our Offers</h2>
-<div class="section-divider mx-auto"></div>
+<span style="display:inline-block; background: rgba(138,138,138,0.15); border: 1px solid rgba(138,138,138,0.3); color: #c7c7c7; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; padding: 0.4rem 1.2rem; border-radius: 999px; margin-bottom: 1.25rem;">Limited Time Deals</span>
+<h2 class="font-display text-4xl md:text-6xl font-bold mb-4" style="color: #ffffff;">Our <span style="background: linear-gradient(135deg, #c7c7c7, #8a8a8a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Offers</span></h2>
+<div class="mx-auto mb-6" style="width: 60px; height: 3px; background: linear-gradient(90deg, #8a8a8a, #c7c7c7); border-radius: 2px;"></div>
+<p style="color: rgba(255,255,255,0.55); max-width: 480px; margin: 0 auto; font-size: 1rem; line-height: 1.7;">Exclusive deals crafted to make every visit even more memorable.</p>
 </div>
-<div class="grid md:grid-cols-1 gap-8">
-<div class="glass-card rounded-3xl p-8 md:p-12 shadow-xl shadow-warm-200/50 reveal-scale">
-<h3 class="font-display text-2xl md:text-3xl font-semibold text-ink-800 mb-4">weekend brunch special</h3>
-<p class="text-ink-600 mb-4">15%off on brunch items</p>
-<p class="text-sm text-ink-500">Valid until: 2026-06-18</p>
+<!-- Offers Grid -->
+<div class="grid md:grid-cols-2 gap-6 stagger-children">
+<!-- Card 1: Weekend Brunch Special -->
+<div class="reveal-scale" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 24px 48px rgba(0,0,0,0.4)'" style="background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 2rem 2.25rem; position: relative; overflow: hidden; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s ease;">
+<div style="position:absolute; top:0; right:0; width:180px; height:180px; background: radial-gradient(circle, rgba(138,138,138,0.12) 0%, transparent 70%); pointer-events:none;"></div>
+<div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem;">
+<div style="width:44px; height:44px; border-radius:12px; background: linear-gradient(135deg, #696969, #8a8a8a); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+<svg fill="none" height="22" stroke="white" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" x2="6" y1="1" y2="4"></line><line x1="10" x2="10" y1="1" y2="4"></line><line x1="14" x2="14" y1="1" y2="4"></line></svg>
 </div>
-<div class="glass-card rounded-3xl p-8 md:p-12 shadow-xl shadow-warm-200/50 reveal-scale">
-<h3 class="font-display text-2xl md:text-3xl font-semibold text-ink-800 mb-4">valentines offer</h3>
-<p class="text-ink-600 mb-4">special deal for couples</p>
-<p class="text-sm text-ink-500">Valid until: 2026-06-30</p>
+<span style="background: rgba(138,138,138,0.2); color: #c7c7c7; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 999px; border: 1px solid rgba(138,138,138,0.3);">Weekend Deal</span>
 </div>
-<div class="glass-card rounded-3xl p-8 md:p-12 shadow-xl shadow-warm-200/50 reveal-scale">
-<h3 class="font-display text-2xl md:text-3xl font-semibold text-ink-800 mb-4">free pasta on umang's birthday</h3>
-<p class="text-ink-600 mb-4">Celebrate Umang's birthday with a free pasta on us!</p>
-<p class="text-sm text-ink-500">Valid until: 2026-07-31</p>
+<h3 class="font-display" style="font-size: 1.6rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.2;">Weekend Brunch Special</h3>
+<p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">Treat yourself to a leisurely weekend brunch — enjoy <strong style="color:#c7c7c7;">15% off</strong> on all brunch items and start your weekend the right way.</p>
+<div style="display:flex; align-items:center; justify-content:space-between; padding-top:1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
+<div style="display:flex; align-items:center; gap:0.5rem; color: rgba(255,255,255,0.4); font-size:0.8rem;">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          Valid until Jun 18, 2026
+        </div>
+<div style="font-size: 2rem; font-weight: 900; color: #8a8a8a; font-family: 'Playfair Display', serif; line-height:1;">15%<span style="font-size:1rem; font-weight:600; color:#696969;"> OFF</span></div>
 </div>
-<div class="glass-card rounded-3xl p-8 md:p-12 shadow-xl shadow-warm-200/50 reveal-scale">
-<h3 class="font-display text-2xl md:text-3xl font-semibold text-ink-800 mb-4">10% Off All Curries</h3>
-<p class="text-ink-600 mb-4">Enjoy a 10% discount on all our delicious curry dishes.</p>
-<p class="text-sm text-ink-500">Valid until: 2026-08-31</p>
+</div>
+<!-- Card 2: Valentine's Offer -->
+<div class="reveal-scale" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 24px 48px rgba(0,0,0,0.4)'" style="background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 2rem 2.25rem; position: relative; overflow: hidden; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s ease;">
+<div style="position:absolute; top:0; right:0; width:180px; height:180px; background: radial-gradient(circle, rgba(138,138,138,0.12) 0%, transparent 70%); pointer-events:none;"></div>
+<div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem;">
+<div style="width:44px; height:44px; border-radius:12px; background: linear-gradient(135deg, #696969, #8a8a8a); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+<svg fill="none" height="22" stroke="white" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+</div>
+<span style="background: rgba(138,138,138,0.2); color: #c7c7c7; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 999px; border: 1px solid rgba(138,138,138,0.3);">Couples Special</span>
+</div>
+<h3 class="font-display" style="font-size: 1.6rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.2;">Valentine's Offer</h3>
+<p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">Celebrate love with a dining experience made for two. Our exclusive couples' deal is the perfect way to share a special evening together.</p>
+<div style="display:flex; align-items:center; justify-content:space-between; padding-top:1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
+<div style="display:flex; align-items:center; gap:0.5rem; color: rgba(255,255,255,0.4); font-size:0.8rem;">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          Valid until Jun 30, 2026
+        </div>
+<div style="display:flex; align-items:center; gap:0.4rem;">
+<svg fill="#8a8a8a" height="18" viewbox="0 0 24 24" width="18"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+<svg fill="#696969" height="18" viewbox="0 0 24 24" width="18"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+</div>
+</div>
+</div>
+<!-- Card 3: Birthday Pasta -->
+<div class="reveal-scale" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 24px 48px rgba(0,0,0,0.4)'" style="background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 2rem 2.25rem; position: relative; overflow: hidden; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s ease;">
+<div style="position:absolute; top:0; right:0; width:180px; height:180px; background: radial-gradient(circle, rgba(138,138,138,0.12) 0%, transparent 70%); pointer-events:none;"></div>
+<div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem;">
+<div style="width:44px; height:44px; border-radius:12px; background: linear-gradient(135deg, #696969, #8a8a8a); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+<svg fill="none" height="22" stroke="white" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M20 12V22H4V12"></path><path d="M22 7H2v5h20V7z"></path><path d="M12 22V7"></path><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
+</div>
+<span style="background: rgba(138,138,138,0.2); color: #c7c7c7; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 999px; border: 1px solid rgba(138,138,138,0.3);">Birthday Treat</span>
+</div>
+<h3 class="font-display" style="font-size: 1.6rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.2;">Free Pasta on Umang's Birthday</h3>
+<p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">Birthdays deserve something special! Join us and enjoy a complimentary pasta dish on the house — our gift to celebrate the occasion.</p>
+<div style="display:flex; align-items:center; justify-content:space-between; padding-top:1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
+<div style="display:flex; align-items:center; gap:0.5rem; color: rgba(255,255,255,0.4); font-size:0.8rem;">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          Valid until Jul 31, 2026
+        </div>
+<div style="font-size: 1.1rem; font-weight: 800; color: #8a8a8a; font-family: 'Playfair Display', serif; letter-spacing: -0.02em;">FREE Pasta 🎂</div>
+</div>
+</div>
+<!-- Card 4: 10% Off Curries -->
+<div class="reveal-scale" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 24px 48px rgba(0,0,0,0.4)'" style="background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 2rem 2.25rem; position: relative; overflow: hidden; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s ease;">
+<div style="position:absolute; top:0; right:0; width:180px; height:180px; background: radial-gradient(circle, rgba(138,138,138,0.12) 0%, transparent 70%); pointer-events:none;"></div>
+<div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem;">
+<div style="width:44px; height:44px; border-radius:12px; background: linear-gradient(135deg, #696969, #8a8a8a); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+<svg fill="none" height="22" stroke="white" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"></path><path d="M12 8v4l3 3"></path></svg>
+</div>
+<span style="background: rgba(138,138,138,0.2); color: #c7c7c7; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 999px; border: 1px solid rgba(138,138,138,0.3);">Curry Lovers</span>
+</div>
+<h3 class="font-display" style="font-size: 1.6rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.2;">10% Off All Curries</h3>
+<p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">Dive into our rich, aromatic curry selection and save on every bowl. A full 10% off across our entire curry menu — don't miss out.</p>
+<div style="display:flex; align-items:center; justify-content:space-between; padding-top:1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
+<div style="display:flex; align-items:center; gap:0.5rem; color: rgba(255,255,255,0.4); font-size:0.8rem;">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
+          Valid until Aug 31, 2026
+        </div>
+<div style="font-size: 2rem; font-weight: 900; color: #8a8a8a; font-family: 'Playfair Display', serif; line-height:1;">10%<span style="font-size:1rem; font-weight:600; color:#696969;"> OFF</span></div>
+</div>
 </div>
 </div>
 </div>
