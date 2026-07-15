@@ -182,16 +182,11 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@400;600;700&display=swap">
 <!-- KORA_GOOGLE_FONTS_END -->
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
@@ -200,8 +195,13 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
-</link></link></link></link></link></link></link></link></link></link></head>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+</link></link></link></link></link></link></link></link></link></head>
 <body class="antialiased">
 <!-- ========== NAVIGATION ========== -->
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="navbar">
@@ -610,271 +610,486 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 </div>
 </section>
 <!-- ========== FULL MENU PAGE ========== -->
-<section class="py-24 md:py-32 bg-white relative overflow-hidden" id="menu-page">
-<div class="deco-circle w-[600px] h-[600px] -top-80 -left-80 opacity-20"></div>
-<div class="deco-circle w-[400px] h-[400px] -bottom-40 -right-40 opacity-15"></div>
+<style>
+  /* ── Premium Menu Redesign ── */
+  .menu-page-hero {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+    border-radius: 28px;
+    margin-bottom: 3rem;
+  }
+  .menu-page-hero img {
+    width: 100%; height: 100%; object-fit: cover;
+    transform: scale(1.05);
+    transition: transform 8s ease;
+  }
+  .menu-page-hero:hover img { transform: scale(1.1); }
+  .menu-page-hero-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.35) 60%, rgba(0,0,0,0.15) 100%);
+    display: flex; flex-direction: column;
+    justify-content: flex-end; padding: 2.5rem;
+  }
+  .menu-page-hero-overlay h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800; color: #fff; line-height: 1.1; margin-bottom: 0.5rem;
+  }
+  .menu-page-hero-overlay p { color: rgba(255,255,255,0.75); font-size: 1rem; max-width: 480px; }
+
+  /* Category tabs – pill style */
+  .menu-tabs-bar {
+    display: flex; flex-wrap: wrap; gap: 0.6rem;
+    justify-content: center; margin-bottom: 2.5rem;
+  }
+  .menu-tab-pill {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    padding: 0.55rem 1.4rem; border-radius: 999px;
+    font-size: 0.78rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    border: 1.5px solid #e0e0e0; background: #fff; color: #696969;
+    cursor: pointer; transition: all 0.28s cubic-bezier(0.16,1,0.3,1);
+    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  }
+  .menu-tab-pill:hover { border-color: #8a8a8a; color: #333; background: #f5f5f5; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+  .menu-tab-pill.active { background: #1a1a1a; color: #fff; border-color: #1a1a1a; box-shadow: 0 6px 20px rgba(0,0,0,0.22); transform: translateY(-2px); }
+  .menu-tab-pill .tab-count {
+    background: rgba(255,255,255,0.2); color: inherit;
+    font-size: 0.68rem; padding: 0.1rem 0.45rem; border-radius: 999px;
+  }
+  .menu-tab-pill:not(.active) .tab-count { background: #f0f0f0; color: #8a8a8a; }
+
+  /* Section header strip */
+  .menu-section-header {
+    display: flex; align-items: center; gap: 1rem; margin-bottom: 1.75rem;
+  }
+  .menu-section-header-line { flex: 1; height: 1px; background: linear-gradient(90deg, #e0e0e0, transparent); }
+  .menu-section-header-line.right { background: linear-gradient(270deg, #e0e0e0, transparent); }
+  .menu-section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; font-weight: 700; color: #1a1a1a;
+    letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap;
+  }
+
+  /* Card grid */
+  .menu-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .menu-cards-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1024px) {
+    .menu-cards-grid { grid-template-columns: repeat(3, 1fr); }
+  }
+
+  /* Individual menu card */
+  .menu-card-v2 {
+    background: #fff;
+    border: 1px solid #eeeeee;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex; flex-direction: column;
+    transition: all 0.32s cubic-bezier(0.16,1,0.3,1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    cursor: default;
+  }
+  .menu-card-v2:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+    border-color: #c7c7c7;
+  }
+  .menu-card-v2:hover .menu-card-img-wrap img { transform: scale(1.07); }
+
+  /* Card image slot */
+  .menu-card-img-wrap {
+    width: 100%; height: 160px; overflow: hidden; background: #f5f5f5; flex-shrink: 0;
+  }
+  .menu-card-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s cubic-bezier(0.16,1,0.3,1); }
+
+  /* Card body */
+  .menu-card-body {
+    padding: 1.1rem 1.25rem 1.25rem;
+    display: flex; flex-direction: column; flex: 1;
+  }
+  .menu-card-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; font-weight: 700; color: #1a1a1a;
+    margin-bottom: 0.35rem; line-height: 1.3;
+  }
+  .menu-card-desc {
+    font-size: 0.8rem; color: #696969; line-height: 1.55;
+    flex: 1; margin-bottom: 0.9rem;
+  }
+  .menu-card-footer {
+    display: flex; align-items: center; justify-content: space-between;
+    padding-top: 0.75rem; border-top: 1px solid #f0f0f0;
+  }
+  .menu-card-price {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem; font-weight: 800; color: #1a1a1a;
+  }
+  .menu-card-badge {
+    font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+    padding: 0.2rem 0.6rem; border-radius: 999px;
+    background: #f0f0f0; color: #8a8a8a; border: 1px solid #e0e0e0;
+  }
+
+  /* No-image card variant (text-only) */
+  .menu-card-v2.no-img .menu-card-body { padding-top: 1.4rem; }
+  .menu-card-v2.no-img { border-left: 3px solid #1a1a1a; }
+
+  /* Fade-in animation for section switch */
+  @keyframes menuFadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .menu-cat-section.active .menu-cards-grid { animation: menuFadeUp 0.45s cubic-bezier(0.16,1,0.3,1) both; }
+</style>
+<section class="py-24 md:py-32 relative overflow-hidden" id="menu-page" style="background: linear-gradient(180deg, #ffffff 0%, #fafafa 50%, #ffffff 100%);">
+<div class="deco-circle w-[600px] h-[600px] -top-80 -left-80 opacity-10"></div>
+<div class="deco-circle w-[400px] h-[400px] -bottom-40 -right-40 opacity-10"></div>
 <div class="container mx-auto px-6 max-w-6xl relative z-10">
-<div class="text-center mb-16 reveal">
+<!-- Section intro -->
+<div class="text-center mb-10 reveal">
 <p class="text-brand-600 text-sm font-semibold tracking-[0.25em] uppercase mb-3">Our Selection</p>
 <h2 class="font-display text-4xl md:text-6xl font-bold text-ink-900 mb-4">Our Menu</h2>
 <div class="section-divider mx-auto"></div>
-<p class="text-ink-500 mt-4 max-w-lg mx-auto">Authentic Thai flavors crafted with passion and the finest
-          ingredients.</p>
+<p class="text-ink-500 mt-4 max-w-lg mx-auto">Authentic Thai flavors crafted with passion and the finest ingredients.</p>
+</div>
+<!-- Hero banner -->
+<div class="menu-page-hero reveal">
+<img alt="Authentic Thai cuisine spread" loading="lazy" src="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/afaa6855-dc8b-4284-a459-9c753c8fd451/de8c94d8-887e-4625-825f-ec262dbc28df/1778595086_i97ah0.webp"/>
+<div class="menu-page-hero-overlay">
+<h2>Crafted with Passion</h2>
+<p>Every dish prepared fresh to order using premium spices and herbs from Thailand.</p>
+</div>
 </div>
 <!-- Category Tabs -->
-<div class="flex flex-wrap justify-center gap-3 mb-12 reveal">
-<button class="menu-cat-tab active px-5 py-2.5 rounded-full text-sm font-semibold uppercase tracking-wider border border-warm-200" data-cat="APPETIZER">APPETIZER</button>
-<button class="menu-cat-tab px-5 py-2.5 rounded-full text-sm font-semibold uppercase tracking-wider border border-warm-200" data-cat="CHEF SPECIAL">CHEF SPECIAL</button>
+<div class="menu-tabs-bar reveal">
+<button class="menu-tab-pill menu-cat-tab active" data-cat="APPETIZER">
+        Appetizers <span class="tab-count">15</span>
+</button>
+<button class="menu-tab-pill menu-cat-tab" data-cat="CHEF SPECIAL">
+        Chef's Specials <span class="tab-count">15</span>
+</button>
 </div>
-<!-- Menu Content -->
-<div class="reveal-scale">
+<!-- ── APPETIZER ── -->
 <div class="menu-cat-section active" data-section="APPETIZER">
-<div class="glass-card rounded-3xl p-8 md:p-12 shadow-xl shadow-warm-200/50">
-<h3 class="font-display text-2xl md:text-3xl font-semibold text-center mb-10 text-ink-800">APPETIZER</h3>
-<div class="grid md:grid-cols-2 gap-x-10 gap-y-0">
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">CHICKEN CASHEW WRAP TEST
-                  </h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$11.95</span>
+<div class="menu-section-header">
+<div class="menu-section-header-line"></div>
+<span class="menu-section-title">Appetizers</span>
+<div class="menu-section-header-line right"></div>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Minced chicken, carrot, celery, cilantro and cashew nut
-                  served with lettuce</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">ROTI CANAI</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$8.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Multi layered bread served with chicken curry</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">CRAB RANGOON</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$9.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Crab meat and cream cheese wrapped in wonton wrapper</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">CURRY PUFF</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$7.90</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Pastry stuffed with minced chicken, potato and curry
-                  powder</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">SPRING ROLLS</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$6.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">crispy vegetable rolls with sweet chili sauce</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">PO PIA SOD</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$7.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Lettuce, cucumber, carrot, cilantro, noodle wrapped in
-                  rice paper roll</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">SHRIMP SUMMER ROLL
-                  </h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$9.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Shrimp, lettuce, cucumber, carrot, noodle, cilantro and
-                  basil wrapped in rice paper roll</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">TAO HOO TORD</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$7.25</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Crispy tofu served with sweet chili sauce</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">DUMPLING</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$8.50</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Steamed or pan fried</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">CHICKEN SATAY</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$10.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Grilled marinated chicken served with peanut sauce and
-                  cucumber sauce</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">CHICKEN WING</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$8.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Fried chicken wing served with sweet chili sauce</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">LIME CHILI SHRIMP</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$12.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Batter-fried shrimp, lime, onion, bell pepper, lemon
-                  grass and chili sauce</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">CRISPY CALAMARI</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$10.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Batter-fried calamari with sweet chili sauce</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">MEE GROB</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$11.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Shrimp, crispy rice noodle, sweet and sour sauce</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">KONG TOD</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$9.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Crispy shrimp served with sweet chili sauce</p>
+<div class="menu-cards-grid">
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Chicken Cashew Wrap</div>
+<div class="menu-card-desc">Minced chicken, carrot, celery, cilantro and cashew nut served with lettuce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$11.95</span>
+<span class="menu-card-badge">Chicken</span>
 </div>
 </div>
 </div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Roti Canai</div>
+<div class="menu-card-desc">Multi layered bread served with chicken curry</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$8.95</span>
+<span class="menu-card-badge">Bread</span>
 </div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Crab Rangoon</div>
+<div class="menu-card-desc">Crab meat and cream cheese wrapped in wonton wrapper</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$9.95</span>
+<span class="menu-card-badge">Seafood</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Curry Puff</div>
+<div class="menu-card-desc">Pastry stuffed with minced chicken, potato and curry powder</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$7.90</span>
+<span class="menu-card-badge">Pastry</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Spring Rolls</div>
+<div class="menu-card-desc">Crispy vegetable rolls with sweet chili sauce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$6.95</span>
+<span class="menu-card-badge">Veg</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Po Pia Sod</div>
+<div class="menu-card-desc">Lettuce, cucumber, carrot, cilantro, noodle wrapped in rice paper roll</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$7.95</span>
+<span class="menu-card-badge">Fresh Roll</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Shrimp Summer Roll</div>
+<div class="menu-card-desc">Shrimp, lettuce, cucumber, carrot, noodle, cilantro and basil wrapped in rice paper roll</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$9.95</span>
+<span class="menu-card-badge">Seafood</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Tao Hoo Tord</div>
+<div class="menu-card-desc">Crispy tofu served with sweet chili sauce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$7.25</span>
+<span class="menu-card-badge">Vegan</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Dumpling</div>
+<div class="menu-card-desc">Steamed or pan fried</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$8.50</span>
+<span class="menu-card-badge">Classic</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Chicken Satay</div>
+<div class="menu-card-desc">Grilled marinated chicken served with peanut sauce and cucumber sauce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$10.95</span>
+<span class="menu-card-badge">Grilled</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Chicken Wing</div>
+<div class="menu-card-desc">Fried chicken wing served with sweet chili sauce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$8.95</span>
+<span class="menu-card-badge">Fried</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Lime Chili Shrimp</div>
+<div class="menu-card-desc">Batter-fried shrimp, lime, onion, bell pepper, lemon grass and chili sauce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$12.95</span>
+<span class="menu-card-badge">Seafood</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Crispy Calamari</div>
+<div class="menu-card-desc">Batter-fried calamari with sweet chili sauce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$10.95</span>
+<span class="menu-card-badge">Seafood</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Mee Grob</div>
+<div class="menu-card-desc">Shrimp, crispy rice noodle, sweet and sour sauce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$11.95</span>
+<span class="menu-card-badge">Noodle</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Kong Tod</div>
+<div class="menu-card-desc">Crispy shrimp served with sweet chili sauce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$9.95</span>
+<span class="menu-card-badge">Seafood</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ── CHEF SPECIAL ── -->
 <div class="menu-cat-section" data-section="CHEF SPECIAL">
-<div class="glass-card rounded-3xl p-8 md:p-12 shadow-xl shadow-warm-200/50">
-<h3 class="font-display text-2xl md:text-3xl font-semibold text-center mb-10 text-ink-800">CHEF SPECIAL</h3>
-<div class="grid md:grid-cols-2 gap-x-10 gap-y-0">
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">SIZZLING PANCAKE</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$22.95</span>
+<div class="menu-section-header">
+<div class="menu-section-header-line"></div>
+<span class="menu-section-title">Chef's Specials</span>
+<div class="menu-section-header-line right"></div>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Rice pancake filled with shrimp, crab meat, ground pork,
-                  mushroom, onion, bean sprout and ground peanut (doesn't served with rice)</p>
+<div class="menu-cards-grid">
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Sizzling Pancake</div>
+<div class="menu-card-desc">Rice pancake filled with shrimp, crab meat, ground pork, mushroom, onion, bean sprout and ground peanut</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$22.95</span>
+<span class="menu-card-badge">Signature</span>
 </div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">SEAFOOD DELIGHT</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$23.95</span>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Shrimp, scallop, calamari, mussel, crabmeat, tomato,
-                  onion, bell pepper, pineapple, egg and spicy curry sauce</p>
 </div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">PLA RAD PRIK</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$27.95</span>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Seafood Delight</div>
+<div class="menu-card-desc">Shrimp, scallop, calamari, mussel, crabmeat, tomato, onion, bell pepper, pineapple, egg and spicy curry sauce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$23.95</span>
+<span class="menu-card-badge">Seafood</span>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Crispy whole red snapper topped with onion, bell pepper
-                  and red chili paste</p>
 </div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">PLA SAM ROD</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$27.95</span>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Crispy whole red snapper topped with onion, bell pepper
-                  and sweet chili sauce</p>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Pla Rad Prik</div>
+<div class="menu-card-desc">Crispy whole red snapper topped with onion, bell pepper and red chili paste</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$27.95</span>
+<span class="menu-card-badge">Whole Fish</span>
 </div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">SALMON MANGO CURRY
-                  </h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$22.95</span>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Salmon with onion, bell pepper, tomato, coconut milk and
-                  mango</p>
 </div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">STEAMED GINGER FISH
-                  </h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$20.95</span>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Pla Sam Rod</div>
+<div class="menu-card-desc">Crispy whole red snapper topped with onion, bell pepper and sweet chili sauce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$27.95</span>
+<span class="menu-card-badge">Whole Fish</span>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Steamed tilapia fish topped with bell pepper, garlic,
-                  onion, broccoli, snow peas, scallion and cilantro in soy ginger sauce</p>
 </div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">PINEAPPLE DUCK CURRY
-                  </h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$25.95</span>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Spicy duck, pineapple, coconut, basil and red curry
-                  paste</p>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Salmon Mango Curry</div>
+<div class="menu-card-desc">Salmon with onion, bell pepper, tomato, coconut milk and mango</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$22.95</span>
+<span class="menu-card-badge">Curry</span>
 </div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">DUCK CHOO CHEE</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$25.95</span>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Spicy duck, topped with choo chee sauce and lime leaf
-                </p>
 </div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">DUCK GA PROW</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$25.95</span>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Steamed Ginger Fish</div>
+<div class="menu-card-desc">Steamed tilapia topped with bell pepper, garlic, onion, broccoli, snow peas, scallion and cilantro in soy ginger sauce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$20.95</span>
+<span class="menu-card-badge">Steamed</span>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Spicy duck with onion, bell pepper, mushroom, chili and
-                  basil</p>
 </div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">PEANUT SHRIMP CURRY
-                  </h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$20.95</span>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Peanut sauce, bell pepper, zucchini, pineapple, basil
-                  and curry</p>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Pineapple Duck Curry</div>
+<div class="menu-card-desc">Spicy duck, pineapple, coconut, basil and red curry paste</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$25.95</span>
+<span class="menu-card-badge">Duck</span>
 </div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">PRA RAAM CHICKEN</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$17.95</span>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Chicken, spinach, napa, snow pea, cashew nut and peanut
-                  sauce</p>
 </div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">SHAKING BEEF</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$20.95</span>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Duck Choo Chee</div>
+<div class="menu-card-desc">Spicy duck, topped with choo chee sauce and lime leaf</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$25.95</span>
+<span class="menu-card-badge">Duck</span>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Tender flank steak marinated in house special sauce,
-                  served on a bed of lettuce, cucumber, onion, tomato and ground peanut</p>
 </div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">LAKSA SHRIMP</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$19.95</span>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Shrimp, rice noodles, red pepper, basil, cilantro,
-                  scallions and coconut red curry sauce. Does not served with rice.</p>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Duck Ga Prow</div>
+<div class="menu-card-desc">Spicy duck with onion, bell pepper, mushroom, chili and basil</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$25.95</span>
+<span class="menu-card-badge">Duck</span>
 </div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">GARLIC EGGPLANT
-                    ASPARAGUS</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$17.95</span>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Asparagus and eggplant sauteed with garlic sauce</p>
 </div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">BURGER</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$14.99</span>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Peanut Shrimp Curry</div>
+<div class="menu-card-desc">Peanut sauce, bell pepper, zucchini, pineapple, basil and curry</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$20.95</span>
+<span class="menu-card-badge">Curry</span>
 </div>
-<p class="text-sm text-ink-500 leading-relaxed">Angus beef, cheddar cheese, lettuce, tomato, caramelized
-                  onions, and garlic aioli sauce</p>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Pra Raam Chicken</div>
+<div class="menu-card-desc">Chicken, spinach, napa, snow pea, cashew nut and peanut sauce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$17.95</span>
+<span class="menu-card-badge">Chicken</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Shaking Beef</div>
+<div class="menu-card-desc">Tender flank steak marinated in house special sauce, served on a bed of lettuce, cucumber, onion, tomato and ground peanut</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$20.95</span>
+<span class="menu-card-badge">Beef</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Laksa Shrimp</div>
+<div class="menu-card-desc">Shrimp, rice noodles, red pepper, basil, cilantro, scallions and coconut red curry sauce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$19.95</span>
+<span class="menu-card-badge">Noodle</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Garlic Eggplant Asparagus</div>
+<div class="menu-card-desc">Asparagus and eggplant sauteed with garlic sauce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$17.95</span>
+<span class="menu-card-badge">Veg</span>
+</div>
+</div>
+</div>
+<div class="menu-card-v2 no-img">
+<div class="menu-card-body">
+<div class="menu-card-name">Burger</div>
+<div class="menu-card-desc">Angus beef, cheddar cheese, lettuce, tomato, caramelized onions, and garlic aioli sauce</div>
+<div class="menu-card-footer">
+<span class="menu-card-price">$14.99</span>
+<span class="menu-card-badge">Beef</span>
 </div>
 </div>
 </div>
