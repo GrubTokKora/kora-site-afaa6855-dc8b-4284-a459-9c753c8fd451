@@ -116,7 +116,8 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@400;600;700&display=swap">
 <!-- KORA_GOOGLE_FONTS_END -->
-</head>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
+</link></head>
 <body class="antialiased">
 <!-- ========== NAVIGATION ========== -->
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="navbar">
@@ -126,20 +127,20 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <img alt="Kora Demo logo" class="h-10 w-auto object-contain" decoding="async" height="40" loading="eager" src="https://quseprdus1.blob.core.windows.net/kora-business-images/social-media/afaa6855-dc8b-4284-a459-9c753c8fd451/medialibrary/1781674810_rbpnce.jpg" width="150"/>
 </a>
 <nav class="hidden md:flex items-center gap-8 text-[14px] font-medium uppercase tracking-widest text-white/80">
+<a class="nav-link hover:text-white transition-colors" href="#offers">Offers</a>
 <a class="nav-link hover:text-white transition-colors" href="#menu-page">Menu</a>
 <a class="nav-link hover:text-white transition-colors" href="#about">About</a>
 <a class="nav-link hover:text-white transition-colors" href="#hours_location">Hours &amp; Location</a>
 <a class="nav-link hover:text-white transition-colors" href="#gallery">Gallery</a>
 <a class="nav-link hover:text-white transition-colors" href="#testimonials">Reviews</a>
-<a class="nav-link hover:text-white transition-colors" href="#tiktok">TikTok</a>
 <a class="nav-link hover:text-white transition-colors" href="#contact">Contact</a>
 </nav>
 </div>
-<a class="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-white/90 hover:text-brand-300 transition-colors" href="tel:+1123456789">
+<a class="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-white/90 hover:text-brand-300 transition-colors" href="tel:+12035550100">
 <svg fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="16">
 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
 </svg>
-        +1123456789
+        +12035550100
       </a>
 <button aria-label="Toggle menu" class="md:hidden p-2 hover:bg-white/10 rounded-lg transition-colors text-white" id="menuBtn">
 <svg fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="24">
@@ -160,21 +161,20 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 </button>
 </div>
 <nav class="flex flex-col p-8 gap-6 text-lg font-medium text-ink-700">
+<a class="hover:text-brand-700 transition-colors" href="#offers">Offers</a>
 <a class="hover:text-brand-700 transition-colors" href="#menu-page">Menu</a>
 <a class="hover:text-brand-700 transition-colors" href="#about">About</a>
-<a class="hover:text-brand-700 transition-colors" href="#hours">Hours</a>
-<a class="hover:text-brand-700 transition-colors" href="#location">Location</a>
+<a class="hover:text-brand-700 transition-colors" href="#hours_location">Hours &amp; Location</a>
 <a class="hover:text-brand-700 transition-colors" href="#gallery">Gallery</a>
 <a class="hover:text-brand-700 transition-colors" href="#testimonials">Reviews</a>
-<a class="hover:text-brand-700 transition-colors" href="#tiktok">TikTok</a>
 <a class="hover:text-brand-700 transition-colors" href="#contact">Contact</a>
 </nav>
 <div class="mt-auto p-8 border-t border-warm-200">
-<a class="flex items-center gap-3 text-brand-700 font-semibold" href="tel:+1123456789">
+<a class="flex items-center gap-3 text-brand-700 font-semibold" href="tel:+12035550100">
 <svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="20">
 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
 </svg>
-        +1123456789
+        +12035550100
       </a>
 </div>
 </div>
@@ -234,311 +234,89 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 </div>
 <!-- Offers Grid -->
 <div class="grid md:grid-cols-2 gap-6 stagger-children">
-<!-- Card 1: Weekend Brunch Special -->
+<!-- weekend brunch special -->
 <div class="reveal-scale" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 24px 48px rgba(0,0,0,0.4)'" style="background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 2rem 2.25rem; position: relative; overflow: hidden; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s ease;">
 <div style="position:absolute; top:0; right:0; width:180px; height:180px; background: radial-gradient(circle, rgba(138,138,138,0.12) 0%, transparent 70%); pointer-events:none;"></div>
 <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem;">
 <div style="width:44px; height:44px; border-radius:12px; background: linear-gradient(135deg, #696969, #8a8a8a); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
 <svg fill="none" height="22" stroke="white" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" x2="6" y1="1" y2="4"></line><line x1="10" x2="10" y1="1" y2="4"></line><line x1="14" x2="14" y1="1" y2="4"></line></svg>
 </div>
-<span style="background: rgba(138,138,138,0.2); color: #c7c7c7; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 999px; border: 1px solid rgba(138,138,138,0.3);">Weekend Deal</span>
 </div>
-<h3 class="font-display" style="font-size: 1.6rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.2;">Weekend Brunch Special</h3>
-<p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">Treat yourself to a leisurely weekend brunch — enjoy <strong style="color:#c7c7c7;">15% off</strong> on all brunch items and start your weekend the right way.</p>
+<h3 class="font-display capitalize" style="font-size: 1.6rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.2;">weekend brunch special</h3>
+<p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">15%off on brunch items</p>
 <div style="display:flex; align-items:center; justify-content:space-between; padding-top:1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
 <div style="display:flex; align-items:center; gap:0.5rem; color: rgba(255,255,255,0.4); font-size:0.8rem;">
 <svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
-          Valid until Jun 18, 2026
-        </div>
-<div style="font-size: 2rem; font-weight: 900; color: #8a8a8a; font-family: 'Playfair Display', serif; line-height:1;">15%<span style="font-size:1rem; font-weight:600; color:#696969;"> OFF</span></div>
+        Valid until Jun 18, 2026
+      </div>
 </div>
 </div>
-<!-- Card 2: Valentine's Offer -->
+<!-- valentines offer -->
 <div class="reveal-scale" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 24px 48px rgba(0,0,0,0.4)'" style="background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 2rem 2.25rem; position: relative; overflow: hidden; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s ease;">
 <div style="position:absolute; top:0; right:0; width:180px; height:180px; background: radial-gradient(circle, rgba(138,138,138,0.12) 0%, transparent 70%); pointer-events:none;"></div>
 <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem;">
 <div style="width:44px; height:44px; border-radius:12px; background: linear-gradient(135deg, #696969, #8a8a8a); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
 <svg fill="none" height="22" stroke="white" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
 </div>
-<span style="background: rgba(138,138,138,0.2); color: #c7c7c7; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 999px; border: 1px solid rgba(138,138,138,0.3);">Couples Special</span>
 </div>
-<h3 class="font-display" style="font-size: 1.6rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.2;">Valentine's Offer</h3>
-<p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">Celebrate love with a dining experience made for two. Our exclusive couples' deal is the perfect way to share a special evening together.</p>
+<h3 class="font-display capitalize" style="font-size: 1.6rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.2;">valentines offer</h3>
+<p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">special deal for couples</p>
 <div style="display:flex; align-items:center; justify-content:space-between; padding-top:1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
 <div style="display:flex; align-items:center; gap:0.5rem; color: rgba(255,255,255,0.4); font-size:0.8rem;">
 <svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
-          Valid until Jun 30, 2026
-        </div>
-<div style="display:flex; align-items:center; gap:0.4rem;">
-<svg fill="#8a8a8a" height="18" viewbox="0 0 24 24" width="18"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
-<svg fill="#696969" height="18" viewbox="0 0 24 24" width="18"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        Valid until Jun 30, 2026
+      </div>
 </div>
 </div>
-</div>
-<!-- Card 3: Birthday Pasta -->
+<!-- free pasta on umang's birthday -->
 <div class="reveal-scale" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 24px 48px rgba(0,0,0,0.4)'" style="background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 2rem 2.25rem; position: relative; overflow: hidden; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s ease;">
 <div style="position:absolute; top:0; right:0; width:180px; height:180px; background: radial-gradient(circle, rgba(138,138,138,0.12) 0%, transparent 70%); pointer-events:none;"></div>
 <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem;">
 <div style="width:44px; height:44px; border-radius:12px; background: linear-gradient(135deg, #696969, #8a8a8a); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
 <svg fill="none" height="22" stroke="white" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M20 12V22H4V12"></path><path d="M22 7H2v5h20V7z"></path><path d="M12 22V7"></path><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"></path><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"></path></svg>
 </div>
-<span style="background: rgba(138,138,138,0.2); color: #c7c7c7; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 999px; border: 1px solid rgba(138,138,138,0.3);">Birthday Treat</span>
 </div>
-<h3 class="font-display" style="font-size: 1.6rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.2;">Free Pasta on Umang's Birthday</h3>
-<p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">Birthdays deserve something special! Join us and enjoy a complimentary pasta dish on the house — our gift to celebrate the occasion.</p>
+<h3 class="font-display capitalize" style="font-size: 1.6rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.2;">free pasta on umang's birthday</h3>
+<p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">Celebrate Umang's birthday with a free pasta on us!</p>
 <div style="display:flex; align-items:center; justify-content:space-between; padding-top:1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
 <div style="display:flex; align-items:center; gap:0.5rem; color: rgba(255,255,255,0.4); font-size:0.8rem;">
 <svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
-          Valid until Jul 31, 2026
-        </div>
-<div style="font-size: 1.1rem; font-weight: 800; color: #8a8a8a; font-family: 'Playfair Display', serif; letter-spacing: -0.02em;">FREE Pasta 🎂</div>
+        Valid until Jul 31, 2026
+      </div>
 </div>
 </div>
-<!-- Card 4: 10% Off Curries -->
+<!-- 10% Off All Curries -->
 <div class="reveal-scale" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 24px 48px rgba(0,0,0,0.4)'" style="background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 2rem 2.25rem; position: relative; overflow: hidden; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s ease;">
 <div style="position:absolute; top:0; right:0; width:180px; height:180px; background: radial-gradient(circle, rgba(138,138,138,0.12) 0%, transparent 70%); pointer-events:none;"></div>
 <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem;">
 <div style="width:44px; height:44px; border-radius:12px; background: linear-gradient(135deg, #696969, #8a8a8a); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
 <svg fill="none" height="22" stroke="white" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"></path><path d="M12 8v4l3 3"></path></svg>
 </div>
-<span style="background: rgba(138,138,138,0.2); color: #c7c7c7; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 999px; border: 1px solid rgba(138,138,138,0.3);">Curry Lovers</span>
 </div>
-<h3 class="font-display" style="font-size: 1.6rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.2;">10% Off All Curries</h3>
-<p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">Dive into our rich, aromatic curry selection and save on every bowl. A full 10% off across our entire curry menu — don't miss out.</p>
+<h3 class="font-display capitalize" style="font-size: 1.6rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.2;">10% Off All Curries</h3>
+<p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">Enjoy a 10% discount on all our delicious curry dishes.</p>
 <div style="display:flex; align-items:center; justify-content:space-between; padding-top:1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
 <div style="display:flex; align-items:center; gap:0.5rem; color: rgba(255,255,255,0.4); font-size:0.8rem;">
 <svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
-          Valid until Aug 31, 2026
-        </div>
-<div style="font-size: 2rem; font-weight: 900; color: #8a8a8a; font-family: 'Playfair Display', serif; line-height:1;">10%<span style="font-size:1rem; font-weight:600; color:#696969;"> OFF</span></div>
+        Valid until Aug 31, 2026
+      </div>
 </div>
 </div>
-</div>
-<!-- Card 5: Editor v2 Testing -->
+<!-- editor v2 testing -->
 <div class="reveal-scale" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none'" onmouseover="this.style.transform='translateY(-6px)';this.style.boxShadow='0 24px 48px rgba(0,0,0,0.4)'" style="background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 24px; padding: 2rem 2.25rem; position: relative; overflow: hidden; transition: transform 0.35s cubic-bezier(0.16,1,0.3,1), box-shadow 0.35s ease;">
 <div style="position:absolute; top:0; right:0; width:180px; height:180px; background: radial-gradient(circle, rgba(138,138,138,0.12) 0%, transparent 70%); pointer-events:none;"></div>
 <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:1.25rem;">
 <div style="width:44px; height:44px; border-radius:12px; background: linear-gradient(135deg, #696969, #8a8a8a); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
 <svg fill="none" height="22" stroke="white" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
 </div>
-<span style="background: rgba(138,138,138,0.2); color: #c7c7c7; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; padding: 0.25rem 0.75rem; border-radius: 999px; border: 1px solid rgba(138,138,138,0.3);">Special Offer</span>
 </div>
-<h3 class="font-display" style="font-size: 1.6rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.2;">Editor v2 Testing</h3>
+<h3 class="font-display capitalize" style="font-size: 1.6rem; font-weight: 700; color: #ffffff; margin-bottom: 0.6rem; line-height: 1.2;">editor v2 testing</h3>
 <p style="color: rgba(255,255,255,0.65); font-size: 0.95rem; line-height: 1.65; margin-bottom: 1.5rem;">editor v2 testing</p>
 <div style="display:flex; align-items:center; justify-content:space-between; padding-top:1.25rem; border-top: 1px solid rgba(255,255,255,0.08);">
 <div style="display:flex; align-items:center; gap:0.5rem; color: rgba(255,255,255,0.4); font-size:0.8rem;">
 <svg fill="none" height="14" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="14"><rect height="18" rx="2" width="18" x="3" y="4"></rect><line x1="16" x2="16" y1="2" y2="6"></line><line x1="8" x2="8" y1="2" y2="6"></line><line x1="3" x2="21" y1="10" y2="10"></line></svg>
-          Valid until Jul 22, 2026
-        </div>
-</div>
-</div>
-</div>
-</section>
-<!-- ========== LUNCH SPECIALS ========== -->
-<section class="py-24 md:py-32 section-bg-alt relative overflow-hidden" id="special_menu">
-<div class="deco-circle w-[500px] h-[500px] -top-64 -right-64 opacity-30"></div>
-<div class="container mx-auto px-6 max-w-5xl relative z-10">
-<div class="text-center mb-16 reveal">
-<p class="text-brand-600 text-sm font-semibold tracking-[0.25em] uppercase mb-3">Limited Time</p>
-<h2 class="font-display text-4xl md:text-6xl font-bold text-ink-900 mb-4">Lunch Specials</h2>
-<div class="section-divider mx-auto"></div>
-<p class="text-ink-500 mt-4 max-w-lg mx-auto">Served daily with your choice of rice. Available Tuesday, Thursday, and Friday, 11:30 AM - 3:00 PM.</p>
-</div>
-<div class="reveal-scale">
-<div class="glass-card rounded-3xl p-8 md:p-12 shadow-xl shadow-warm-200/50">
-<h3 class="font-display text-2xl md:text-3xl font-semibold text-center mb-10 text-ink-800">Lunch Specials Menu
-          </h3>
-<div class="grid md:grid-cols-2 gap-x-10 gap-y-0">
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Saag Paneer</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$12.55</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Paneer, spinach with freshly ground spices</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Chana Masala</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$23.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Chickpeas cooked in roasted herbs and spices with fresh
-                tomato sauce</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Aloo Gobi</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$13.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Potatoes, cauliflower, tomatoes and ginger</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Dal Tandoor Pasha
-                </h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$13.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Black lentils with herbs and spices cooked in clay oven
-              </p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Kadai Veg</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$13.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Homemade cottage cheese, onion, and bell pepper</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Kadai Paneer</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$13.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Homemade cottage cheese, onion, and bell pepper</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L - Tadka Dal</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$13.95</span>
-</div>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Chicken Tikka Masala
-                </h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$14.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Tandoori boneless chicken in a creamy tomato and fenugreek
-                sauce</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Chicken Chettinad
-                </h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$14.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Classic south Indian hot 'n' spicy chicken curry</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Chicken Vindaloo</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$14.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Hot and tangy goan style spicy chicken curry</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Kadai Chicken</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$14.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Boneless chicken, onion, bell pepper and cherry tomato</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L - Chicken Curry</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$14.95</span>
-</div>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Lamb Rogan Josh</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$15.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Kashmiri style lamb cooked in shallots, yogurt and
-                aromatic spices</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Lamb Saag</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$15.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Lamb, spinach, ginger and spices</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Lamb Vindaloo</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$15.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Hot and tangy goan style spicy lamb curry</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L - Lamb Tikka Masala
-                </h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$15.95</span>
-</div>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Allepey Fish Curry
-                </h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$19.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Chef signature mango curry with coconut milk</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Shrimp Kabab Masala
-                </h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$20.00</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Tandoori shrimp simmered in creamy onion tomato sauce</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Paneer Kathi Roll
-                </h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$12.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Paneer, peanuts and raisins in light wheat bread</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Veg Kathi Roll</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$12.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Assorted vegetable, peanuts and raisins in light wheat
-                bread</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Chicken Kathi Roll
-                </h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$13.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Grilled chicken minced rolled with a layer of eggs in
-                roasted flat bread</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Lamb Kathi Roll</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$14.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Minced lamb and lentils with herbs and spices, layer of
-                eggs in roasted flat bread</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Gobi Manchurian</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$13.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Cauliflower florets sauteed with onion bell pepper, ginger
-                and garlic sauce</p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Chicken Manchurian
-                </h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$14.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Boneless chicken cooked in ginger &amp; garlic infused sauce
-              </p>
-</div>
-<div class="menu-item border-b border-warm-200/60 py-5 px-4 rounded-xl cursor-default">
-<div class="flex items-baseline justify-between gap-4 mb-1">
-<h4 class="text-base font-semibold uppercase tracking-wide text-ink-900 flex-1">L- Hakka Noodle</h4>
-<span class="text-lg font-bold text-brand-700 whitespace-nowrap menu-price">$12.95</span>
-</div>
-<p class="text-sm text-ink-500 leading-relaxed">Stir-fry egg noodles</p>
-</div>
+        Valid until Jul 22, 2026
+      </div>
 </div>
 </div>
 </div>
@@ -926,27 +704,20 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <h3 class="font-display text-2xl font-bold text-ink-900">Opening Hours</h3>
 </div>
 <ul class="space-y-1 text-ink-600">
-<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Monday</span><span class="font-medium text-ink-800 text-right">9:00 AM – 3:00 PM<br/>6:00 PM – 11:00 PM</span>
-</li>
-<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Tuesday</span><span class="font-medium text-ink-800 text-right">9:00 AM – 11:00 AM<br/>1:00 PM – 4:00 PM<br/>6:00 PM – 11:00 PM</span>
-</li>
-<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Wednesday</span><span class="font-medium text-ink-800 text-right">9:00 AM – 5:00 PM</span>
-</li>
-<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Thursday</span><span class="font-medium text-ink-800 text-right">9:00 AM - 3:00 PM<br/>6:00 PM - 11:00 PM</span>
-</li>
-<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Friday</span><span class="font-medium text-ink-800 text-right">9:00 AM – 5:00 PM</span>
-</li>
-<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Saturday</span><span class="font-medium text-ink-800 text-right">9:00 AM – 5:00 PM</span>
-</li>
-<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Sunday</span><span class="font-medium text-ink-800 text-right">9:00 AM – 5:00 PM</span>
-</li>
+<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Monday</span><span class="font-medium text-ink-800 text-right">9:00 AM – 3:00 PM, 6:00 PM – 11:00 PM</span></li>
+<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Tuesday</span><span class="font-medium text-ink-800 text-right">9:00 AM – 11:00 AM, 1:00 PM – 4:00 PM, 6:00 PM – 11:00 PM</span></li>
+<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Wednesday</span><span class="font-medium text-ink-800 text-right">9:00 AM – 5:00 PM</span></li>
+<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Thursday</span><span class="font-medium text-ink-800 text-right">9:00 AM – 5:00 PM</span></li>
+<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Friday</span><span class="font-medium text-ink-800 text-right">9:00 AM – 5:00 PM</span></li>
+<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Saturday</span><span class="font-medium text-ink-800 text-right">9:00 AM – 5:00 PM</span></li>
+<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Sunday</span><span class="font-medium text-ink-800 text-right">9:00 AM – 5:00 PM</span></li>
 </ul>
 </div>
 <div class="reveal-right glass-card rounded-3xl overflow-hidden shadow-xl shadow-warm-200/30" id="location">
 <div class="relative">
-<iframe class="map-frame w-full h-[280px]" loading="lazy" src="https://maps.google.com/maps?q=123%20Stamford&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=&amp;output=embed" title="Map"></iframe>
+<iframe class="map-frame w-full h-[280px]" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&amp;q=123+Main+Street,Wilton+CT" title="Map of Kora Demo"></iframe>
 <div class="absolute bottom-4 right-4">
-<a class="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg" href="https://www.google.com/maps/search/?api=1&amp;query=123%20Stamford" rel="noopener noreferrer" target="_blank">
+<a class="btn-primary inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-semibold shadow-lg" href="https://www.google.com/maps/search/?api=1&amp;query=123%20Main%20Street%2C%20Wilton%20CT" rel="noopener noreferrer" target="_blank">
 <span>Get Directions</span>
 <svg fill="none" height="14" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24" width="14">
 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"></path>
@@ -964,13 +735,13 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 </div>
 <h3 class="font-display text-2xl font-bold text-ink-900">Location</h3>
 </div>
-<p class="text-ink-600 text-lg leading-relaxed">123 Stamford</p>
+<p class="text-ink-600 text-lg leading-relaxed">123 Main Street, Wilton, CT 06897</p>
 <div class="mt-6 flex flex-wrap gap-3">
-<a class="inline-flex items-center gap-2 px-5 py-2.5 bg-warm-100 text-ink-700 rounded-full text-sm font-medium hover:bg-warm-200 transition-colors" href="tel:+1123456789">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 bg-warm-100 text-ink-700 rounded-full text-sm font-medium hover:bg-warm-200 transition-colors" href="tel:+12035550100">
 <svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16">
 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
 </svg>
-                +1123456789
+                +12035550100
               </a>
 </div>
 </div>
@@ -989,18 +760,12 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <p class="text-ink-500 mt-4 max-w-lg mx-auto">A glimpse into our kitchen and the artistry behind every plate we
           serve.</p>
 </div>
-<div class="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 stagger-children">
+<div class="grid grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 stagger-children">
 <div class="img-overlay rounded-2xl overflow-hidden shadow-lg shadow-warm-200/30">
 <img alt="img 1" class="gallery-img w-full h-64 md:h-80 object-cover" height="320" loading="lazy" src="https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/afaa6855-dc8b-4284-a459-9c753c8fd451/ff96a28a-1959-4f54-b66e-fd4184809a26/1784286049_bni5mt.jpg" width="300"/>
 </div>
 <div class="img-overlay rounded-2xl overflow-hidden shadow-lg shadow-warm-200/30 md:mt-8">
 <img alt="img 2" class="gallery-img w-full h-64 md:h-80 object-cover" height="320" loading="lazy" src="https://quseprdus1.blob.core.windows.net/kora-business-images/generated/afaa6855-dc8b-4284-a459-9c753c8fd451/instagram_1784210774_355f8603_0.jpg" width="300"/>
-</div>
-<div class="img-overlay rounded-2xl overflow-hidden shadow-lg shadow-warm-200/30">
-<img alt="Close-up of a Thai curry dish" class="gallery-img w-full h-64 md:h-80 object-cover" height="320" loading="lazy" src="https://quseprdus1.blob.core.windows.net/kora-business-images/ff96a28a-1959-4f54-b66e-fd4184809a26_1767156094.png" width="300"/>
-</div>
-<div class="img-overlay rounded-2xl overflow-hidden shadow-lg shadow-warm-200/30 md:mt-8">
-<img alt="Another tasty dish from Kora Demo" class="gallery-img w-full h-64 md:h-80 object-cover" height="320" loading="lazy" src="https://quseprdus1.blob.core.windows.net/kora-business-images/ff96a28a-1959-4f54-b66e-fd4184809a26_1767156219.png" width="300"/>
 </div>
 </div>
 </div>
