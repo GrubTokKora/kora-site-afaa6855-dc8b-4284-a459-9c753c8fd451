@@ -116,8 +116,8 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@400;600;700&display=swap">
 <!-- KORA_GOOGLE_FONTS_END -->
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
-</link></head>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+</head>
 <body class="antialiased">
 <!-- ========== NAVIGATION ========== -->
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="navbar">
@@ -862,6 +862,19 @@ window.KORA_CONFIG.features.voice.provider = "xai";
       category: "Movie Screening",
       ticket_url: "",
       hero_image_url: ""
+    },
+    {
+      id: "31ebb632-3577-4ffa-94fd-367ef211f8d1",
+      title: "Live Garba Night at Kora",
+      short_description: "Join us for an unforgettable evening of vibrant music and traditional Garba dance. Experience the festive energy right here in Stamford, brought to you with the warm hospitality of Kora.",
+      full_description: "Immerse yourself in the joyous spirit of a traditional Garba festival at Kora! We're transforming our space for a special night dedicated to music, dance, and community. Get ready to move to the infectious rhythms of live folk music in a vibrant, celebratory atmosphere.\n\nWhether you're an experienced dancer or new to Garba, everyone is welcome to join in the fun. Our live band will guide you through the energetic beats, creating an authentic and exhilarating experience for all. It's the perfect opportunity to celebrate, meet new people, and create lasting memories.\n\nRefuel between dances with our exquisite menu of authentic Thai cuisine. While the music celebrates Indian tradition, your taste buds will journey to Thailand with our carefully prepared dishes, offering a unique fusion of cultural experiences for one special night.",
+      start_datetime: "2026-07-25T16:30:00+00:00",
+      end_datetime: "",
+      timezone: "",
+      location_text: "Connecticut",
+      category: "Festival",
+      ticket_url: "",
+      hero_image_url: "https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/afaa6855-dc8b-4284-a459-9c753c8fd451/0b8e8303-87c0-4895-ad63-61c214049730/1784642332_bq9big.jpg"
     }
   ];
 
@@ -991,6 +1004,7 @@ window.KORA_CONFIG.features.voice.provider = "xai";
       var dateStr = dt.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
       var timeStr = dt.toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit', hour12:true });
       card.innerHTML =
+        (ev.hero_image_url && ev.hero_image_url.trim() ? '<img src="' + evtEscape(ev.hero_image_url) + '" alt="' + evtEscape(ev.title) + '" style="width:100%;height:180px;object-fit:cover;">' : '') +
         '<div style="padding:1.5rem;">' +
           '<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;">' +
             '<span style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.65rem;border-radius:999px;background:#f0f0f0;color:#696969;border:1px solid #e0e0e0;">' + evtEscape(ev.category) + '</span>' +
