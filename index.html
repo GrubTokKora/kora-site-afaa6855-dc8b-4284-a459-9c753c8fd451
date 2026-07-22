@@ -116,8 +116,8 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Roboto:wght@400;600;700&display=swap">
 <!-- KORA_GOOGLE_FONTS_END -->
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
-</link></head>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+</head>
 <body class="antialiased">
 <!-- ========== NAVIGATION ========== -->
 <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" id="navbar">
@@ -1276,6 +1276,149 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 </div>
 </div>
 </section>
+<!-- ========== NEWSLETTER SIGNUP ========== -->
+<section class="py-24 md:py-32 relative overflow-hidden" id="newsletter" style="background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 50%, #0d0d0d 100%);">
+<!-- Decorative background -->
+<div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at 30% 50%, rgba(138,138,138,0.08) 0%, transparent 60%), radial-gradient(ellipse at 70% 20%, rgba(138,138,138,0.06) 0%, transparent 50%);"></div>
+<div class="absolute top-0 left-0 w-full h-px" style="background: linear-gradient(90deg, transparent, rgba(138,138,138,0.3), transparent);"></div>
+<div class="absolute bottom-0 left-0 w-full h-px" style="background: linear-gradient(90deg, transparent, rgba(138,138,138,0.3), transparent);"></div>
+<div class="container mx-auto px-6 max-w-4xl relative z-10">
+<div class="text-center mb-12 reveal">
+<span style="display:inline-block; background: rgba(138,138,138,0.15); border: 1px solid rgba(138,138,138,0.3); color: #c7c7c7; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; padding: 0.4rem 1.2rem; border-radius: 999px; margin-bottom: 1.25rem;">Stay Connected</span>
+<h2 class="font-display text-4xl md:text-5xl font-bold mb-4" style="color: #ffffff;">Join Our <span style="background: linear-gradient(135deg, #c7c7c7, #8a8a8a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Inner Circle</span></h2>
+<div class="mx-auto mb-6" style="width: 60px; height: 3px; background: linear-gradient(90deg, #8a8a8a, #c7c7c7); border-radius: 2px;"></div>
+<p style="color: rgba(255,255,255,0.55); max-width: 520px; margin: 0 auto; font-size: 1rem; line-height: 1.7;">Be the first to hear about seasonal specials, exclusive offers, and upcoming events at Kora Demo. Sign up and let us bring Thailand to your inbox.</p>
+</div>
+<div class="reveal" style="background: linear-gradient(135deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); border-radius: 28px; padding: 2.5rem 2.5rem;">
+<form id="newsletter-form" novalidate="">
+<div class="grid md:grid-cols-2 gap-5 mb-5">
+<!-- Email -->
+<div>
+<label for="nl-email" style="display:block; font-size:0.8rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin-bottom:0.5rem;">Email Address</label>
+<input id="nl-email" name="email" onblur="this.style.borderColor='rgba(255,255,255,0.15)'" onfocus="this.style.borderColor='rgba(199,199,199,0.5)'" placeholder="your@email.com" style="width:100%; padding:0.85rem 1.1rem; border-radius:12px; border:1px solid rgba(255,255,255,0.15); background:#2a2a2a; color:#ffffff; font-size:0.9rem; outline:none; transition:border-color 0.3s;" type="email"/>
+</div>
+<!-- Phone -->
+<div>
+<label for="nl-phone" style="display:block; font-size:0.8rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.6); margin-bottom:0.5rem;">Phone Number <span style="color:rgba(255,255,255,0.3); font-weight:400; text-transform:none; letter-spacing:0;">(optional)</span></label>
+<input id="nl-phone" name="phone" onblur="this.style.borderColor='rgba(255,255,255,0.15)'" onfocus="this.style.borderColor='rgba(199,199,199,0.5)'" placeholder="(123) 456-7890" style="width:100%; padding:0.85rem 1.1rem; border-radius:12px; border:1px solid rgba(255,255,255,0.15); background:#2a2a2a; color:#ffffff; font-size:0.9rem; outline:none; transition:border-color 0.3s;" type="tel"/>
+</div>
+</div>
+<!-- Consent checkboxes -->
+<div style="display:flex; flex-direction:column; gap:0.75rem; margin-bottom:1.75rem;">
+<label style="display:flex; align-items:flex-start; gap:0.75rem; cursor:pointer;">
+<input id="nl-email-opt" name="email_opt_in" style="width:18px; height:18px; margin-top:2px; flex-shrink:0; accent-color:#8a8a8a; cursor:pointer;" type="checkbox"/>
+<span style="font-size:0.85rem; color:rgba(255,255,255,0.65); line-height:1.5;">
+              Yes, send me email updates about specials, new menu items, and events at Kora Demo.
+            </span>
+</label>
+<label style="display:flex; align-items:flex-start; gap:0.75rem; cursor:pointer;">
+<input id="nl-sms-opt" name="sms_opt_in" style="width:18px; height:18px; margin-top:2px; flex-shrink:0; accent-color:#8a8a8a; cursor:pointer;" type="checkbox"/>
+<span style="font-size:0.85rem; color:rgba(255,255,255,0.65); line-height:1.5;">
+              Yes, send me SMS text updates with exclusive offers and event reminders. Message &amp; data rates may apply.
+            </span>
+</label>
+</div>
+<!-- Submit -->
+<div style="display:flex; flex-direction:column; align-items:center; gap:1rem;">
+<button id="nl-submit-btn" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='none';" onmouseover="if(!this.disabled){this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 32px rgba(0,0,0,0.4)';}" style="display:inline-flex; align-items:center; justify-content:center; gap:0.5rem; padding:0.9rem 2.5rem; border-radius:999px; border:none; background:linear-gradient(135deg, #8a8a8a, #696969); color:#ffffff; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; cursor:pointer; transition:all 0.3s; min-width:200px;" type="submit">
+<span id="nl-submit-label">Subscribe Now</span>
+</button>
+<div id="nl-message" style="font-size:0.85rem; text-align:center; min-height:1.2em;"></div>
+</div>
+</form>
+</div>
+</div>
+</section>
+<script>
+(function () {
+  var cfg = window.KORA_CONFIG || window.KORA_SITE_CONFIG || {};
+  var apiBaseUrl = (cfg.apiBaseUrl || '').replace(/\/+$/, '');
+  var businessId = cfg.businessId;
+
+  var form = document.getElementById('newsletter-form');
+  var submitBtn = document.getElementById('nl-submit-btn');
+  var submitLabel = document.getElementById('nl-submit-label');
+  var msgEl = document.getElementById('nl-message');
+
+  function showMsg(text, color) {
+    msgEl.textContent = text;
+    msgEl.style.color = color || 'rgba(255,255,255,0.7)';
+  }
+
+  if (!apiBaseUrl || !businessId) {
+    if (submitBtn) {
+      submitBtn.disabled = true;
+      submitBtn.style.opacity = '0.45';
+      submitBtn.style.cursor = 'not-allowed';
+    }
+    showMsg('Newsletter signup is temporarily unavailable.', 'rgba(255,255,255,0.45)');
+    return;
+  }
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    if (submitBtn.disabled) return;
+
+    var email = document.getElementById('nl-email').value.trim();
+    var phone = document.getElementById('nl-phone').value.trim();
+    var emailOpt = document.getElementById('nl-email-opt').checked;
+    var smsOpt = document.getElementById('nl-sms-opt').checked;
+
+    showMsg('', '');
+
+    // Validation
+    if (!emailOpt && !smsOpt) {
+      showMsg('Please select at least one subscription option.', '#fca5a5');
+      return;
+    }
+    if (emailOpt && !email) {
+      showMsg('Please enter your email address to receive email updates.', '#fca5a5');
+      return;
+    }
+    if (smsOpt && !phone) {
+      showMsg('Please enter your phone number to receive SMS updates.', '#fca5a5');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.65';
+    submitLabel.textContent = 'Subscribing…';
+
+    try {
+      var response = await fetch(apiBaseUrl + '/api/v1/public/newsletter/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          business_id: businessId,
+          email: email || null,
+          phone_number: phone || null,
+          email_opt_in: emailOpt,
+          sms_opt_in: smsOpt,
+          source: 'static_site_widget'
+        })
+      });
+
+      if (!response.ok) {
+        var errData = await response.json().catch(function () { return {}; });
+        console.error('[Newsletter] subscribe failed', response.status, errData);
+        throw new Error('subscribe_failed');
+      }
+
+      showMsg('🎉 You\'re in! Thank you for subscribing — we\'ll be in touch soon.', '#86efac');
+      form.reset();
+    } catch (err) {
+      if (err.message !== 'subscribe_failed') {
+        console.error('[Newsletter] unexpected error', err);
+      }
+      showMsg('Something went wrong. Please try again in a moment.', '#fca5a5');
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.style.opacity = '1';
+      submitLabel.textContent = 'Subscribe Now';
+    }
+  });
+})();
+</script>
 <!-- ========== TIKTOK FOLLOW ========== -->
 <section class="py-24 md:py-32 bg-white" id="tiktok">
 <div class="container mx-auto px-6 max-w-6xl">
