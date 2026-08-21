@@ -101,8 +101,8 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap"></noscript>
 <!-- KORA_GOOGLE_FONTS_END -->
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
-</link></head>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+</head>
 <body>
 <!-- KORA_TRACKING_GTM_BODY_START -->
 <!-- Google Tag Manager (noscript) -->
@@ -1439,7 +1439,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </a>
 </div>
 <div class="reveal-right">
-<div class="rounded-2xl shadow-xl w-full" style="height:500px;background:#c7b89a;"></div>
+<div class="rounded-2xl shadow-xl w-full overflow-hidden" style="height:500px;background:#000;">
+<video autoplay="" class="w-full h-full" loop="" muted="" playsinline="" src="https://stream.mux.com/9jEiOMHee689y00o6zPSZyzSnj7EQWbXR3p9qyzgqcR4/high.mp4" style="object-fit:cover;"></video>
+</div>
 </div>
 </div>
 </div>
@@ -1613,7 +1615,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     wrapper.setAttribute('data-kora-branding-footer', 'true');
     wrapper.style.cssText = 'display:flex;justify-content:flex-end;align-items:center;gap:0.35rem;padding:0.75rem 1rem;font-size:0.75rem;';
     wrapper.innerHTML = '<span style="color:' + muted + '">Powered by</span>' +
-      '<a href="' + koraUrl + '" target="_blank" rel="noopener noreferrer" style="text-decoration:none;font-weight:600;background:linear-gradient(135deg,' + blue + ',' + purple + ');-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Kora</a>';
+      '<a href="' + koraUrl + '" target="_blank" rel="nofollow noopener noreferrer" style="text-decoration:none;font-weight:600;background:linear-gradient(135deg,' + blue + ',' + purple + ');-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent">Kora</a>';
     return wrapper;
   }
 
