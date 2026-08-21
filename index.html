@@ -101,8 +101,8 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap"></noscript>
 <!-- KORA_GOOGLE_FONTS_END -->
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
-</head>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
+</link></head>
 <body>
 <!-- KORA_TRACKING_GTM_BODY_START -->
 <!-- Google Tag Manager (noscript) -->
@@ -125,7 +125,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a class="nav-link hover:text-white transition-colors" href="#about">About</a>
 <a class="nav-link hover:text-white transition-colors" href="#hours_location">Hours &amp; Location</a>
 <a class="nav-link hover:text-white transition-colors" href="#gallery">Gallery</a>
-<a class="nav-link hover:text-white transition-colors" href="#events">Events</a>
+<a class="nav-link hover:text-white transition-colors" href="events.html">Events</a>
 <a class="nav-link hover:text-white transition-colors" href="#testimonials">Reviews</a>
 <a class="nav-link hover:text-white transition-colors" href="#contact">Contact</a>
 </nav>
@@ -160,7 +160,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a class="hover:text-brand-700 transition-colors" href="#about">About</a>
 <a class="hover:text-brand-700 transition-colors" href="#hours_location">Hours &amp; Location</a>
 <a class="hover:text-brand-700 transition-colors" href="#gallery">Gallery</a>
-<a class="hover:text-brand-700 transition-colors" href="#events">Events</a>
+<a class="hover:text-brand-700 transition-colors" href="events.html">Events</a>
 <a class="hover:text-brand-700 transition-colors" href="#testimonials">Reviews</a>
 <a class="hover:text-brand-700 transition-colors" href="#contact">Contact</a>
 </nav>
@@ -457,355 +457,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 </section>
-<!-- ========== EVENTS ========== -->
+<!-- ========== EVENTS TEASER ========== -->
 <section class="py-24 md:py-32 bg-white relative overflow-hidden" id="events">
 <div class="deco-circle w-[400px] h-[400px] -top-40 -right-40 opacity-10"></div>
 <div class="container mx-auto px-6 max-w-6xl relative z-10">
-<div class="text-center mb-12 reveal">
+<div class="text-center reveal">
 <p class="text-brand-600 text-sm font-semibold tracking-[0.25em] uppercase mb-3">What's On</p>
 <h2 class="font-display text-4xl md:text-5xl font-bold text-ink-900 mb-4">Events</h2>
 <div class="section-divider mx-auto"></div>
-<p class="text-ink-500 mt-4 max-w-lg mx-auto">Join us for special evenings, screenings, and celebrations at Kora Demo.</p>
-</div>
-<!-- View Toggle -->
-<div class="flex justify-center mb-10 reveal">
-<div style="display:inline-flex; background:#f5f5f5; border-radius:999px; padding:4px; gap:4px;">
-<button id="evtCalBtn" onclick="evtShowView('calendar')" style="padding:0.5rem 1.5rem; border-radius:999px; border:none; font-size:0.82rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; background:#1a1a1a; color:#fff; transition:all 0.25s;">Calendar</button>
-<button id="evtListBtn" onclick="evtShowView('list')" style="padding:0.5rem 1.5rem; border-radius:999px; border:none; font-size:0.82rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; cursor:pointer; background:transparent; color:#696969; transition:all 0.25s;">List</button>
+<p class="text-ink-500 mt-4 max-w-lg mx-auto leading-relaxed">From live music and outdoor movie nights to vibrant Garba celebrations — there's always something special happening at Kora Demo. See the full calendar and reserve your spot.</p>
+<div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="btn-primary px-10 py-4 rounded-full text-sm font-semibold uppercase tracking-wider" href="events.html">
+<span>View All Events</span>
+</a>
 </div>
 </div>
-<!-- Calendar View -->
-<div class="reveal" id="evtCalendarView">
-<div style="background:#fff; border:1px solid #eeeeee; border-radius:24px; overflow:hidden; box-shadow:0 4px 24px rgba(0,0,0,0.07);">
-<!-- Calendar Header -->
-<div style="display:flex; align-items:center; justify-content:space-between; padding:1.25rem 1.5rem; border-bottom:1px solid #f0f0f0; background:#fafafa;">
-<button onclick="evtCalPrev()" onmouseout="this.style.background='#fff'" onmouseover="this.style.background='#f0f0f0'" style="width:36px;height:36px;border-radius:50%;border:1px solid #e0e0e0;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#1a1a1a;transition:all 0.2s;">‹</button>
-<div style="display:flex;align-items:center;gap:0.75rem;">
-<span id="evtCalMonthLabel" style="font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:#1a1a1a;"></span>
-<button onclick="evtCalToday()" onmouseout="this.style.background='#fff'" onmouseover="this.style.background='#f0f0f0'" style="padding:0.25rem 0.85rem;border-radius:999px;border:1px solid #e0e0e0;background:#fff;font-size:0.72rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;cursor:pointer;color:#696969;transition:all 0.2s;">Today</button>
 </div>
-<button onclick="evtCalNext()" onmouseout="this.style.background='#fff'" onmouseover="this.style.background='#f0f0f0'" style="width:36px;height:36px;border-radius:50%;border:1px solid #e0e0e0;background:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#1a1a1a;transition:all 0.2s;">›</button>
-</div>
-<!-- Day headers -->
-<div style="display:grid;grid-template-columns:repeat(7,1fr);border-bottom:1px solid #f0f0f0;">
-<div style="text-align:center;padding:0.6rem 0;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8a8a8a;">Sun</div>
-<div style="text-align:center;padding:0.6rem 0;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8a8a8a;">Mon</div>
-<div style="text-align:center;padding:0.6rem 0;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8a8a8a;">Tue</div>
-<div style="text-align:center;padding:0.6rem 0;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8a8a8a;">Wed</div>
-<div style="text-align:center;padding:0.6rem 0;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8a8a8a;">Thu</div>
-<div style="text-align:center;padding:0.6rem 0;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8a8a8a;">Fri</div>
-<div style="text-align:center;padding:0.6rem 0;font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#8a8a8a;">Sat</div>
-</div>
-<!-- Calendar Grid -->
-<div id="evtCalGrid" style="display:grid;grid-template-columns:repeat(7,1fr);"></div>
-</div>
-</div>
-<!-- List View -->
-<div id="evtListView" style="display:none;">
-<div class="grid md:grid-cols-2 gap-6 stagger-children" id="evtListContainer"></div>
-</div>
-</div>
-<!-- Event Detail Modal -->
-<div id="evtModal" onclick="if(event.target===this)evtCloseModal()" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:1rem;">
-<div style="background:#fff;border-radius:24px;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,0.25);position:relative;">
-<button onclick="evtCloseModal()" onmouseout="this.style.background='#fff'" onmouseover="this.style.background='#f0f0f0'" style="position:absolute;top:1rem;right:1rem;width:36px;height:36px;border-radius:50%;border:1px solid #e0e0e0;background:#fff;cursor:pointer;font-size:1.1rem;color:#696969;z-index:10;display:flex;align-items:center;justify-content:center;">×</button>
-<div id="evtModalContent" style="padding:2rem;"></div>
-</div>
-</div>
-<style>
-  .evt-cal-cell {
-    min-height: 80px;
-    border-right: 1px solid #f5f5f5;
-    border-bottom: 1px solid #f5f5f5;
-    padding: 0.4rem;
-    position: relative;
-    cursor: default;
-  }
-  .evt-cal-cell:nth-child(7n) { border-right: none; }
-  .evt-cal-cell.other-month .evt-day-num { color: #c7c7c7; }
-  .evt-cal-cell.today .evt-day-num {
-    background: #1a1a1a; color: #fff;
-    border-radius: 50%; width: 26px; height: 26px;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .evt-day-num { font-size: 0.8rem; font-weight: 600; color: #1a1a1a; width: 26px; height: 26px; display: flex; align-items: center; justify-content: center; }
-  .evt-cal-event-pill {
-    margin-top: 2px; padding: 2px 6px; border-radius: 6px;
-    background: #1a1a1a; color: #fff;
-    font-size: 0.62rem; font-weight: 700; line-height: 1.3;
-    cursor: pointer; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;
-    transition: background 0.2s;
-  }
-  .evt-cal-event-pill:hover { background: #696969; }
-  .evt-list-card {
-    background: #fff; border: 1px solid #eeeeee; border-radius: 20px;
-    overflow: hidden; transition: all 0.32s cubic-bezier(0.16,1,0.3,1);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); cursor: pointer;
-  }
-  .evt-list-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.12); border-color: #c7c7c7; }
-  @media (max-width: 640px) {
-    .evt-cal-cell { min-height: 52px; }
-    .evt-cal-event-pill { display: none; }
-    .evt-cal-cell.has-event { background: #f0f0f0; cursor: pointer; }
-  }
-</style>
-<script>
-(function() {
-  var EVT_EVENTS = [
-    {
-      id: "0486760f-329c-4501-9306-4daaba173a7b",
-      title: "Live Music at Kora Demo",
-      short_description: "Enjoy an afternoon of live music at Kora Demo. Relax and unwind with great tunes in a vibrant atmosphere.",
-      full_description: "Join us at Kora Demo for a special live music event. We're excited to host talented musicians who will fill the air with beautiful melodies.\n\nCome for the music, stay for the experience. It's the perfect way to spend your afternoon.\n\nWe look forward to seeing you there!",
-      start_datetime: "2026-04-14T14:30:00+00:00",
-      end_datetime: "",
-      timezone: "",
-      location_text: "Max Downtown",
-      category: "live music",
-      ticket_url: "",
-      hero_image_url: ""
-    },
-    {
-      id: "9fc33489-b845-453f-931f-41de96b05087",
-      title: "Garba Night",
-      short_description: "Join us for an unforgettable Garba Night at Gift City — a vibrant festival celebration open to everyone, full of energy, color, and joy.",
-      full_description: "Kora Demo invites you to a spectacular Garba Night, a festive celebration that brings the community together for an evening of traditional dance, lively music, and pure cultural joy.\n\nSet against the vibrant backdrop of Gift City, this is a night where everyone is welcome — families, friends, couples, and solo guests alike. Come dressed in your finest festive attire and let the rhythm of Garba move you through the night.\n\nExpect a warm, welcoming atmosphere filled with the spirit of togetherness. Whether you are a seasoned Garba dancer or stepping onto the dance floor for the very first time, this celebration is crafted to make every guest feel at home.\n\nAs always, Kora Demo brings the same warmth and hospitality that defines our dining experience to every event we host. Come celebrate, connect, and create memories that last well beyond the night.\n\nMark your calendars for July 23, 2026, starting at 11:00 PM at Gift City. We look forward to celebrating with you.",
-      start_datetime: "2026-07-23T17:30:00+00:00",
-      end_datetime: "",
-      timezone: "",
-      location_text: "Gift City",
-      category: "festival",
-      ticket_url: "",
-      hero_image_url: "https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/afaa6855-dc8b-4284-a459-9c753c8fd451/0b8e8303-87c0-4895-ad63-61c214049730/1784701224_1th8po.jpg"
-    },
-    {
-      id: "5b3bfecb-e471-4004-95d8-6731115dbeee",
-      title: "Kora's Outdoor Movie Night: An Odyssey Screening",
-      short_description: "Join us for an enchanting evening under the stars with a special screening of 'Odyssey'. Savor authentic Thai cuisine from our full menu while you enjoy the film on our patio.",
-      full_description: "Experience an unforgettable summer evening at Kora as we transform our patio into a beautiful open-air cinema. We invite you and your loved ones to a special screening of the acclaimed film, 'Odyssey'.\n\nImmerse yourself in cinematic adventure while indulging in the authentic, vibrant flavors of Thailand. Our complete dinner, appetizer, and beverage menu will be available for you to enjoy throughout the evening, all prepared with the finest ingredients and our signature warm hospitality.\n\nSeating is first-come, first-served, so we encourage you to arrive a bit early to select your favorite spot and place your order before the film begins. We look forward to sharing this magical night of film and food with you.",
-      start_datetime: "2026-07-24T17:00:00+00:00",
-      end_datetime: "",
-      timezone: "",
-      location_text: "Stamford, CT",
-      category: "Movie Screening",
-      ticket_url: "",
-      hero_image_url: ""
-    },
-    {
-      id: "31ebb632-3577-4ffa-94fd-367ef211f8d1",
-      title: "Live Garba Night at Kora",
-      short_description: "Join us for an unforgettable evening of vibrant music and traditional Garba dance. Experience the festive energy right here in Stamford, brought to you with the warm hospitality of Kora.",
-      full_description: "Immerse yourself in the joyous spirit of a traditional Garba festival at Kora! We're transforming our space for a special night dedicated to music, dance, and community. Get ready to move to the infectious rhythms of live folk music in a vibrant, celebratory atmosphere.\n\nWhether you're an experienced dancer or new to Garba, everyone is welcome to join in the fun. Our live band will guide you through the energetic beats, creating an authentic and exhilarating experience for all. It's the perfect opportunity to celebrate, meet new people, and create lasting memories.\n\nRefuel between dances with our exquisite menu of authentic Thai cuisine. While the music celebrates Indian tradition, your taste buds will journey to Thailand with our carefully prepared dishes, offering a unique fusion of cultural experiences for one special night.",
-      start_datetime: "2026-07-25T16:30:00+00:00",
-      end_datetime: "",
-      timezone: "",
-      location_text: "Connecticut",
-      category: "Festival",
-      ticket_url: "",
-      hero_image_url: "https://quseprdus1.blob.core.windows.net/kora-business-images/user-media/afaa6855-dc8b-4284-a459-9c753c8fd451/0b8e8303-87c0-4895-ad63-61c214049730/1784642332_bq9big.jpg"
-    }
-  ];
-
-  var evtCurrentYear, evtCurrentMonth;
-
-  function evtInit() {
-    var now = new Date();
-    evtCurrentYear = now.getFullYear();
-    evtCurrentMonth = now.getMonth();
-    evtRenderCalendar();
-    evtRenderList();
-  }
-
-  function evtShowView(view) {
-    var calView = document.getElementById('evtCalendarView');
-    var listView = document.getElementById('evtListView');
-    var calBtn = document.getElementById('evtCalBtn');
-    var listBtn = document.getElementById('evtListBtn');
-    if (view === 'calendar') {
-      calView.style.display = 'block';
-      listView.style.display = 'none';
-      calBtn.style.background = '#1a1a1a'; calBtn.style.color = '#fff';
-      listBtn.style.background = 'transparent'; listBtn.style.color = '#696969';
-    } else {
-      calView.style.display = 'none';
-      listView.style.display = 'block';
-      listBtn.style.background = '#1a1a1a'; listBtn.style.color = '#fff';
-      calBtn.style.background = 'transparent'; calBtn.style.color = '#696969';
-    }
-  }
-
-  function evtCalPrev() {
-    evtCurrentMonth--;
-    if (evtCurrentMonth < 0) { evtCurrentMonth = 11; evtCurrentYear--; }
-    evtRenderCalendar();
-  }
-  function evtCalNext() {
-    evtCurrentMonth++;
-    if (evtCurrentMonth > 11) { evtCurrentMonth = 0; evtCurrentYear++; }
-    evtRenderCalendar();
-  }
-  function evtCalToday() {
-    var now = new Date();
-    evtCurrentYear = now.getFullYear();
-    evtCurrentMonth = now.getMonth();
-    evtRenderCalendar();
-  }
-
-  function evtGetEventsByDate(y, m, d) {
-    return EVT_EVENTS.filter(function(ev) {
-      var dt = new Date(ev.start_datetime);
-      return dt.getFullYear() === y && dt.getMonth() === m && dt.getDate() === d;
-    });
-  }
-
-  function evtRenderCalendar() {
-    var monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
-    document.getElementById('evtCalMonthLabel').textContent = monthNames[evtCurrentMonth] + ' ' + evtCurrentYear;
-    var grid = document.getElementById('evtCalGrid');
-    grid.innerHTML = '';
-    var firstDay = new Date(evtCurrentYear, evtCurrentMonth, 1).getDay();
-    var daysInMonth = new Date(evtCurrentYear, evtCurrentMonth + 1, 0).getDate();
-    var daysInPrev = new Date(evtCurrentYear, evtCurrentMonth, 0).getDate();
-    var today = new Date();
-    var totalCells = Math.ceil((firstDay + daysInMonth) / 7) * 7;
-
-    for (var i = 0; i < totalCells; i++) {
-      var cell = document.createElement('div');
-      cell.className = 'evt-cal-cell';
-      var dayNum, isOther = false, cellYear = evtCurrentYear, cellMonth = evtCurrentMonth;
-
-      if (i < firstDay) {
-        dayNum = daysInPrev - firstDay + i + 1;
-        isOther = true;
-        cellMonth = evtCurrentMonth - 1;
-        if (cellMonth < 0) { cellMonth = 11; cellYear--; }
-      } else if (i >= firstDay + daysInMonth) {
-        dayNum = i - firstDay - daysInMonth + 1;
-        isOther = true;
-        cellMonth = evtCurrentMonth + 1;
-        if (cellMonth > 11) { cellMonth = 0; cellYear++; }
-      } else {
-        dayNum = i - firstDay + 1;
-      }
-
-      if (isOther) cell.classList.add('other-month');
-      var isToday = !isOther && dayNum === today.getDate() && evtCurrentMonth === today.getMonth() && evtCurrentYear === today.getFullYear();
-      if (isToday) cell.classList.add('today');
-
-      var numEl = document.createElement('div');
-      numEl.className = 'evt-day-num';
-      numEl.textContent = dayNum;
-      cell.appendChild(numEl);
-
-      var dayEvents = evtGetEventsByDate(cellYear, cellMonth, dayNum);
-      if (dayEvents.length > 0) {
-        cell.classList.add('has-event');
-        dayEvents.forEach(function(ev) {
-          var pill = document.createElement('div');
-          pill.className = 'evt-cal-event-pill';
-          pill.textContent = ev.title;
-          pill.onclick = function(e) { e.stopPropagation(); evtOpenModal(ev); };
-          cell.appendChild(pill);
-        });
-        cell.style.cursor = 'pointer';
-        (function(evs) {
-          cell.addEventListener('click', function() { if (evs.length === 1) evtOpenModal(evs[0]); });
-        })(dayEvents);
-      }
-
-      grid.appendChild(cell);
-    }
-  }
-
-  function evtRenderList() {
-    var container = document.getElementById('evtListContainer');
-    container.innerHTML = '';
-    if (EVT_EVENTS.length === 0) {
-      container.innerHTML = '<p style="color:#8a8a8a;text-align:center;grid-column:1/-1;">No upcoming events at this time.</p>';
-      return;
-    }
-    EVT_EVENTS.forEach(function(ev) {
-      var card = document.createElement('div');
-      card.className = 'evt-list-card';
-      card.onclick = function() { evtOpenModal(ev); };
-      var dt = new Date(ev.start_datetime);
-      var dateStr = dt.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
-      var timeStr = dt.toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit', hour12:true });
-      card.innerHTML =
-        (ev.hero_image_url && ev.hero_image_url.trim() ? '<img src="' + evtEscape(ev.hero_image_url) + '" alt="' + evtEscape(ev.title) + '" style="width:100%;height:180px;object-fit:cover;">' : '') +
-        '<div style="padding:1.5rem;">' +
-          '<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;">' +
-            '<span style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.65rem;border-radius:999px;background:#f0f0f0;color:#696969;border:1px solid #e0e0e0;">' + evtEscape(ev.category) + '</span>' +
-          '</div>' +
-          '<h3 style="font-family:\'Playfair Display\',serif;font-size:1.15rem;font-weight:700;color:#1a1a1a;margin-bottom:0.5rem;line-height:1.3;">' + evtEscape(ev.title) + '</h3>' +
-          '<p style="font-size:0.82rem;color:#696969;line-height:1.55;margin-bottom:1rem;">' + evtEscape(ev.short_description) + '</p>' +
-          '<div style="display:flex;flex-wrap:wrap;gap:0.75rem;padding-top:0.75rem;border-top:1px solid #f0f0f0;">' +
-            '<span style="display:flex;align-items:center;gap:0.35rem;font-size:0.75rem;color:#8a8a8a;">' +
-              '<svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>' +
-              evtEscape(dateStr) + ' · ' + evtEscape(timeStr) +
-            '</span>' +
-            (ev.location_text ? '<span style="display:flex;align-items:center;gap:0.35rem;font-size:0.75rem;color:#8a8a8a;"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' + evtEscape(ev.location_text) + '</span>' : '') +
-          '</div>' +
-        '</div>';
-      container.appendChild(card);
-    });
-  }
-
-  function evtOpenModal(ev) {
-    var dt = new Date(ev.start_datetime);
-    var dateStr = dt.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
-    var timeStr = dt.toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit', hour12:true });
-    var fullDescHtml = evtEscape(ev.full_description).replace(/\n\n/g, '</p><p style="margin-bottom:0.75rem;">').replace(/\n/g, '<br>');
-    var imgHtml = (ev.hero_image_url && ev.hero_image_url.trim())
-      ? '<img src="' + evtEscape(ev.hero_image_url) + '" alt="' + evtEscape(ev.title) + '" style="width:100%;height:220px;object-fit:cover;border-radius:16px;margin-bottom:1.5rem;">'
-      : '';
-    var ctaHtml = (ev.ticket_url && ev.ticket_url.trim())
-      ? '<a href="' + evtEscape(ev.ticket_url) + '" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.75rem;background:#1a1a1a;color:#fff;border-radius:999px;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;margin-top:1.25rem;transition:background 0.2s;" onmouseover="this.style.background=\'#696969\'" onmouseout="this.style.background=\'#1a1a1a\'">Register / Book Tickets ↗</a>'
-      : '';
-    document.getElementById('evtModalContent').innerHTML =
-      imgHtml +
-      '<span style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.65rem;border-radius:999px;background:#f0f0f0;color:#696969;border:1px solid #e0e0e0;">' + evtEscape(ev.category) + '</span>' +
-      '<h2 style="font-family:\'Playfair Display\',serif;font-size:1.5rem;font-weight:800;color:#1a1a1a;margin:0.75rem 0 0.5rem;line-height:1.25;">' + evtEscape(ev.title) + '</h2>' +
-      '<div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:1rem;">' +
-        '<span style="display:flex;align-items:center;gap:0.35rem;font-size:0.8rem;color:#696969;">' +
-          '<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>' +
-          evtEscape(dateStr) + ' · ' + evtEscape(timeStr) +
-        '</span>' +
-        (ev.location_text ? '<span style="display:flex;align-items:center;gap:0.35rem;font-size:0.8rem;color:#696969;"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' + evtEscape(ev.location_text) + '</span>' : '') +
-      '</div>' +
-      '<p style="font-size:0.9rem;color:#696969;line-height:1.65;margin-bottom:1rem;font-style:italic;">' + evtEscape(ev.short_description) + '</p>' +
-      '<div style="border-top:1px solid #f0f0f0;padding-top:1rem;">' +
-        '<p style="margin-bottom:0.75rem;">' + fullDescHtml + '</p>' +
-      '</div>' +
-      ctaHtml;
-    var modal = document.getElementById('evtModal');
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
-  }
-
-  function evtCloseModal() {
-    document.getElementById('evtModal').style.display = 'none';
-    document.body.style.overflow = '';
-  }
-
-  function evtEscape(str) {
-    return (str || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
-  }
-
-  window.evtShowView = evtShowView;
-  window.evtCalPrev = evtCalPrev;
-  window.evtCalNext = evtCalNext;
-  window.evtCalToday = evtCalToday;
-  window.evtOpenModal = evtOpenModal;
-  window.evtCloseModal = evtCloseModal;
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', evtInit);
-  } else {
-    evtInit();
-  }
-})();
-</script>
 </section>
 <!-- ========== TESTIMONIALS ========== -->
 <section class="py-24 md:py-32 section-bg-alt" id="testimonials">
