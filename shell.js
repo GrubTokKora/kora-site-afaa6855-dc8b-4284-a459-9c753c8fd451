@@ -20,7 +20,8 @@
       box-shadow: 0 2px 16px rgba(0,0,0,0.10);
     }
     #navbar.navbar-scrolled .nav-link,
-    #navbar.navbar-scrolled nav a {
+    #navbar.navbar-scrolled nav a,
+    #navbar.navbar-scrolled .nav-brand {
       color: #1a1a1a !important;
     }
     #navbar.navbar-scrolled .nav-link:hover,
@@ -198,7 +199,7 @@
                alt="Kora Demo logo"
                style="width:40px;height:40px;border-radius:10px;object-fit:cover;"
                width="40" height="40"/>
-          <span style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#fff;letter-spacing:0.02em;">Kora Demo</span>
+          <span class="nav-brand" style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#fff;letter-spacing:0.02em;">Kora Demo</span>
         </a>
 
         <!-- Desktop nav -->
@@ -377,31 +378,30 @@
   }
 
   /* ─────────────────────────────────────────────
-     INJECT HEADER
+     INJECT HELPERS
+     HEADER_HTML has multiple root nodes (nav +
+     backdrop + drawer). Always insert the full set.
   ───────────────────────────────────────────── */
-  function injectHeader() {
-    var placeholder = document.getElementById('site-header');
+  function injectMarkup(placeholderId, html, fallbackPosition) {
+    var placeholder = document.getElementById(placeholderId);
+    var markup = (html || '').trim();
+    if (!markup) return;
+
     if (placeholder) {
-      placeholder.outerHTML = HEADER_HTML;
-    } else {
-      // Prepend to body if no placeholder
-      var wrapper = document.createElement('div');
-      wrapper.innerHTML = HEADER_HTML;
-      document.body.insertBefore(wrapper.firstElementChild, document.body.firstChild);
+      placeholder.insertAdjacentHTML('afterend', markup);
+      placeholder.remove();
+      return;
     }
+
+    document.body.insertAdjacentHTML(fallbackPosition, markup);
   }
 
-  /* ─────────────────────────────────────────────
-     INJECT FOOTER
-  ───────────────────────────────────────────── */
+  function injectHeader() {
+    injectMarkup('site-header', HEADER_HTML, 'afterbegin');
+  }
+
   function injectFooter() {
-    var placeholder = document.getElementById('site-footer');
-    if (placeholder) {
-      placeholder.outerHTML = FOOTER_HTML;
-    } else {
-      document.body.insertAdjacentHTML('beforeend', FOOTER_HTML);
-    }
-    // Set current year
+    injectMarkup('site-footer', FOOTER_HTML, 'beforeend');
     var yearEl = document.getElementById('footer-year');
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
@@ -483,17 +483,26 @@
   ───────────────────────────────────────────── */
   function highlightActiveNav() {
     var path = window.location.pathname;
+    var currentHash = (window.location.hash || '').replace(/^#/, '');
+    var currentPage = path.replace(/^\//, '').replace(/\/$/, '').replace(/\.html$/, '');
+    if (currentPage === '' || currentPage === 'index') currentPage = 'index';
+
     var links = document.querySelectorAll('#navbar .nav-link, #mobileMenu nav a');
     links.forEach(function (link) {
       var href = link.getAttribute('href') || '';
-      // Normalise: strip leading slash and trailing slash
-      var linkPath = href.replace(/^\//, '').replace(/\/$/, '').split('#')[0];
-      var currentPage = path.replace(/^\//, '').replace(/\/$/, '').replace(/\.html$/, '');
+      var parts = href.split('#');
+      var linkPath = (parts[0] || '').replace(/^\//, '').replace(/\/$/, '');
+      var linkHash = parts[1] || '';
       var linkPage = linkPath.replace(/\.html$/, '');
+      if (linkPage === '') linkPage = 'index';
 
       var isActive = false;
-      if (currentPage === '' && (linkPage === '' || linkPage === 'index')) isActive = true;
-      else if (currentPage !== '' && linkPage === currentPage) isActive = true;
+      if (linkHash) {
+        // Hash links (About/Contact) are active only when that section is current
+        isActive = linkPage === currentPage && linkHash === currentHash;
+      } else {
+        isActive = linkPage === currentPage;
+      }
 
       if (isActive) {
         link.style.opacity = '0.6';
