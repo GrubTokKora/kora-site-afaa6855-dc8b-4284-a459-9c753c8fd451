@@ -115,22 +115,12 @@ window.KORA_CONFIG = {
   }
 };
 </script>
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
-<script>
-window.KORA_CONFIG = window.KORA_CONFIG || {};
-window.KORA_CONFIG.apiBaseUrl = "https://kora-agent.grubtok.com";
-window.KORA_CONFIG.features = window.KORA_CONFIG.features || {};
-window.KORA_CONFIG.features.voice = window.KORA_CONFIG.features.voice || {};
-window.KORA_CONFIG.features.voice.enabled = true;
-window.KORA_CONFIG.features.voice.provider = "xai";
-</script>
 <!-- KORA_GOOGLE_FONTS_START -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap"></noscript>
 <!-- KORA_GOOGLE_FONTS_END -->
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
 </head>
 <body>
 <!-- KORA_TRACKING_GTM_BODY_START -->
@@ -140,16 +130,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <!-- KORA_TRACKING_GTM_BODY_END -->
 
-<div class="antialiased">
-<div id="site-header"></div>
-<nav aria-label="Main navigation">
-<ul style="display:flex;flex-wrap:wrap;gap:1rem;list-style:none;margin:0;padding:0.75rem 1rem;">
-<li><a href="index.html">Home</a></li>
-<li><a href="menu.html">Menu</a></li>
-<li>About</li>
-<li>Contact</li>
-</ul>
+<nav aria-label="Main navigation" style="display:none;">
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
 </nav>
+<div id="site-header"></div>
+<div class="antialiased">
 <!-- ========== PAGE HERO ========== -->
 <section class="relative min-h-[75vh] flex items-center justify-center text-center text-white overflow-hidden" id="top">
 <div class="absolute inset-0 z-0">
@@ -557,7 +543,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <a class="btn-primary px-10 py-4 rounded-full text-sm font-semibold uppercase tracking-wider" href="https://www.toasttab.com/bedford-thai-stamford-77-bedford-street-stamford-ct" rel="noopener noreferrer" target="_blank">Order Online</a>
 <a class="btn-outline px-10 py-4 rounded-full text-sm font-semibold uppercase tracking-wider" href="tel:+12030000000">Call +12030000000</a>
 </div>
-<div class="g-recaptcha" data-sitekey="6LcsdJYsAAAAAAur-h7cYlZuGJTmijNHmOi5kFH7" style="display:inline-block;margin-top:1.5rem;"></div>
 </div>
 </div>
 </section>
@@ -588,6 +573,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 })();
 </script>
 <script async="" defer="" src="https://www.google.com/recaptcha/api.js"></script>
+<div class="g-recaptcha" data-sitekey="6LcsdJYsAAAAAAur-h7cYlZuGJTmijNHmOi5kFH7" style="display:none;"></div>
 <script src="assets/kora-voice/voice-client.js"></script>
 <script src="assets/kora-voice/voice-widget.js"></script>
 
