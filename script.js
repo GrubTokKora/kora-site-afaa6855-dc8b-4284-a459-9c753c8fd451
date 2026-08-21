@@ -9,19 +9,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Mobile menu
+  // Mobile menu – the drawer wrapper is #mobileMenuWrapper; #mobileMenu is the inner panel
   const menuBtn = document.getElementById('menuBtn');
   const closeMenu = document.getElementById('closeMenu');
-  const mobileMenu = document.getElementById('mobileMenu');
+  const mobileMenuWrapper = document.getElementById('mobileMenuWrapper');
+  const mobileMenuBackdrop = document.getElementById('mobileMenuBackdrop');
   const setMenuOpen = (open) => {
-    mobileMenu.classList.toggle('open', open);
+    if (!mobileMenuWrapper) return;
+    mobileMenuWrapper.classList.toggle('open', open);
+    if (mobileMenuBackdrop) mobileMenuBackdrop.classList.toggle('open', open);
+    if (menuBtn) {
+      menuBtn.classList.toggle('is-open', open);
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    }
+    mobileMenuWrapper.setAttribute('aria-hidden', open ? 'false' : 'true');
     document.body.style.overflow = open ? 'hidden' : '';
   };
-  menuBtn.addEventListener('click', () => setMenuOpen(true));
-  closeMenu.addEventListener('click', () => setMenuOpen(false));
-  mobileMenu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => setMenuOpen(false));
-  });
+  if (menuBtn) menuBtn.addEventListener('click', () => setMenuOpen(true));
+  if (closeMenu) closeMenu.addEventListener('click', () => setMenuOpen(false));
+  if (mobileMenuBackdrop) mobileMenuBackdrop.addEventListener('click', () => setMenuOpen(false));
+  if (mobileMenuWrapper) {
+    mobileMenuWrapper.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', () => setMenuOpen(false));
+    });
+  }
 
   // Scroll reveal observer
   const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
@@ -39,12 +50,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Hero parallax
   const heroImg = document.getElementById('heroImg');
-  window.addEventListener('scroll', () => {
-    const scrolled = window.scrollY;
-    if (scrolled < window.innerHeight) {
-      heroImg.style.transform = `scale(1.1) translateY(${scrolled * 0.3}px)`;
-    }
-  });
+  if (heroImg) {
+    window.addEventListener('scroll', () => {
+      const scrolled = window.scrollY;
+      if (scrolled < window.innerHeight) {
+        heroImg.style.transform = `scale(1.1) translateY(${scrolled * 0.3}px)`;
+      }
+    });
+  }
 
   // Menu page category tabs
   document.querySelectorAll('.menu-cat-tab').forEach(tab => {
