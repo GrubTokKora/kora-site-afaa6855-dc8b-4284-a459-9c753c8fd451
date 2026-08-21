@@ -1,0 +1,34 @@
+# Kora Demo
+
+> Kora Demo offers a wide range of classic Thai dishes, including various curries, noodle dishes like Pad Thai, stir-fries, rice plates, soups, and appetizers. They use the finest ingredients and premium spices brought from Thailand, prepared with care for every guest.
+
+## Menu
+Offers a wide range of classic Thai dishes including various curries, noodle dishes like Pad Thai, stir-fries, rice plates, soups, and appetizers.
+
+### Offers
+- weekend brunch special
+- valentines offer
+- free pasta on umang's birthday
+- 10% Off All Curries
+- editor v2 testing
+
+## Location & Contact
+- Address: 48 Strawberry Hill Ave, Stamford, CT 06902, United States
+- Phone: +12030000000
+- Email: umang@gmail.com
+- Website: https://korademo.com
+
+## Hours
+- Monday: Closed
+- Tuesday: Closed
+- Wednesday: 9 AM – 10 PM
+- Thursday: Closed
+- Friday: Closed
+- Saturday: Closed
+- Sunday: Closed
+
+## Action Links
+- Reserve a Table: tel:+12035550100
+- Order Online: https://www.toasttab.com/bedford-thai-stamford-77-bedford-street-stamford-ct
+- View Full Menu: menu.html
+- Reserve a Table: tel:+12030000000
