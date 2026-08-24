@@ -156,8 +156,8 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap"></noscript>
 <!-- KORA_GOOGLE_FONTS_END -->
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
-</link></head>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+</head>
 <body>
 <!-- KORA_TRACKING_GTM_BODY_START -->
 <!-- Google Tag Manager (noscript) -->
@@ -963,27 +963,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
   }
 
+  var _evtSavedScrollY = 0;
+
   function evtLockScroll() {
-    var scrollY = window.scrollY || window.pageYOffset || 0;
-    document.documentElement.style.overflow = 'hidden';
-    document.body.style.overflow = 'hidden';
-    /* iOS Safari: fix position to prevent rubber-band scroll */
+    _evtSavedScrollY = window.scrollY || window.pageYOffset || 0;
+    document.body.style.top = '-' + _evtSavedScrollY + 'px';
     document.body.style.position = 'fixed';
-    document.body.style.top = '-' + scrollY + 'px';
-    document.body.style.left = '0';
-    document.body.style.right = '0';
-    document.body.dataset.scrollY = scrollY;
+    document.body.style.overflow = 'hidden';
+    document.body.style.width = '100%';
   }
 
   function evtUnlockScroll() {
-    var scrollY = parseInt(document.body.dataset.scrollY || '0', 10);
-    document.documentElement.style.overflow = '';
-    document.body.style.overflow = '';
     document.body.style.position = '';
     document.body.style.top = '';
-    document.body.style.left = '';
-    document.body.style.right = '';
-    window.scrollTo(0, scrollY);
+    document.body.style.overflow = '';
+    document.body.style.width = '';
+    window.scrollTo(0, _evtSavedScrollY);
   }
 
   function evtOpenModal(ev) {
