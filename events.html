@@ -156,8 +156,8 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap"></noscript>
 <!-- KORA_GOOGLE_FONTS_END -->
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
-</link></head>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+</head>
 <body>
 <!-- KORA_TRACKING_GTM_BODY_START -->
 <!-- Google Tag Manager (noscript) -->
@@ -924,6 +924,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   }
 
+  function evtKeyHandler(e) {
+    if (e.key === 'Escape' || e.keyCode === 27) {
+      evtCloseModal();
+    }
+  }
+
   function evtOpenModal(ev) {
     var p = evtPalette(ev.category);
     var dt = new Date(ev.start_datetime);
@@ -971,6 +977,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     modal.innerHTML = modalHtml;
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
+    document.addEventListener('keydown', evtKeyHandler);
   }
 
   function evtCloseModal() {
@@ -978,6 +985,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     modal.style.display = 'none';
     modal.innerHTML = '';
     document.body.style.overflow = '';
+    document.removeEventListener('keydown', evtKeyHandler);
   }
 
   function evtEscape(str) {
