@@ -156,8 +156,8 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap"></noscript>
 <!-- KORA_GOOGLE_FONTS_END -->
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
-</head>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
+</link></head>
 <body>
 <!-- KORA_TRACKING_GTM_BODY_START -->
 <!-- Google Tag Manager (noscript) -->
@@ -268,12 +268,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </section>
 <!-- ========== EVENT DETAIL MODAL ========== -->
-<div id="evtModal" onclick="if(event.target===this)evtCloseModal()" style="display:none;position:fixed;inset:0;z-index:200;background:rgba(0,0,0,0.6);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:1rem;">
-<div style="background:#fff;border-radius:24px;max-width:600px;width:100%;max-height:90vh;overflow-y:auto;box-shadow:0 24px 64px rgba(0,0,0,0.25);position:relative;">
-<button onclick="evtCloseModal()" onmouseout="this.style.background='#fff'" onmouseover="this.style.background='#f0f0f0'" style="position:absolute;top:1rem;right:1rem;width:36px;height:36px;border-radius:50%;border:1px solid #e0e0e0;background:#fff;cursor:pointer;font-size:1.1rem;color:#696969;z-index:10;display:flex;align-items:center;justify-content:center;">×</button>
-<div id="evtModalContent" style="padding:2rem;"></div>
-</div>
-</div>
+<div id="evtModal" onclick="if(event.target===this)evtCloseModal()"></div>
 <!-- ========== WHAT TO EXPECT SECTION ========== -->
 <section class="py-24 md:py-32 section-bg-alt relative overflow-hidden">
 <div class="container mx-auto px-6 max-w-6xl">
@@ -399,6 +394,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div id="site-footer"></div>
 </div><!-- end .antialiased wrapper -->
 <style>
+  /* ── Calendar styles ── */
   .evt-cal-cell {
     min-height: 80px;
     border-right: 1px solid #f5f5f5;
@@ -423,16 +419,265 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     transition: background 0.2s;
   }
   .evt-cal-event-pill:hover { background: #696969; }
+
+  /* ── List card styles ── */
   .evt-list-card {
-    background: #fff; border: 1px solid #eeeeee; border-radius: 20px;
-    overflow: hidden; transition: all 0.32s cubic-bezier(0.16,1,0.3,1);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05); cursor: pointer;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.32s cubic-bezier(0.16,1,0.3,1), box-shadow 0.32s cubic-bezier(0.16,1,0.3,1);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.07);
+    display: flex;
+    flex-direction: column;
   }
-  .evt-list-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,0.12); border-color: #c7c7c7; }
+  .evt-list-card:hover {
+    transform: translateY(-8px) scale(1.012);
+    box-shadow: 0 24px 56px rgba(0,0,0,0.16);
+  }
+  .evt-list-card-accent {
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 5px;
+    border-radius: 20px 0 0 20px;
+  }
+  .evt-list-card-body {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.5rem 1.5rem 1.5rem 1.75rem;
+    flex: 1;
+  }
+  .evt-list-card-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 1.6rem;
+  }
+  .evt-list-card-content {
+    flex: 1;
+    min-width: 0;
+  }
+  .evt-list-card-category {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.7rem;
+    border-radius: 999px;
+    margin-bottom: 0.5rem;
+  }
+  .evt-list-card-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .evt-list-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    align-items: center;
+  }
+  .evt-list-card-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+  }
+  .evt-list-card-arrow {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: transform 0.2s;
+  }
+  .evt-list-card:hover .evt-list-card-arrow {
+    transform: translateX(4px);
+  }
+  .evt-list-card-cta {
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 1.5rem 1.25rem 1.75rem;
+  }
+  .evt-list-card-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.45rem 1.1rem;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.2s, transform 0.2s;
+  }
+  .evt-list-card-cta-btn:hover { opacity: 0.85; transform: scale(1.04); }
+
+  /* ── Modal styles ── */
+  #evtModal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(6px);
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: evtModalBgIn 0.25s ease;
+  }
+  @keyframes evtModalBgIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  .evt-modal-inner {
+    background: #fff;
+    border-radius: 24px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 92vh;
+    overflow-y: auto;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.3);
+    position: relative;
+    animation: evtModalIn 0.3s cubic-bezier(0.16,1,0.3,1);
+    scrollbar-width: thin;
+  }
+  @keyframes evtModalIn {
+    from { opacity: 0; transform: scale(0.92) translateY(24px); }
+    to { opacity: 1; transform: scale(1) translateY(0); }
+  }
+  .evt-modal-header {
+    padding: 2.25rem 2rem 1.75rem;
+    position: relative;
+    border-radius: 24px 24px 0 0;
+  }
+  .evt-modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+    backdrop-filter: blur(4px);
+  }
+  .evt-modal-close:hover { background: rgba(255,255,255,0.35); }
+  .evt-modal-category-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(255,255,255,0.22);
+    color: #fff;
+    margin-bottom: 0.75rem;
+    backdrop-filter: blur(4px);
+  }
+  .evt-modal-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.65rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 1.25rem;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  }
+  .evt-modal-meta-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: rgba(255,255,255,0.92);
+    margin-bottom: 0.5rem;
+  }
+  .evt-modal-meta-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    backdrop-filter: blur(4px);
+  }
+  .evt-modal-body {
+    padding: 1.75rem 2rem 2rem;
+  }
+  .evt-modal-desc-label {
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #8a8a8a;
+    margin-bottom: 0.75rem;
+  }
+  .evt-modal-desc {
+    font-size: 0.92rem;
+    color: #444;
+    line-height: 1.75;
+  }
+  .evt-modal-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.85rem 2rem;
+    border-radius: 999px;
+    border: none;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 1.5rem;
+    color: #fff;
+  }
+  .evt-modal-cta:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(0,0,0,0.25); }
+
   @media (max-width: 640px) {
     .evt-cal-cell { min-height: 52px; }
     .evt-cal-event-pill { display: none; }
     .evt-cal-cell.has-event { background: #f0f0f0; cursor: pointer; }
+    .evt-modal-inner { border-radius: 20px 20px 0 0; max-height: 95vh; }
+    #evtModal { align-items: flex-end; padding: 0; }
+    .evt-modal-title { font-size: 1.35rem; }
+    .evt-list-card-title { white-space: normal; }
   }
 </style>
 <script>
@@ -603,6 +848,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
   }
 
+  /* ── Per-category color palette ── */
+  var EVT_PALETTES = {
+    'live music':      { grad: 'linear-gradient(135deg,#f97316,#ef4444)', bg: '#fff8f5', cat: '#f97316', catBg: '#fff0e6', text: '#c2410c', icon: '🎵', chipBg: '#fff0e6', chipColor: '#c2410c' },
+    'festival':        { grad: 'linear-gradient(135deg,#a855f7,#ec4899)', bg: '#fdf5ff', cat: '#a855f7', catBg: '#f5e8ff', text: '#7e22ce', icon: '🎉', chipBg: '#f5e8ff', chipColor: '#7e22ce' },
+    'movie screening': { grad: 'linear-gradient(135deg,#3b82f6,#06b6d4)', bg: '#f0f9ff', cat: '#3b82f6', catBg: '#e0f2fe', text: '#1d4ed8', icon: '🎬', chipBg: '#e0f2fe', chipColor: '#1d4ed8' },
+    'default':         { grad: 'linear-gradient(135deg,#10b981,#059669)', bg: '#f0fdf4', cat: '#10b981', catBg: '#d1fae5', text: '#065f46', icon: '📅', chipBg: '#d1fae5', chipColor: '#065f46' }
+  };
+
+  function evtPalette(category) {
+    var key = (category || '').toLowerCase().trim();
+    return EVT_PALETTES[key] || EVT_PALETTES['default'];
+  }
+
   function evtRenderList() {
     var container = document.getElementById('evtListContainer');
     container.innerHTML = '';
@@ -611,66 +869,114 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       return;
     }
     EVT_EVENTS.forEach(function(ev) {
+      var p = evtPalette(ev.category);
       var card = document.createElement('div');
       card.className = 'evt-list-card';
+      card.style.background = p.bg;
+      card.style.border = '1px solid ' + p.cat + '22';
       card.onclick = function() { evtOpenModal(ev); };
+
       var dt = new Date(ev.start_datetime);
-      var dateStr = dt.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
+      var dateStr = dt.toLocaleDateString('en-US', { weekday:'short', month:'short', day:'numeric', year:'numeric' });
       var timeStr = dt.toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit', hour12:true });
+
       card.innerHTML =
-        (ev.hero_image_url && ev.hero_image_url.trim() ? '<img src="' + evtEscape(ev.hero_image_url) + '" alt="' + evtEscape(ev.title) + '" style="width:100%;height:200px;object-fit:cover;">' : '') +
-        '<div style="padding:1.5rem;">' +
-          '<div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.75rem;">' +
-            '<span style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.65rem;border-radius:999px;background:#f0f0f0;color:#696969;border:1px solid #e0e0e0;">' + evtEscape(ev.category) + '</span>' +
+        /* Colored left accent bar */
+        '<div class="evt-list-card-accent" style="background:' + p.grad + ';"></div>' +
+        '<div class="evt-list-card-body">' +
+          /* Icon badge */
+          '<div class="evt-list-card-icon" style="background:' + p.catBg + ';">' +
+            p.icon +
           '</div>' +
-          '<h3 style="font-family:\'Playfair Display\',serif;font-size:1.15rem;font-weight:700;color:#1a1a1a;margin-bottom:0.5rem;line-height:1.3;">' + evtEscape(ev.title) + '</h3>' +
-          '<p style="font-size:0.82rem;color:#696969;line-height:1.55;margin-bottom:1rem;">' + evtEscape(ev.short_description) + '</p>' +
-          '<div style="display:flex;flex-wrap:wrap;gap:0.75rem;padding-top:0.75rem;border-top:1px solid #f0f0f0;">' +
-            '<span style="display:flex;align-items:center;gap:0.35rem;font-size:0.75rem;color:#8a8a8a;">' +
-              '<svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>' +
-              evtEscape(dateStr) + ' · ' + evtEscape(timeStr) +
-            '</span>' +
-            (ev.location_text ? '<span style="display:flex;align-items:center;gap:0.35rem;font-size:0.75rem;color:#8a8a8a;"><svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' + evtEscape(ev.location_text) + '</span>' : '') +
+          /* Content */
+          '<div class="evt-list-card-content">' +
+            '<div class="evt-list-card-category" style="background:' + p.catBg + ';color:' + p.text + ';">' +
+              evtEscape(ev.category) +
+            '</div>' +
+            '<div class="evt-list-card-title" style="color:' + p.text + ';">' + evtEscape(ev.title) + '</div>' +
+            '<div class="evt-list-card-meta">' +
+              '<span class="evt-list-card-chip" style="background:' + p.chipBg + ';color:' + p.chipColor + ';">' +
+                '<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>' +
+                evtEscape(dateStr) + ' · ' + evtEscape(timeStr) +
+              '</span>' +
+              (ev.location_text
+                ? '<span class="evt-list-card-chip" style="background:' + p.chipBg + ';color:' + p.chipColor + ';">' +
+                    '<svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' +
+                    evtEscape(ev.location_text) +
+                  '</span>'
+                : '') +
+            '</div>' +
           '</div>' +
+          /* Arrow CTA */
+          '<div class="evt-list-card-arrow" style="background:' + p.catBg + ';color:' + p.text + ';">' +
+            '<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>' +
+          '</div>' +
+        '</div>' +
+        /* View Details CTA strip */
+        '<div class="evt-list-card-cta" style="display:flex;">' +
+          '<button class="evt-list-card-cta-btn" style="background:' + p.grad + ';color:#fff;">' +
+            'View Details' +
+            '<svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>' +
+          '</button>' +
         '</div>';
+
       container.appendChild(card);
     });
   }
 
   function evtOpenModal(ev) {
+    var p = evtPalette(ev.category);
     var dt = new Date(ev.start_datetime);
     var dateStr = dt.toLocaleDateString('en-US', { weekday:'long', year:'numeric', month:'long', day:'numeric' });
     var timeStr = dt.toLocaleTimeString('en-US', { hour:'numeric', minute:'2-digit', hour12:true });
-    var fullDescHtml = evtEscape(ev.full_description).replace(/\n\n/g, '</p><p style="margin-bottom:0.75rem;">').replace(/\n/g, '<br>');
-    var imgHtml = (ev.hero_image_url && ev.hero_image_url.trim())
-      ? '<img src="' + evtEscape(ev.hero_image_url) + '" alt="' + evtEscape(ev.title) + '" style="width:100%;height:220px;object-fit:cover;border-radius:16px;margin-bottom:1.5rem;">'
-      : '';
+    var fullDescHtml = evtEscape(ev.full_description)
+      .replace(/\n\n/g, '</p><p style="margin-bottom:1rem;">')
+      .replace(/\n/g, '<br>');
     var ctaHtml = (ev.ticket_url && ev.ticket_url.trim())
-      ? '<a href="' + evtEscape(ev.ticket_url) + '" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:0.5rem;padding:0.75rem 1.75rem;background:#1a1a1a;color:#fff;border-radius:999px;font-size:0.82rem;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;text-decoration:none;margin-top:1.25rem;transition:background 0.2s;" onmouseover="this.style.background=\'#696969\'" onmouseout="this.style.background=\'#1a1a1a\'">Register / Book Tickets ↗</a>'
-      : '';
-    document.getElementById('evtModalContent').innerHTML =
-      imgHtml +
-      '<span style="font-size:0.65rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.2rem 0.65rem;border-radius:999px;background:#f0f0f0;color:#696969;border:1px solid #e0e0e0;">' + evtEscape(ev.category) + '</span>' +
-      '<h2 style="font-family:\'Playfair Display\',serif;font-size:1.5rem;font-weight:800;color:#1a1a1a;margin:0.75rem 0 0.5rem;line-height:1.25;">' + evtEscape(ev.title) + '</h2>' +
-      '<div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-bottom:1rem;">' +
-        '<span style="display:flex;align-items:center;gap:0.35rem;font-size:0.8rem;color:#696969;">' +
-          '<svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>' +
-          evtEscape(dateStr) + ' · ' + evtEscape(timeStr) +
-        '</span>' +
-        (ev.location_text ? '<span style="display:flex;align-items:center;gap:0.35rem;font-size:0.8rem;color:#696969;"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>' + evtEscape(ev.location_text) + '</span>' : '') +
-      '</div>' +
-      '<p style="font-size:0.9rem;color:#696969;line-height:1.65;margin-bottom:1rem;font-style:italic;">' + evtEscape(ev.short_description) + '</p>' +
-      '<div style="border-top:1px solid #f0f0f0;padding-top:1rem;">' +
-        '<p style="margin-bottom:0.75rem;">' + fullDescHtml + '</p>' +
-      '</div>' +
-      ctaHtml;
+      ? '<a href="' + evtEscape(ev.ticket_url) + '" target="_blank" rel="noopener noreferrer" class="evt-modal-cta" style="background:' + p.grad + ';">Register / Book Tickets <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg></a>'
+      : '<button onclick="evtCloseModal()" class="evt-modal-cta" style="background:' + p.grad + ';">Explore More Events <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>';
+
+    var modalHtml =
+      '<div class="evt-modal-inner">' +
+        /* Colored header */
+        '<div class="evt-modal-header" style="background:' + p.grad + ';">' +
+          '<button class="evt-modal-close" onclick="evtCloseModal()" aria-label="Close">✕</button>' +
+          '<div class="evt-modal-category-badge">' + p.icon + ' ' + evtEscape(ev.category) + '</div>' +
+          '<div class="evt-modal-title">' + evtEscape(ev.title) + '</div>' +
+          /* Date row */
+          '<div class="evt-modal-meta-row">' +
+            '<div class="evt-modal-meta-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>' +
+            evtEscape(dateStr) + ' &nbsp;·&nbsp; ' + evtEscape(timeStr) +
+          '</div>' +
+          /* Location row */
+          (ev.location_text
+            ? '<div class="evt-modal-meta-row">' +
+                '<div class="evt-modal-meta-icon"><svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>' +
+                evtEscape(ev.location_text) +
+              '</div>'
+            : '') +
+        '</div>' +
+        /* Body */
+        '<div class="evt-modal-body">' +
+          (ev.hero_image_url && ev.hero_image_url.trim()
+            ? '<img src="' + evtEscape(ev.hero_image_url) + '" alt="' + evtEscape(ev.title) + '" style="width:100%;height:200px;object-fit:cover;border-radius:14px;margin-bottom:1.5rem;">'
+            : '') +
+          '<div class="evt-modal-desc-label">About This Event</div>' +
+          '<div class="evt-modal-desc"><p style="margin-bottom:1rem;">' + fullDescHtml + '</p></div>' +
+          ctaHtml +
+        '</div>' +
+      '</div>';
+
     var modal = document.getElementById('evtModal');
+    modal.innerHTML = modalHtml;
     modal.style.display = 'flex';
     document.body.style.overflow = 'hidden';
   }
 
   function evtCloseModal() {
-    document.getElementById('evtModal').style.display = 'none';
+    var modal = document.getElementById('evtModal');
+    modal.style.display = 'none';
+    modal.innerHTML = '';
     document.body.style.overflow = '';
   }
 
