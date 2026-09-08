@@ -72,11 +72,10 @@ sections:
 - Soup — 4 priced items: Tom Yum Goong, Tom Kha Gai, Sweet Corn Soup, Vegetable Soup
 - Side — 10 priced items: Jasmine Rice, Sub Brown Rice, Add Tofu, Thai Sticky Rice, Sub Sticky Rice, Steamed Vegetables, Brown Rice, Peanut Sauce, PRIK NAM PLA, FRIED EGG
 - Beverages — 7 priced items: THAI ICE TEA, LYCHEE JUICE, COKE, DIET COKE, SPRITE, GINGER ALE, THAI ICE COFFEE
-- Desserts — 4 priced items: MANGO STICKY RICE, FRIED BANANA, COCONUT PUDDING, FRIED ICE CREAM
 also: Every dish has its own id of the form <category>-<slug>, so a single dish can be addressed directly. The categories themselves have no ids, so a change to a whole category is located by its heading.
 also: Renaming a dish leaves its id pointing at the old name, and the id is what any link to that dish uses.
 also: An item named "editor testing" sits in the appetizer group. It is a test entry, not a dish, and it has no id of its own — unlike every real dish on the page.
-also: Side, beverage and dessert names are written in capitals while every other category is written in title case, so a change applied to one style will miss the other.
+also: Side and beverage names are written in capitals while every other category is written in title case, so a change applied to one style will miss the other.
 
 ## shared (every page)
 The header, navigation, mobile menu and footer are propagated from index.html to every other page by
