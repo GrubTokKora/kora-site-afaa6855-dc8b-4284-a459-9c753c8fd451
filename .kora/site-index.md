@@ -1,4 +1,4 @@
-# Site index · format 1
+# Site index · format 2
 Structure and the names of what each page offers. Values that change often — prices, hours, phone,
 address — and body copy are deliberately not recorded here; read the page itself for those.
 
@@ -77,6 +77,20 @@ also: Renaming a dish leaves its id pointing at the old name, and the id is what
 also: An item named "editor testing" sits in the appetizer group. It is a test entry, not a dish, and it has no id of its own — unlike every real dish on the page.
 also: Side and beverage names are written in capitals while every other category is written in title case, so a change applied to one style will miss the other.
 
+## support files
+Files that are not pages. A line marked [content] holds words or data a visitor reads, so a
+change to the site's content can land there; the rest only make the site work or look right.
+- `llms.txt` — a plain-text summary of the business for AI crawlers — derived from the site by the deploy, not written by hand
+- `robots.txt` — crawler rules and the sitemap link — derived from the site by the deploy, not written by hand
+- `sitemap.xml` — the list of page URLs — derived from the site by the deploy, not written by hand
+- `script.js` — scroll behaviour, the mobile menu and the forms
+- `shell.js` — THE HEADER, NAVIGATION AND FOOTER for every page — index.html has none of its own, so every change to the shared chrome is made here  [content]
+- `assets/kora-voice/voice-client.js` — the voice assistant's connection to the API
+- `assets/kora-voice/voice-widget.css` — the voice assistant button and panel styling
+- `assets/kora-voice/voice-widget.js` — the voice assistant's on-page behaviour
+
 ## shared (every page)
-The header, navigation, mobile menu and footer are propagated from index.html to every other page by
-`shell_propagation`. A change to any of them is made on index.html alone and copied automatically.
+The header, navigation, mobile menu and footer are NOT in the pages. They are rendered at
+load by `shell.js`, which is where every change to the shared chrome has to be made. Editing a
+page's markup to change the header will appear to do nothing, because there is no header in
+it to change.
