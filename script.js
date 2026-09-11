@@ -93,14 +93,34 @@ document.addEventListener('DOMContentLoaded', () => {
       const recaptchaContainer = document.getElementById('recaptcha-container');
 
       const renderRecaptcha = () => {
-        if (recaptchaWidgetId !== undefined) {
-            grecaptcha.reset(recaptchaWidgetId);
+        if (typeof grecaptcha === 'undefined' || !grecaptcha.render || !recaptchaContainer) {
             return;
         }
-        if (typeof grecaptcha !== 'undefined' && grecaptcha.render && recaptchaContainer) {
+        if (recaptchaWidgetId !== undefined) {
+            try { grecaptcha.reset(recaptchaWidgetId); } catch (e) {}
+            return;
+        }
+        // grecaptcha.render() throws "placeholder element must be empty" when the container
+        // already holds a widget — and it can hold one this closure never saw, because
+        // render is reachable from three places: the API's onload callback, the focusin
+        // handler and the submit handler.
+        //
+        // That throw is what made the form unusable. recaptchaWidgetId was never assigned,
+        // so every later submit took the "not ready" branch and showed "Security check is
+        // loading, please try again in a moment" — while the checkbox sat there ticked and
+        // looking perfectly fine. Clearing the placeholder first means a second render
+        // replaces the widget instead of failing.
+        if (recaptchaContainer.childElementCount > 0) {
+            recaptchaContainer.innerHTML = '';
+        }
+        try {
             recaptchaWidgetId = grecaptcha.render(recaptchaContainer, {
                 'sitekey': recaptchaSiteKey
             });
+        } catch (e) {
+            // Left unset on purpose, so a later attempt renders again rather than trying to
+            // reset a widget that does not exist.
+            recaptchaWidgetId = undefined;
         }
       };
 
