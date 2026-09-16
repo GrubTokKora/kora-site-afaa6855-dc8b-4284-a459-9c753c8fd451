@@ -9,7 +9,6 @@ sections:
 - `#top` "Kora Demo Stamford: Your Go-To for Lunch, Dinner & Takeout" — the hero
 - `#heroImg` — the hero image
 - `#offers` "Our Offers" — the current promotions, each with an expiry date
-- `#signature-dishes` "Signature Dishes" — auto-scrolling carousel showcasing signature Thai dishes: Pad Thai, Green Curry, Sizzling Pancake, Drunken Noodles, Tom Yum Goong, Pla Rad Prik, Rendang, Crab Rangoon
 - `#menu-page` "Our Menu" — a teaser for the menu with View Full Menu and Order Online actions
 - `#about` "About Kora Demo" — the restaurant's story
 - `#hours_location` "Hours & Location" — the block holding the opening hours and the address
@@ -17,7 +16,7 @@ sections:
 - `#location` "Location" — the address
 - `#gallery` "Gallery" — photographs of the food and the room
 - `#events` "Events" — a teaser for the events page
-- `#testimonials` "What Our Customers Say" — carousel of 5 named customer reviews: Nire Lewis, Rama Ramachandran, Tihomir S, Mohit Shah, shalin thomas
+- `#testimonials` "What Our Customers Say" — 3 named customer reviews: Rama Ramachandran, Tihomir S, Nire Lewis
 - `#contact` "Contact Us" — the address, phone, email and hours, beside the enquiry form
 - `#contact-form` — the enquiry form
 - `#contact-name` — the form's name input
@@ -84,7 +83,6 @@ change to the site's content can land there; the rest only make the site work or
 - `llms.txt` — a plain-text summary of the business for AI crawlers — derived from the site by the deploy, not written by hand
 - `robots.txt` — crawler rules and the sitemap link — derived from the site by the deploy, not written by hand
 - `sitemap.xml` — the list of page URLs — derived from the site by the deploy, not written by hand
-- `assets/site.css` — the site's styling, brand colours and type scale
 - `script.js` — scroll behaviour, the mobile menu and the forms
 - `shell.js` — THE HEADER, NAVIGATION AND FOOTER for every page — index.html has none of its own, so every change to the shared chrome is made here  [content]
 - `assets/kora-voice/voice-client.js` — the voice assistant's connection to the API
