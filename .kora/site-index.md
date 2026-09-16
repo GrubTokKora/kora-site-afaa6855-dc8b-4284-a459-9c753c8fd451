@@ -84,6 +84,7 @@ change to the site's content can land there; the rest only make the site work or
 - `llms.txt` — a plain-text summary of the business for AI crawlers — derived from the site by the deploy, not written by hand
 - `robots.txt` — crawler rules and the sitemap link — derived from the site by the deploy, not written by hand
 - `sitemap.xml` — the list of page URLs — derived from the site by the deploy, not written by hand
+- `assets/site.css` — the site's styling, brand colours and type scale
 - `script.js` — scroll behaviour, the mobile menu and the forms
 - `shell.js` — THE HEADER, NAVIGATION AND FOOTER for every page — index.html has none of its own, so every change to the shared chrome is made here  [content]
 - `assets/kora-voice/voice-client.js` — the voice assistant's connection to the API
