@@ -102,8 +102,8 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap"></noscript>
 <!-- KORA_GOOGLE_FONTS_END -->
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
-</head>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
+</link></head>
 <body>
 <!-- KORA_TRACKING_GTM_BODY_START -->
 <!-- Google Tag Manager (noscript) -->
@@ -770,12 +770,28 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 <div class="space-y-6 stagger-children">
 <div class="glass-card rounded-2xl p-8 shadow-lg reveal">
+<h3 class="font-display text-xl font-bold text-ink-900 mb-3">What style of cuisine does Kora Demo serve?</h3>
+<p class="text-ink-600 leading-relaxed">We specialize in authentic Thai cuisine cooked fresh to order by our experienced chefs. We use only the finest ingredients, including premium spices and aromatic herbs sourced directly from Thailand.</p>
+</div>
+<div class="glass-card rounded-2xl p-8 shadow-lg reveal">
 <h3 class="font-display text-xl font-bold text-ink-900 mb-3">What are Kora Demo's most popular dishes?</h3>
-<p class="text-ink-600 leading-relaxed">Our most popular dishes include our fragrant Pad Thai — rice noodles tossed with peanut, bean sprout, egg, and tamarind sauce — and our rich, aromatic Green Curry made with coconut milk, fresh vegetables, and basil. Both are customer favourites and available with your choice of protein.</p>
+<p class="text-ink-600 leading-relaxed">Our most popular dishes include our classic Pad Thai, aromatic Green Curry, Drunken Noodles, crispy Crab Rangoon, and signature specialties such as Duck Choo Chee and Sizzling Pancake.</p>
+</div>
+<div class="glass-card rounded-2xl p-8 shadow-lg reveal">
+<h3 class="font-display text-xl font-bold text-ink-900 mb-3">Does Kora Demo offer vegetarian or vegan options?</h3>
+<p class="text-ink-600 leading-relaxed">Yes, we offer an extensive selection of vegetarian and vegan-friendly dishes. Most of our curries, wok entrees, noodles, and fried rice dishes can be prepared with tofu and mixed vegetables.</p>
 </div>
 <div class="glass-card rounded-2xl p-8 shadow-lg reveal">
 <h3 class="font-display text-xl font-bold text-ink-900 mb-3">Does Kora Demo offer delivery or takeout in Stamford?</h3>
-<p class="text-ink-600 leading-relaxed">Yes, Kora Demo offers convenient delivery and takeout services throughout Stamford, CT. You can place your order online for pickup or delivery.</p>
+<p class="text-ink-600 leading-relaxed">Yes, Kora Demo provides convenient delivery and takeout services across Stamford, CT. You can easily view our menu and place your order online for pickup or direct delivery.</p>
+</div>
+<div class="glass-card rounded-2xl p-8 shadow-lg reveal">
+<h3 class="font-display text-xl font-bold text-ink-900 mb-3">What are your hours of operation?</h3>
+<p class="text-ink-600 leading-relaxed">We are open Tuesday through Thursday, Saturday, and Sunday from 9:00 AM to 5:00 PM, and Friday with late-night hours from 12:00 PM to 3:00 AM. We are closed on Mondays.</p>
+</div>
+<div class="glass-card rounded-2xl p-8 shadow-lg reveal">
+<h3 class="font-display text-xl font-bold text-ink-900 mb-3">Where are you located and how can I get in touch?</h3>
+<p class="text-ink-600 leading-relaxed">We are located at 48 Strawberry Hill Ave, Stamford, CT 06902. You can reach us by phone at +1 (203) 000-0000, send an email to umang@gmail.com, or submit a message through our online contact form.</p>
 </div>
 </div>
 </div>
@@ -787,10 +803,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   "mainEntity": [
     {
       "@type": "Question",
+      "name": "What style of cuisine does Kora Demo serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We specialize in authentic Thai cuisine cooked fresh to order by our experienced chefs. We use only the finest ingredients, including premium spices and aromatic herbs sourced directly from Thailand."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "What are Kora Demo's most popular dishes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Our most popular dishes include our fragrant Pad Thai — rice noodles tossed with peanut, bean sprout, egg, and tamarind sauce — and our rich, aromatic Green Curry made with coconut milk, fresh vegetables, and basil. Both are customer favourites and available with your choice of protein."
+        "text": "Our most popular dishes include our classic Pad Thai, aromatic Green Curry, Drunken Noodles, crispy Crab Rangoon, and signature specialties such as Duck Choo Chee and Sizzling Pancake."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Kora Demo offer vegetarian or vegan options?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, we offer an extensive selection of vegetarian and vegan-friendly dishes. Most of our curries, wok entrees, noodles, and fried rice dishes can be prepared with tofu and mixed vegetables."
       }
     },
     {
@@ -798,7 +830,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       "name": "Does Kora Demo offer delivery or takeout in Stamford?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, Kora Demo offers convenient delivery and takeout services throughout Stamford, CT. You can place your order online for pickup or delivery."
+        "text": "Yes, Kora Demo provides convenient delivery and takeout services across Stamford, CT. You can easily view our menu and place your order online for pickup or direct delivery."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are your hours of operation?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We are open Tuesday through Thursday, Saturday, and Sunday from 9:00 AM to 5:00 PM, and Friday with late-night hours from 12:00 PM to 3:00 AM. We are closed on Mondays."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where are you located and how can I get in touch?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We are located at 48 Strawberry Hill Ave, Stamford, CT 06902. You can reach us by phone at +1 (203) 000-0000, send an email to umang@gmail.com, or submit a message through our online contact form."
       }
     }
   ]
