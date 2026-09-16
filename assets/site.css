@@ -489,6 +489,45 @@ body {
   }
 }
 
+/* Food Carousel */
+.food-carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 5%, black 95%, transparent 100%);
+}
+
+.food-carousel-group {
+  animation: scrollCarousel 38s linear infinite;
+  will-change: transform;
+}
+
+.food-carousel-wrapper:hover .food-carousel-group,
+.food-carousel-wrapper.is-paused .food-carousel-group {
+  animation-play-state: paused;
+}
+
+@keyframes scrollCarousel {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 1.5rem));
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .food-carousel-group {
+    animation: none;
+  }
+  .food-carousel-wrapper {
+    overflow-x: auto;
+    mask-image: none;
+    -webkit-mask-image: none;
+  }
+}
+
 /* ── Hand-built premium layer (kept OUTSIDE src/ on purpose) ─────────────────
    Gold square buttons, dark glass cards, charcoal alternate sections. */
 :root { --premium-accent: #b8860b; --premium-accent-dark: #8a6508; --premium-ink: #14110f; }

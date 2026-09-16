@@ -9,6 +9,7 @@ sections:
 - `#top` "Kora Demo Stamford: Your Go-To for Lunch, Dinner & Takeout" — the hero
 - `#heroImg` — the hero image
 - `#offers` "Our Offers" — the current promotions, each with an expiry date
+- `#signature-dishes` "Signature Dishes" — auto-scrolling carousel showcasing signature Thai dishes: Pad Thai, Green Curry, Sizzling Pancake, Drunken Noodles, Tom Yum Goong, Pla Rad Prik, Rendang, Crab Rangoon
 - `#menu-page` "Our Menu" — a teaser for the menu with View Full Menu and Order Online actions
 - `#about` "About Kora Demo" — the restaurant's story
 - `#hours_location` "Hours & Location" — the block holding the opening hours and the address

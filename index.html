@@ -102,8 +102,8 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap"></noscript>
 <!-- KORA_GOOGLE_FONTS_END -->
-<link href="assets/kora-voice/voice-widget.css" rel="stylesheet">
-</link></head>
+<link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+</head>
 <body>
 <!-- KORA_TRACKING_GTM_BODY_START -->
 <!-- Google Tag Manager (noscript) -->
@@ -238,6 +238,325 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 </div>
 </section>
+<!-- ========== SIGNATURE DISHES CAROUSEL ========== -->
+<section class="py-24 md:py-32 relative overflow-hidden" id="signature-dishes" style="background: linear-gradient(135deg, #0d0d0d 0%, #171717 50%, #0d0d0d 100%);">
+<!-- Background glow -->
+<div class="absolute inset-0 pointer-events-none" style="background: radial-gradient(ellipse at 50% 30%, rgba(138,138,138,0.08) 0%, transparent 70%);"></div>
+<div class="absolute top-0 left-0 w-full h-px" style="background: linear-gradient(90deg, transparent, rgba(138,138,138,0.25), transparent);"></div>
+<div class="absolute bottom-0 left-0 w-full h-px" style="background: linear-gradient(90deg, transparent, rgba(138,138,138,0.25), transparent);"></div>
+<div class="container mx-auto px-6 max-w-6xl relative z-10 mb-12">
+<div class="text-center reveal">
+<span style="display:inline-block; background: rgba(138,138,138,0.15); border: 1px solid rgba(138,138,138,0.3); color: #c7c7c7; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.3em; text-transform: uppercase; padding: 0.4rem 1.2rem; border-radius: 999px; margin-bottom: 1.25rem;">Chef's Specialties</span>
+<h2 class="font-display text-4xl md:text-6xl font-bold mb-4" style="color: #ffffff;">Signature <span style="background: linear-gradient(135deg, #c7c7c7, #8a8a8a); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Dishes</span></h2>
+<div class="mx-auto mb-6" style="width: 60px; height: 3px; background: linear-gradient(90deg, #8a8a8a, #c7c7c7); border-radius: 2px;"></div>
+<p style="color: rgba(255,255,255,0.65); width: 100%; max-width: min(540px, 100%); margin: 0 auto; font-size: 1rem; line-height: 1.7;">
+Authentic Thai favorites hand-crafted with premium spices, aromatic herbs, and time-honored culinary artistry.
+</p>
+</div>
+<!-- Controls bar -->
+<div class="flex items-center justify-between mt-8 max-w-5xl mx-auto px-2">
+<p class="text-xs uppercase tracking-wider text-white/40 hidden sm:block">Hover card or tap to pause motion</p>
+<button class="ml-auto inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 text-xs font-semibold uppercase tracking-wider text-white/80 hover:text-white hover:border-white/40 bg-white/5 transition-all" id="carousel-toggle-btn">
+<svg class="w-3.5 h-3.5 text-white/80" fill="none" id="carousel-toggle-icon" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
+<rect height="16" width="4" x="6" y="4"></rect>
+<rect height="16" width="4" x="14" y="4"></rect>
+</svg>
+<span id="carousel-toggle-text">Pause Scroll</span>
+</button>
+</div>
+</div>
+<!-- Carousel Track -->
+<div class="food-carousel-wrapper relative py-2" id="signature-carousel-wrapper">
+<div class="flex gap-6 w-max">
+<!-- Group 1 -->
+<div class="food-carousel-group flex gap-6 shrink-0">
+<!-- Card 1: Pad Thai -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Noodle</span>
+<span class="text-lg font-bold text-white">from $13.95</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Pad Thai</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Rice noodle, crushed peanut, bean sprout, egg, scallion and authentic savory tamarind sauce.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#noodle-pad-thai">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+<!-- Card 2: Green Curry -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Curry</span>
+<span class="text-lg font-bold text-white">from $14.95</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Green Curry</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Coconut milk, zucchini, eggplant, bell pepper, bamboo shoot, lime leaf and fragrant fresh Thai basil.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#curry-green-curry">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+<!-- Card 3: Sizzling Pancake -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Chef Special</span>
+<span class="text-lg font-bold text-white">$20.95</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Sizzling Pancake</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Crispy rice pancake filled with shrimp, crab meat, ground pork, mushroom, onion, bean sprout and peanut.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#chef-special-sizzling-pancake">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+<!-- Card 4: Drunken Noodles -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Noodle</span>
+<span class="text-lg font-bold text-white">from $13.95</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Drunken Noodles</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Wide flat rice noodles with bell pepper, onion, fresh Thai basil and aromatic chili paste.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#noodle-drunken-noodles">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+<!-- Card 5: Tom Yum Goong -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Soup</span>
+<span class="text-lg font-bold text-white">$7.25</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Tom Yum Goong</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Shrimp lemongrass soup infused with mushroom, ripe tomato, fresh scallion and fragrant cilantro.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#soup-tom-yum-goong">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+<!-- Card 6: Pla Rad Prik -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Chef Special</span>
+<span class="text-lg font-bold text-white">$27.95</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Pla Rad Prik</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Crispy whole red snapper crowned with sautéed onion, bell pepper and authentic spicy red chili paste.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#chef-special-pla-rad-prik">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+<!-- Card 7: Rendang -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Curry</span>
+<span class="text-lg font-bold text-white">from $14.95</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Rendang</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Slow-simmered coconut milk stew with chili, onion, garlic, candle nut, bay leaf, lime leaf and lemongrass.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#curry-rendang">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+<!-- Card 8: Crab Rangoon -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Appetizer</span>
+<span class="text-lg font-bold text-white">$9.95</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Crab Rangoon</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Crisp golden wonton pouches filled with delicate real crab meat and creamy seasoned filling.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#appetizer-crab-rangoon">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+</div>
+<!-- Group 2 (Duplicate for Seamless Continuous Auto-Scroll) -->
+<div aria-hidden="true" class="food-carousel-group flex gap-6 shrink-0">
+<!-- Card 1: Pad Thai -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Noodle</span>
+<span class="text-lg font-bold text-white">from $13.95</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Pad Thai</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Rice noodle, crushed peanut, bean sprout, egg, scallion and authentic savory tamarind sauce.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#noodle-pad-thai" tabindex="-1">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+<!-- Card 2: Green Curry -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Curry</span>
+<span class="text-lg font-bold text-white">from $14.95</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Green Curry</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Coconut milk, zucchini, eggplant, bell pepper, bamboo shoot, lime leaf and fragrant fresh Thai basil.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#curry-green-curry" tabindex="-1">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+<!-- Card 3: Sizzling Pancake -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Chef Special</span>
+<span class="text-lg font-bold text-white">$20.95</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Sizzling Pancake</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Crispy rice pancake filled with shrimp, crab meat, ground pork, mushroom, onion, bean sprout and peanut.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#chef-special-sizzling-pancake" tabindex="-1">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+<!-- Card 4: Drunken Noodles -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Noodle</span>
+<span class="text-lg font-bold text-white">from $13.95</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Drunken Noodles</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Wide flat rice noodles with bell pepper, onion, fresh Thai basil and aromatic chili paste.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#noodle-drunken-noodles" tabindex="-1">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+<!-- Card 5: Tom Yum Goong -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Soup</span>
+<span class="text-lg font-bold text-white">$7.25</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Tom Yum Goong</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Shrimp lemongrass soup infused with mushroom, ripe tomato, fresh scallion and fragrant cilantro.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#soup-tom-yum-goong" tabindex="-1">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+<!-- Card 6: Pla Rad Prik -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Chef Special</span>
+<span class="text-lg font-bold text-white">$27.95</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Pla Rad Prik</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Crispy whole red snapper crowned with sautéed onion, bell pepper and authentic spicy red chili paste.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#chef-special-pla-rad-prik" tabindex="-1">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+<!-- Card 7: Rendang -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Curry</span>
+<span class="text-lg font-bold text-white">from $14.95</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Rendang</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Slow-simmered coconut milk stew with chili, onion, garlic, candle nut, bay leaf, lime leaf and lemongrass.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#curry-rendang" tabindex="-1">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+<!-- Card 8: Crab Rangoon -->
+<div class="w-[300px] sm:w-[340px] shrink-0 rounded-3xl p-7 flex flex-col justify-between" style="background: linear-gradient(145deg, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 100%); border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 16px 36px rgba(0,0,0,0.35);">
+<div>
+<div class="flex items-center justify-between mb-4">
+<span class="text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-white/20 text-white/80 bg-white/5">Appetizer</span>
+<span class="text-lg font-bold text-white">$9.95</span>
+</div>
+<h3 class="font-display text-2xl font-bold text-white mb-2">Crab Rangoon</h3>
+<div class="w-10 h-0.5 mb-3" style="background: linear-gradient(90deg, #8a8a8a, transparent);"></div>
+<p class="text-white/65 text-sm leading-relaxed mb-6">Crisp golden wonton pouches filled with delicate real crab meat and creamy seasoned filling.</p>
+</div>
+<a class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-300 hover:text-white transition-colors pt-4 border-t border-white/10" href="menu.html#appetizer-crab-rangoon" tabindex="-1">
+<span>View on Menu</span>
+<svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-12 reveal">
+<a class="btn-primary inline-flex items-center gap-2 px-10 py-4 rounded-full text-sm font-semibold uppercase tracking-wider" href="menu.html">
+<span>Explore All 80+ Dishes</span>
+<svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2" viewbox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+</section>
+<script>
+(function() {
+  var wrapper = document.getElementById('signature-carousel-wrapper');
+  var toggleBtn = document.getElementById('carousel-toggle-btn');
+  var toggleIcon = document.getElementById('carousel-toggle-icon');
+  var toggleText = document.getElementById('carousel-toggle-text');
+  if (!wrapper || !toggleBtn) return;
+  toggleBtn.addEventListener('click', function() {
+    var isPaused = wrapper.classList.toggle('is-paused');
+    if (toggleText) toggleText.textContent = isPaused ? 'Resume Scroll' : 'Pause Scroll';
+    if (toggleIcon) {
+      toggleIcon.innerHTML = isPaused 
+        ? '<polygon points="5 3 19 12 5 21 5 3"></polygon>' 
+        : '<rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect>';
+    }
+  });
+})();
+</script>
 <!-- ========== MENU TEASER ========== -->
 <section class="py-24 md:py-32 relative overflow-hidden" id="menu-page" style="background: linear-gradient(180deg, #ffffff 0%, #fafafa 50%, #ffffff 100%);">
 <div class="deco-circle w-[600px] h-[600px] -top-80 -left-80 opacity-10"></div>
