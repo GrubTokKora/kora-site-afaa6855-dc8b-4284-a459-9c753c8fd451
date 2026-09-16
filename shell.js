@@ -53,7 +53,8 @@
       background: currentColor;
       transition: width 0.25s ease;
     }
-    .nav-link:hover::after { width: 100%; }
+    .nav-link:hover::after,
+    .nav-link[aria-current="page"]::after { width: 100%; }
 
     /* Mobile backdrop */
     #mobileMenuBackdrop {
@@ -501,15 +502,43 @@
         // Hash links (About/Contact) are active only when that section is current
         isActive = linkPage === currentPage && linkHash === currentHash;
       } else {
-        isActive = linkPage === currentPage;
+        isActive = linkPage === currentPage && !currentHash;
       }
 
       if (isActive) {
-        link.style.opacity = '0.6';
-        link.style.pointerEvents = 'none';
         link.setAttribute('aria-current', 'page');
+      } else {
+        link.removeAttribute('aria-current');
       }
     });
+  }
+
+  /* ─────────────────────────────────────────────
+     HOME LINK NAVIGATION
+  ───────────────────────────────────────────── */
+  function initHomeNavigation() {
+    var path = window.location.pathname;
+    var currentPage = path.replace(/^\//, '').replace(/\/$/, '').replace(/\.html$/, '');
+    if (currentPage === '' || currentPage === 'index') currentPage = 'index';
+
+    var homeLinks = document.querySelectorAll('a[href="index.html"], a[href="./index.html"], a[href="/index.html"]');
+    homeLinks.forEach(function (link) {
+      link.addEventListener('click', function (e) {
+        if (currentPage === 'index') {
+          e.preventDefault();
+          if (window.location.hash) {
+            history.pushState(null, '', window.location.pathname + window.location.search);
+          }
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          if (typeof window.closeDrawer === 'function') {
+            window.closeDrawer();
+          }
+          highlightActiveNav();
+        }
+      });
+    });
+
+    window.addEventListener('hashchange', highlightActiveNav);
   }
 
   /* ─────────────────────────────────────────────
@@ -522,6 +551,7 @@
     initDrawer();
     initScrollEffect();
     highlightActiveNav();
+    initHomeNavigation();
   }
 
   if (document.readyState === 'loading') {
