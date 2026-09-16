@@ -17,7 +17,7 @@ sections:
 - `#location` "Location" — the address
 - `#gallery` "Gallery" — photographs of the food and the room
 - `#events` "Events" — a teaser for the events page
-- `#testimonials` "What Our Customers Say" — 3 named customer reviews: Rama Ramachandran, Tihomir S, Nire Lewis
+- `#testimonials` "What Our Customers Say" — carousel of 5 named customer reviews: Nire Lewis, Rama Ramachandran, Tihomir S, Mohit Shah, shalin thomas
 - `#contact` "Contact Us" — the address, phone, email and hours, beside the enquiry form
 - `#contact-form` — the enquiry form
 - `#contact-name` — the form's name input
