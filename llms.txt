@@ -1,6 +1,6 @@
 # Kora Demo
 
-> Kora Demo is located at 48 Strawberry Hill Ave in Stamford, CT, offering a wide range of classic Thai dishes prepared with fine ingredients and premium spices. The menu features traditional options including curries, noodle dishes like Pad Thai, stir-fries, rice plates, soups, and appetizers.
+> Kora Demo is located at 48 Strawberry Hill Ave, Stamford, CT. The restaurant offers a wide range of classic Thai dishes prepared with care using fine ingredients and premium spices brought from Thailand.
 
 ## Menu
 Offers a wide range of classic Thai dishes including various curries, noodle dishes like Pad Thai, stir-fries, rice plates, soups, and appetizers.
@@ -19,16 +19,25 @@ Offers a wide range of classic Thai dishes including various curries, noodle dis
 - Website: https://korademo.com
 
 ## Hours
-- Monday: Closed
-- Tuesday: 9 AM – 5 PM
-- Wednesday: 9 AM – 5 PM
-- Thursday: 9 AM – 5 PM
-- Friday: 12 PM – 3 AM
-- Saturday: 9 AM – 5 PM
-- Sunday: 9 AM – 5 PM
+- Monday: 9:00 AM - 11:00 PM
+- Tuesday: 9:00 AM - 11:00 PM
+- Wednesday: 9:00 AM - 11:00 PM
+- Thursday: 9:00 AM - 11:00 PM
+- Friday: 12:00 AM - 7:00 AM
+- Saturday: 9:00 AM - 11:00 PM
+- Sunday: 9:00 AM - 11:00 PM
+
+## Pages
+- [Kora Demo Stamford: Your Go-To for Lunch, Dinner &amp; Takeout](https://korademo.com/)
+- [Upcoming Events](https://korademo.com/events)
+- [Our Full Menu](https://korademo.com/menu)
 
 ## Action Links
-- Reserve a Table: tel:+12035550100
-- Order Online: https://www.toasttab.com/bedford-thai-stamford-77-bedford-street-stamford-ct
-- View Full Menu: menu.html
-- Reserve a Table: tel:+12030000000
+- [Reserve a Table](tel:+12035550100)
+- [Order Online](https://www.toasttab.com/bedford-thai-stamford-77-bedford-street-stamford-ct)
+- [View Full Menu](menu.html)
+- [Reserve a Table](tel:+12030000000)
+
+## Social
+- [Instagram](https://www.instagram.com/askkora.ai/)
+- [TikTok](https://www.tiktok.com/@kora.demo)
