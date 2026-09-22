@@ -16,7 +16,7 @@ sections:
 - `#location` "Location" — the address
 - `#gallery` "Gallery" — photographs of the food and the room
 - `#events` "Events" — a teaser for the events page
-- `#testimonials` "What Our Customers Say" — 3 named customer reviews: Rama Ramachandran, Tihomir S, Nire Lewis
+- `#testimonials` "What Our Customers Say" — 5 named customer reviews: Nire Lewis, Rama Ramachandran, Tihomir S, Mohit Shah, shalin thomas
 - `#contact` "Contact Us" — the address, phone, email and hours, beside the enquiry form
 - `#contact-form` — the enquiry form
 - `#contact-name` — the form's name input
@@ -54,6 +54,14 @@ sections:
 - `#evtModal` — the pop-up that opens when an event is clicked
 - `#contact-strip` "Questions About Events?" — the phone, email and address for event enquiries
 also: The calendar grid, the list and the modal are all filled by script at page load, so no event is named anywhere in the markup. An individual event's wording cannot be edited on this page.
+
+## reviews.html → /reviews
+title: Customer Reviews & Ratings – Kora Demo Stamford, CT
+purpose: The customer reviews page — Google rating summary (4.2★ average from 984 reviews) and customer review cards.
+sections:
+- `#top` "Customer Reviews" — page hero
+- `#reviews-list` "Latest Guest Reviews" — review cards for Nire Lewis, Rama Ramachandran, Tihomir S, Mohit Shah, shalin thomas
+- `#cta` "Experience Kora Demo for Yourself" — actions to explore menu or order online
 
 ## menu.html → /menu
 title: Thai Restaurant Menu – Kora Demo in Stamford, CT

@@ -208,6 +208,7 @@
           <a href="index.html" class="nav-link" style="color:#fff;text-decoration:none;font-size:0.875rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;">Home</a>
           <a href="menu.html" class="nav-link" style="color:#fff;text-decoration:none;font-size:0.875rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;">Menu</a>
           <a href="events.html" class="nav-link" style="color:#fff;text-decoration:none;font-size:0.875rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;">Events</a>
+          <a href="reviews.html" class="nav-link" style="color:#fff;text-decoration:none;font-size:0.875rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;">Reviews</a>
           <a href="index.html#about" class="nav-link" style="color:#fff;text-decoration:none;font-size:0.875rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;">About</a>
           <a href="index.html#contact" class="nav-link" style="color:#fff;text-decoration:none;font-size:0.875rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;">Contact</a>
         </div>
@@ -259,6 +260,7 @@
           <a href="index.html" onclick="closeDrawer()">Home</a>
           <a href="menu.html" onclick="closeDrawer()">Menu</a>
           <a href="events.html" onclick="closeDrawer()">Events</a>
+          <a href="reviews.html" onclick="closeDrawer()">Reviews</a>
           <a href="index.html#about" onclick="closeDrawer()">About</a>
           <a href="index.html#contact" onclick="closeDrawer()">Contact</a>
         </nav>
@@ -313,6 +315,7 @@
               <li><a href="index.html" style="font-size:0.875rem;">Home</a></li>
               <li><a href="menu.html" style="font-size:0.875rem;">Menu</a></li>
               <li><a href="events.html" style="font-size:0.875rem;">Events</a></li>
+              <li><a href="reviews.html" style="font-size:0.875rem;">Reviews</a></li>
               <li><a href="index.html#about" style="font-size:0.875rem;">About</a></li>
               <li><a href="index.html#contact" style="font-size:0.875rem;">Contact</a></li>
             </ul>
