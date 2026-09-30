@@ -209,6 +209,12 @@ document.addEventListener('DOMContentLoaded', () => {
           contactForm.reset();
           grecaptcha.reset(recaptchaWidgetId);
 
+          window.dataLayer = window.dataLayer || [];
+          window.dataLayer.push({ event: 'kora_form_submit', form_type: 'contact' });
+          if (typeof gtag === 'function') {
+            gtag('event', 'conversion', { 'send_to': 'AW-18165004688/opkYCPudr_QcEJDz39VD' });
+          }
+
         } catch (error) {
           formMessage.textContent = error.message || 'An error occurred. Please try again later.';
           formMessage.classList.add('text-red-500');
