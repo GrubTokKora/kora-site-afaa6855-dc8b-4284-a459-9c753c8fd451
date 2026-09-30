@@ -59,19 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Menu page category tabs
-  document.querySelectorAll('.menu-cat-tab').forEach(tab => {
-    tab.addEventListener('click', () => {
-      const cat = tab.dataset.cat;
-      // Update tabs
-      document.querySelectorAll('.menu-cat-tab').forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      // Update sections
-      document.querySelectorAll('.menu-cat-section').forEach(s => s.classList.remove('active'));
-      document.querySelector(`.menu-cat-section[data-section="${cat}"]`).classList.add('active');
-    });
-  });
-
   const contactForm = document.getElementById('contact-form');
   if (contactForm) {
     const submitBtn = document.getElementById('contact-submit-btn');
