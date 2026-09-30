@@ -120,8 +120,12 @@ body {
   background: color-mix(in oklab, var(--color-brand-100) 50%, transparent);
 }
 
+.menu-price {
+  color: #dc2626;
+}
+
 .menu-item:hover .menu-price {
-  color: var(--color-brand-600);
+  color: #b91c1c;
 }
 
 .menu-item h4 {
