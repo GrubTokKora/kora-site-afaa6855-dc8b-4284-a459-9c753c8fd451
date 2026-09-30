@@ -1,6 +1,6 @@
 # Kora Demo
 
-> Kora Demo is located at 48 Strawberry Hill Ave in Stamford, CT, offering a wide range of classic Thai dishes prepared with fine ingredients and premium spices. The menu features curries, noodle dishes like Pad Thai, stir-fries, rice plates, soups, and appetizers.
+> Kora Demo — Finest ingredients & premium spices brought from Thailand, prepared with care for every guest.
 
 ## Menu
 Offers a wide range of classic Thai dishes including various curries, noodle dishes like Pad Thai, stir-fries, rice plates, soups, and appetizers.
