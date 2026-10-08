@@ -6,7 +6,7 @@ address — and body copy are deliberately not recorded here; read the page itse
 title: Kora Demo Stamford: Delicious Lunch, Dinner & Takeout
 purpose: The landing page — offers, a menu teaser, hours, gallery, events, reviews, contact and newsletter sign-up.
 sections:
-- `#top` "Kora Demo Stamford: Your Go-To for Lunch, Dinner & Takeout" — the hero
+- `#top` "Refined Thai Flavors, Artfully Crafted" — the hero
 - `#heroImg` — the hero image
 - `#offers` "Our Offers" — the current promotions, each with an expiry date
 - `#menu-page` "Our Menu" — a teaser for the menu with View Full Menu and Order Online actions
