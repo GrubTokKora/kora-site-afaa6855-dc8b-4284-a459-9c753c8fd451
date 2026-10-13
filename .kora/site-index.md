@@ -69,7 +69,7 @@ purpose: The full menu — every dish, each one individually addressable.
 sections:
 - `#top` "Our Full Menu" — the page hero
 - `#menu-page` "Explore Every Dish" — the whole menu, 87 priced items in twelve categories
-- Appetizer — 13 priced items: Crab Rangoon, Curry Puff, Spring Rolls, Po Pia Sod, Shrimp Summer Roll, Tao Hoo Tord, Dumpling, Chicken Satay, Chicken Wing, Lime Chili Shrimp, Crispy Calamari, Mee Grob, Kong Tod
+- Appetizer — 12 priced items: Curry Puff, Spring Rolls, Po Pia Sod, Shrimp Summer Roll, Tao Hoo Tord, Dumpling, Chicken Satay, Chicken Wing, Lime Chili Shrimp, Crispy Calamari, Mee Grob, Kong Tod
 - Chef Special — 14 priced items: Sizzling Pancake, Seafood Delight, Pla Rad Prik, Pla Sam Rod, Salmon Mango Curry, Steamed Ginger Fish, Pineapple Duck Curry, Duck Choo Chee, Duck Ga Prow, Peanut Shrimp Curry, Pra Raam Chicken, Shaking Beef, Laksa Shrimp, Garlic Eggplant Asparagus
 - Curry — 9 priced items: Rendang, Red Curry, Green Curry, Penang Curry, Mango Curry, Yellow Curry, Masaman Curry, Jungle Curry, Pineapple Curry
 - From the Wok — 8 preparations: Basil, Cashew Nut, Ginger, Garlic, Sambal, Sweet and Sour, Broccoli, Pad Ped
