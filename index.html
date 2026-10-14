@@ -68,8 +68,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   "openingHoursSpecification": [
     {
       "@type": "OpeningHoursSpecification",
+      "dayOfWeek": "Monday",
+      "opens": "09:00",
+      "closes": "17:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
       "dayOfWeek": [
-        "Monday",
         "Tuesday",
         "Wednesday",
         "Thursday",
@@ -126,6 +131,7 @@ window.KORA_CONFIG.features.voice = window.KORA_CONFIG.features.voice || {};
 window.KORA_CONFIG.features.voice.enabled = true;
 window.KORA_CONFIG.features.voice.provider = "xai";
 </script>
+
 <!-- KORA_GOOGLE_FONTS_START -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -133,6 +139,7 @@ window.KORA_CONFIG.features.voice.provider = "xai";
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap"></noscript>
 <!-- KORA_GOOGLE_FONTS_END -->
 <link href="assets/kora-voice/voice-widget.css" rel="stylesheet"/>
+<link rel="stylesheet" href="assets/kora-voice/voice-widget.css" />
 </head>
 <body>
 <!-- KORA_TRACKING_GTM_BODY_START -->
@@ -358,7 +365,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <h3 class="font-display text-2xl font-bold text-ink-900">Opening Hours</h3>
 </div>
 <ul class="space-y-1 text-ink-600">
-<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Monday</span><span class="font-medium text-ink-800 text-right">9:00 AM - 11:00 PM</span></li>
+<li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Monday</span><span class="font-medium text-ink-800 text-right">9:00 AM - 5:00 PM</span></li>
 <li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Tuesday</span><span class="font-medium text-ink-800 text-right">9:00 AM - 11:00 PM</span></li>
 <li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Wednesday</span><span class="font-medium text-ink-800 text-right">9:00 AM - 11:00 PM</span></li>
 <li class="hours-row flex justify-between items-center py-3 px-4 rounded-lg"><span class="font-semibold text-ink-800">Thursday</span><span class="font-medium text-ink-800 text-right">9:00 AM - 11:00 PM</span></li>
@@ -615,7 +622,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <div>
 <h4 class="font-semibold text-ink-900 mb-1">Hours</h4>
 <p class="text-ink-600 text-sm leading-relaxed">
-              Monday: 9:00 AM - 11:00 PM<br/>
+              Monday: 9:00 AM - 5:00 PM<br/>
               Tuesday: 9:00 AM - 11:00 PM<br/>
               Wednesday: 9:00 AM - 11:00 PM<br/>
               Thursday: 9:00 AM - 11:00 PM<br/>
