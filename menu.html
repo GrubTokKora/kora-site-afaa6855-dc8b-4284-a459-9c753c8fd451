@@ -121,10 +121,7 @@ window.KORA_CONFIG = {
 };
 </script>
 <!-- KORA_GOOGLE_FONTS_START -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=Roboto:wght@400;600;700&amp;display=swap"></noscript>
+<!-- kora:fonts --><!-- /kora:fonts -->
 <!-- KORA_GOOGLE_FONTS_END -->
 </head>
 <body>
@@ -198,7 +195,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     justify-content: flex-end; padding: 2.5rem;
   }
   .menu-page-hero-overlay h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--kora-font-heading, 'Playfair Display'), serif;
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800; color: #fff; line-height: 1.1; margin-bottom: 0.5rem;
   }
@@ -224,7 +221,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .kora-menu .kora-menu__menu { margin: 0; }
   .kora-menu .kora-menu__menu-title {
     display: flex; align-items: center; gap: 1rem; margin: 0 0 1.75rem;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--kora-font-heading, 'Playfair Display'), serif;
     font-size: 1.1rem; font-weight: 700; color: #1a1a1a;
     letter-spacing: 0.12em; text-transform: uppercase; white-space: nowrap;
   }
@@ -263,14 +260,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   .kora-menu .kora-menu__item-head { display: contents; }
   .kora-menu .kora-menu__item-name {
     order: 1;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--kora-font-heading, 'Playfair Display'), serif;
     font-size: 1rem; font-weight: 700; color: #1a1a1a;
     margin-bottom: 0.35rem; line-height: 1.3;
   }
   .kora-menu .kora-menu__item-desc { order: 2; font-size: 0.8rem; color: #696969; opacity: 1; line-height: 1.55; flex: 1; margin: 0 0 0.9rem; }
   .kora-menu .kora-menu__item-price, .kora-menu .kora-menu__prices {
     order: 3; margin-top: auto; padding-top: 0.75rem; border-top: 1px solid #f0f0f0;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--kora-font-heading, 'Playfair Display'), serif;
     font-size: 1.2rem; font-weight: 800; color: #dc2626;
   }
 

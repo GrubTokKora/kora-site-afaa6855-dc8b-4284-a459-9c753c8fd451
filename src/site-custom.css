@@ -4,7 +4,7 @@ html {
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--kora-font-body, 'Roboto'), sans-serif;
   background: var(--color-warm-50);
   color: var(--color-ink-900);
   overflow-x: hidden;

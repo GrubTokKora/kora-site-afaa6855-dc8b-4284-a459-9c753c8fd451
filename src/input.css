@@ -9,8 +9,9 @@
   --color-primary: #000000;
   --color-secondary: #F5F5F5;
   --color-accent: #8A8A8A;
-  --font-heading: "Playfair Display", serif;
-  --font-body: Roboto, sans-serif;
+  --font-heading: var(--kora-font-heading, "Playfair Display"), serif;
+  --font-body: var(--kora-font-body, Roboto), sans-serif;
+  --font-accent: var(--kora-font-accent, var(--font-heading)), var(--font-heading);
 }
 /* KORA_BRAND_THEME_END */
 

@@ -36,6 +36,6 @@
   --color-ink-800: #0d0d0d;
   --color-ink-900: #000000;
 
-  --font-display: "Playfair Display", serif;
-  --font-body: "Roboto", sans-serif;
+  --font-display: var(--kora-font-heading, "Playfair Display"), serif;
+  --font-body: var(--kora-font-body, "Roboto"), sans-serif;
 }

@@ -152,7 +152,7 @@
     #site-footer-el {
       background: #0d0d0d;
       color: rgba(255,255,255,0.7);
-      font-family: 'Roboto', sans-serif;
+      font-family: var(--kora-font-body, 'Roboto'), sans-serif;
     }
     #site-footer-el a {
       color: rgba(255,255,255,0.7);
@@ -200,7 +200,7 @@
                alt="Kora Demo logo"
                style="width:40px;height:40px;border-radius:10px;object-fit:cover;"
                width="40" height="40"/>
-          <span class="nav-brand" style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:700;color:#fff;letter-spacing:0.02em;">Kora Demo</span>
+          <span class="nav-brand" style="font-family:var(--kora-font-heading, 'Playfair Display'), serif;font-size:1.15rem;font-weight:700;color:#fff;letter-spacing:0.02em;">Kora Demo</span>
         </a>
 
         <!-- Desktop nav -->
@@ -246,7 +246,7 @@
                  alt="Kora Demo logo"
                  style="width:36px;height:36px;border-radius:8px;object-fit:cover;"
                  width="36" height="36"/>
-            <span style="font-family:'Playfair Display',serif;font-size:1rem;font-weight:700;color:#1a1a1a;">Kora Demo</span>
+            <span style="font-family:var(--kora-font-heading, 'Playfair Display'), serif;font-size:1rem;font-weight:700;color:#1a1a1a;">Kora Demo</span>
           </a>
           <button id="mobileCloseBtn" aria-label="Close menu"
                   style="width:36px;height:36px;border-radius:50%;border:1px solid #e0e0e0;background:#f5f5f5;cursor:pointer;display:flex;align-items:center;justify-content:center;">
@@ -295,7 +295,7 @@
             <a href="index.html" style="display:inline-flex;align-items:center;gap:0.75rem;text-decoration:none;margin-bottom:1rem;">
               <img src="https://quseprdus1.blob.core.windows.net/kora-business-images/social-media/afaa6855-dc8b-4284-a459-9c753c8fd451/medialibrary/1781674810_rbpnce.jpg"
                    alt="Kora Demo logo" class="footer-logo" width="48" height="48"/>
-              <span style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:#fff;">Kora Demo</span>
+              <span style="font-family:var(--kora-font-heading, 'Playfair Display'), serif;font-size:1.1rem;font-weight:700;color:#fff;">Kora Demo</span>
             </a>
             <p style="font-size:0.875rem;line-height:1.65;max-width:260px;">Authentic Thai cuisine crafted with the finest ingredients and premium spices from Thailand.</p>
             <div style="display:flex;gap:0.6rem;margin-top:1.25rem;">
@@ -310,7 +310,7 @@
 
           <!-- Quick links -->
           <div>
-            <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:1rem;letter-spacing:0.05em;text-transform:uppercase;">Quick Links</h4>
+            <h4 style="font-family:var(--kora-font-heading, 'Playfair Display'), serif;font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:1rem;letter-spacing:0.05em;text-transform:uppercase;">Quick Links</h4>
             <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.6rem;">
               <li><a href="index.html" style="font-size:0.875rem;">Home</a></li>
               <li><a href="menu.html" style="font-size:0.875rem;">Menu</a></li>
@@ -323,7 +323,7 @@
 
           <!-- Contact -->
           <div>
-            <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:1rem;letter-spacing:0.05em;text-transform:uppercase;">Contact</h4>
+            <h4 style="font-family:var(--kora-font-heading, 'Playfair Display'), serif;font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:1rem;letter-spacing:0.05em;text-transform:uppercase;">Contact</h4>
             <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:0.75rem;">
               <li style="display:flex;align-items:flex-start;gap:0.5rem;font-size:0.875rem;">
                 <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="flex-shrink:0;margin-top:2px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -346,7 +346,7 @@
 
           <!-- Order CTA -->
           <div>
-            <h4 style="font-family:'Playfair Display',serif;font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:1rem;letter-spacing:0.05em;text-transform:uppercase;">Order &amp; Reserve</h4>
+            <h4 style="font-family:var(--kora-font-heading, 'Playfair Display'), serif;font-size:0.95rem;font-weight:700;color:#fff;margin-bottom:1rem;letter-spacing:0.05em;text-transform:uppercase;">Order &amp; Reserve</h4>
             <div style="display:flex;flex-direction:column;gap:0.75rem;">
               <a href="https://www.toasttab.com/bedford-thai-stamford-77-bedford-street-stamford-ct"
                  target="_blank" rel="noopener noreferrer"
